@@ -170,27 +170,6 @@ namespace testWeb2.Controllers
                     optimizationLevel: OptimizationLevel.Release,
                     assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default));
         }
-
-        public void generateModel([FromBody]modelGen options)
-        {
-            var scriptInstallDNF = "dotnet tool install -g dotnet-ef >> log1.txt";
-            Process.Start("powershell", scriptInstallDNF).WaitForExit();
-            var installDepend = "dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 2.1.14 >> log2.txt";
-            Process.Start("powershell", installDepend).WaitForExit();
-            installDepend = "dotnet add package Microsoft.EntityFrameworkCore.Design -v 2.1.14 >> log3.txt";
-            Process.Start("powershell", installDepend).WaitForExit();
-            var scriptGenerateModels = $"dotnet ef dbcontext scaffold \"Data Source=pylon\\mssqlserverdev; Database=Tempdb;Integrated Security=True;\" Microsoft.EntityFrameworkCore.SqlServer -o Model -c \"Context\" -v >> log4.txt";
-            Process.Start("powershell", scriptGenerateModels).WaitForExit();
-        }
-
-
-
-        public class modelGen
-        {
-            public string ConnectionString { get; set; }
-            public string ContextName { get; set; }
-
-        }
         public class requestData
         {
             public string text { get; set; }

@@ -1,0 +1,27 @@
+textarea {
+    /* background-color: #5D8DCA; */
+}
+
+#btnGenerate {}
+
+#btnGenerate {
+    margin-left: 15px;
+}
+
+.btnConnect {
+    height: 30px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding-top: 0 !important;
+    /* padding: 0 !important; */
+}
+
+.txtArea {
+    margin-left: 10px;
+}
+
+.conString {
+    height: 200px;
+}
+
+input {}

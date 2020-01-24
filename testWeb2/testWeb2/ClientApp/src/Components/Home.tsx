@@ -1,4 +1,7 @@
 ﻿import React from 'react';
+import './Home.css' 
+import { Button, ButtonGroup } from 'reactstrap'
+
 
 interface state {
     currentCount: string
@@ -96,16 +99,16 @@ export class Home extends React.Component<{}, state>{
                 <br />
                 <div id="conString">
                     <input id="ConnectionStringInput" size={100} onChange={this.inptOnChange} type="text" placeholder="input connection string" />
-                    <button onClick={this.btnClick}>Connect</button><br />
-                    <input id="inputContextName" type="text" placeholder="input context name" /><br />
-                    <button id="btnGenerate" onClick={this.btnOnClickModelGenerate} >Generate Models</button>
+                    <Button className="btnConnect" color="danger" onClick={this.btnClick}>Connect</Button><br />
+                    <input id="inputContextName" type="text" placeholder="input context name" />
+                    <Button className="btnConnect" color="danger" onClick={this.btnOnClickModelGenerate} >Generate Models</Button>
                 </div>
                 <br />
                 <br />
-                <textarea rows={20} cols={70} onChange={this.txtAreaOnChange} placeholder="input yours code" ></textarea>
-                <textarea rows={20} cols={70} value={this.state.currentCount} placeholder="result" ></textarea>
+                <textarea className="txtArea" rows={20} cols={70} onChange={this.txtAreaOnChange} placeholder="input yours code" ></textarea>
+                <textarea className="txtArea" rows={20} cols={70} value={this.state.currentCount} placeholder="result" ></textarea>
                 <br />
-                <button onClick={this.incrementCounter}>Submit</button>
+                <Button className="btnConnect" color="danger" onClick={this.incrementCounter}>Submit</Button>
             </div>
 
         );
