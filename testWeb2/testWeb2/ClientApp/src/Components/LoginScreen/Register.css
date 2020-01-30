@@ -1,0 +1,13 @@
+.Register {
+    margin-top: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.regBlocks {
+    width: 30%;
+    margin: 0 auto;
+    text-align: left;
+    color: #f8f9fa;
+}

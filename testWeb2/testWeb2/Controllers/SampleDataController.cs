@@ -9,8 +9,6 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore.SqlServer;
-using Microsoft.EntityFrameworkCore.SqlServer.Design;
 using System.Diagnostics;
 
 
@@ -31,29 +29,6 @@ namespace testWeb2.Controllers
         {
             try
             {
-                text.text = "return \"hello\";";
-
-
-
-                var reportHandler = new OperationReportHandler();
-                var resultHandler = new OperationResultHandler();
-                var executor = new OperationExecutor(reportHandler, new Dictionary<string, string> { { "targetName", "testWeb2" }, { "startupTargetName", "testWeb2" }, { "projectDir", @"C:\Users\mdm\Desktop\testWeb2\testWeb2" },{"rootNamespace","testWeb2" } });
-                var context = new OperationExecutor.ScaffoldContext(executor, resultHandler, new Dictionary<string, object> {
-                    {"connectionString", $@"Data Source=pylon\mssqlserverdev; Database=test;Integrated Security=True;" },
-                    {"provider", "Microsoft.EntityFrameworkCore.SqlServer"},
-                    { "outputDir", "Model" },
-                    {"dbContextClassName","DBContext" },
-                    {"outputDbContextDir","Model" },
-                    {"schemaFilters",new string[0] },
-                    {"tableFilters",new string[]{"Samples"} },
-                    {"useDataAnnotations",false },
-                    {"overwriteFiles",true },
-                    { "useDatabaseNames",false} });
-                context.Execute(new Action(() => { }));
-
-
-
-
                 string codeHead = @"
                                 using System;
                                 using System.Diagnostics;
@@ -70,7 +45,7 @@ namespace testWeb2.Controllers
                                        { ";
 
                 string codeFoot = @"}}}";
-                string sourceCode = codeHead + text.text + codeFoot;
+                string sourceCode = codeHead + text.SourceCode + codeFoot;
 
                 using (var peStream = new MemoryStream())
                 {
@@ -81,7 +56,6 @@ namespace testWeb2.Controllers
                     if (!result.Success)
                     {
                         string error = "";
-                        Console.WriteLine("Compilation done with error.");
 
                         var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
 
@@ -91,7 +65,6 @@ namespace testWeb2.Controllers
                         }
                         return error;
                     }
-                    Console.WriteLine("Compilation done without any error.");
 
                     peStream.Seek(0, SeekOrigin.Begin);
                     var assebly = Assembly.Load(peStream.ToArray());
@@ -102,30 +75,6 @@ namespace testWeb2.Controllers
                     return resultOut;
 
                 }
-
-
-
-                //var compiler = CodeDomProvider.CreateProvider("CSharp");
-                //var parameters = new CompilerParameters
-                //{
-                //    CompilerOptions = "/t:library",
-                //    GenerateInMemory = true,
-                //    IncludeDebugInformation = false
-                //};
-                //var compilerResults = compiler.CompileAssemblyFromSource(parameters, sourceCode);
-
-                //if (compilerResults.Errors.Capacity > 0)
-                //{
-                //    foreach (var r in compilerResults.Errors)
-                //    {
-                //        errors = errors + " " + r.ToString();
-                //    }
-                //    return errors;
-                //}
-                //var instance = compilerResults.CompiledAssembly.CreateInstance("onfly.TestClass");
-
-                //string result = compilerResults.CompiledAssembly.GetType("onfly.TestClass").GetMethod("main").Invoke(instance, null).ToString();
-                //return text1;
             }
             catch (Exception ex)
             {
@@ -143,17 +92,14 @@ namespace testWeb2.Controllers
             var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
             var assebly = AppDomain.CurrentDomain.GetAssemblies();
             var parsedSyntaxTree = SyntaxFactory.ParseSyntaxTree(codeString, options);
-            var references = new MetadataReference[]
+            List<MetadataReference> references = new List<MetadataReference>()
             {
-
                 MetadataReference.CreateFromFile(assebly.First(c=>c.FullName.StartsWith("netstandard")).Location),
                 //MetadataReference.CreateFromFile(assebly.First(c=>c.FullName.StartsWith("mscorelib")).Location),
                 //MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\sdk\3.1.100\Microsoft\Microsoft.NET.Build.Extensions\net461\lib\netstandard.dll"),
                 MetadataReference.CreateFromFile(typeof(System.Linq.Enumerable).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Linq.Expressions.BinaryExpression).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(RelationalDatabaseFacadeExtensions).Assembly.Location),
-                //MetadataReference.CreateFromFile(typeof(testWeb2.Model.Context).Assembly.Location),
-                //MetadataReference.CreateFromFile(typeof(testWeb2.Model.Temp).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.ComponentModel.TypeConverter).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(DbContext).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.ComponentModel.IComponent).Assembly.Location),
@@ -163,37 +109,72 @@ namespace testWeb2.Controllers
                 MetadataReference.CreateFromFile(typeof(System.Runtime.AssemblyTargetedPatchBandAttribute).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo).Assembly.Location),
             };
-            return CSharpCompilation.Create("Hello.dll",
-                new[] { parsedSyntaxTree },
-                references: references,
-                options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary,
-                    optimizationLevel: OptimizationLevel.Release,
-                    assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default));
+            foreach (var v in Directory.GetFiles(Environment.CurrentDirectory + "\\Model"))
+            {
+                references.Add(MetadataReference.CreateFromFile(v));
+            }
+            return CSharpCompilation.Create("CompiledCode.dll",
+        new[] { parsedSyntaxTree },
+        references: references,
+        options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary,
+            optimizationLevel: OptimizationLevel.Release,
+            assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default));
         }
 
-        public void generateModel([FromBody]modelGen options)
+        public string ModelGenerate([FromBody] ConectionData data)
         {
-            var scriptInstallDNF = "dotnet tool install -g dotnet-ef >> log1.txt";
-            Process.Start("powershell", scriptInstallDNF).WaitForExit();
-            var installDepend = "dotnet add package Microsoft.EntityFrameworkCore.SqlServer -v 2.1.14 >> log2.txt";
-            Process.Start("powershell", installDepend).WaitForExit();
-            installDepend = "dotnet add package Microsoft.EntityFrameworkCore.Design -v 2.1.14 >> log3.txt";
-            Process.Start("powershell", installDepend).WaitForExit();
-            var scriptGenerateModels = $"dotnet ef dbcontext scaffold \"Data Source=pylon\\mssqlserverdev; Database=Tempdb;Integrated Security=True;\" Microsoft.EntityFrameworkCore.SqlServer -o Model -c \"Context\" -v >> log4.txt";
-            Process.Start("powershell", scriptGenerateModels).WaitForExit();
+
+            try
+            {
+                if (string.IsNullOrEmpty(data.ContextName))
+                {
+                    data.ContextName = "Context";
+                }
+                if (!string.IsNullOrEmpty(data.ConnectionString))
+                {
+                    var reportHandler = new OperationReportHandler();
+                    var resultHandler = new OperationResultHandler();
+                    var executor = new OperationExecutor(reportHandler, new Dictionary<string, string> {
+                    { "targetName", "testWeb2" },
+                    { "startupTargetName", "testWeb2" },
+                    { "projectDir", Environment.CurrentDirectory },
+                    { "rootNamespace", "testWeb2" } });
+                    var context = new OperationExecutor.ScaffoldContext(executor, resultHandler, new Dictionary<string, object> {
+                    {"connectionString", data.ConnectionString },
+                    {"provider", "Microsoft.EntityFrameworkCore.SqlServer"},
+                    { "outputDir", "Model" },
+                    {"dbContextClassName",data.ContextName},
+                    {"outputDbContextDir","Model" },
+                    {"schemaFilters",new string[]{"dbo"} },//Фильр схем н-р DBO
+                    {"tableFilters",new string[0] },//Фильр таблиц 
+                    {"useDataAnnotations",false },
+                    {"overwriteFiles",true },
+                    { "useDatabaseNames",false} });
+                    context.Execute(new Action(() => { }));
+                    return "True";
+                }
+                else
+                {
+                    return "False";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
-
-
-
-        public class modelGen
+        public class ConectionData
         {
             public string ConnectionString { get; set; }
             public string ContextName { get; set; }
 
+
         }
         public class requestData
         {
-            public string text { get; set; }
+            public string SourceCode { get; set; }
+            public string ContextName { get; set; }
+
         }
     }
 }
