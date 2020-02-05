@@ -1,0 +1,77 @@
+.Fields {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.createProjectModulBody {
+    background-color: ghostwhite;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.createProjectModulBody input {
+    width: auto;
+    border-radius: 10px;
+    width: 88%;
+}
+
+.ProjectNameInput {
+    margin-top: 10px;
+}
+
+.FieldsModul {
+    background-color: ghostwhite;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.dataEditModul {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 80.89%;
+}
+
+.ProjectsModul {
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 23.9%;
+    margin-top: 20px;
+    width: 56.25%;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Projects {
+    background-color: ghostwhite;
+    border-radius: 10px;
+}
+
+.createProjectModul {
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 5.2%;
+    margin-top: 20px;
+    width: 18%;
+}

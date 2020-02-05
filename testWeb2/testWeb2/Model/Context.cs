@@ -15,7 +15,9 @@ namespace testWeb2.Model
         {
         }
 
+        public virtual DbSet<CompiledContext> CompiledContext { get; set; }
         public virtual DbSet<Model> Model { get; set; }
+        public virtual DbSet<Projects> Projects { get; set; }
         public virtual DbSet<User> User { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,6 +31,20 @@ namespace testWeb2.Model
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<CompiledContext>(entity =>
+            {
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.CompiledContext1).HasColumnName("CompiledContext");
+
+                entity.HasOne(d => d.Project)
+                    .WithMany(p => p.CompiledContext)
+                    .HasForeignKey(d => d.ProjectId)
+                    .HasConstraintName("FK__CompiledC__Proje__4CA06362");
+            });
+
             modelBuilder.Entity<Model>(entity =>
             {
                 entity.Property(e => e.Id).HasColumnName("ID");
@@ -36,6 +52,32 @@ namespace testWeb2.Model
                 entity.Property(e => e.Model1)
                     .HasColumnName("Model")
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Projects>(entity =>
+            {
+                entity.Property(e => e.Id)
+                    .HasColumnName("id")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.ConnectionString)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ContextName)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.OwnerId).HasColumnName("ownerId");
+
+                entity.Property(e => e.ProjectName)
+                    .HasMaxLength(500)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Owner)
+                    .WithMany(p => p.Projects)
+                    .HasForeignKey(d => d.OwnerId)
+                    .HasConstraintName("FK__Projects__ownerI__49C3F6B7");
             });
 
             modelBuilder.Entity<User>(entity =>

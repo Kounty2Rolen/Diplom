@@ -19,24 +19,30 @@ namespace testWeb2.Controllers
         {
             var identity = GetIdentity(person);
 
-            var now = DateTime.UtcNow;
-            // создаем JWT-токен
-            var jwt = new JwtSecurityToken(
-                    issuer: AuthOptions.ISSUER,
-                    audience: AuthOptions.AUDIENCE,
-                    notBefore: now,
-                    claims: identity.Claims,
-                    expires: now.Add(TimeSpan.FromMinutes(AuthOptions.LIFETIME)),
-                    signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
-            var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+            if (identity != null)
+            {
+                var now = DateTime.UtcNow;
+                // создаем JWT-токен
+                var jwt = new JwtSecurityToken(
+                        issuer: AuthOptions.ISSUER,
+                        audience: AuthOptions.AUDIENCE,
+                        notBefore: now,
+                        claims: identity.Claims,
+                        expires: now.Add(TimeSpan.FromMinutes(AuthOptions.LIFETIME)),
+                        signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
+                var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
-            return Content(encodedJwt);
+                return Content(encodedJwt);
+            }
+            else {
+                return Content(null);
+            }
         }
         [Authorize]
         public IActionResult GetLogin()
         {
- 
-            return Ok(User.Identity.Name);
+            Context context = new Context();
+            return Ok(context.User.Where(c=>c.LoginName==User.Identity.Name).Select(c=>c.Fname+" "+c.Mname));
 
     }
         private ClaimsIdentity GetIdentity([FromBody]Person personfrmbody)

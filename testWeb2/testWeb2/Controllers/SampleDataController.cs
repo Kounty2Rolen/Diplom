@@ -2,18 +2,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using System.Diagnostics;
-
-
-
-
 
 namespace testWeb2.Controllers
 {
@@ -49,9 +45,8 @@ namespace testWeb2.Controllers
 
                 using (var peStream = new MemoryStream())
                 {
-                    var result = GenerateCode(sourceCode).Emit(peStream);
-
-
+                    var streams = CompileModel();
+                    var result = GenerateCode(sourceCode, streams, true).Emit(peStream);
 
                     if (!result.Success)
                     {
@@ -73,7 +68,6 @@ namespace testWeb2.Controllers
 
                     var resultOut = assebly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
                     return resultOut;
-
                 }
             }
             catch (Exception ex)
@@ -81,17 +75,59 @@ namespace testWeb2.Controllers
                 return ex.ToString();
             }
         }
+        private static List<MemoryStream> CompileModel()
+        {
+            List<MemoryStream> streams = new List<MemoryStream>();
+            streams.Add(new MemoryStream());
+            string modelCode = @"using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+using System.Collections.Generic; ";
+
+            //Обьеденение всех файлов модели в один файл
+            foreach (var file in Directory.GetFiles(Environment.CurrentDirectory + "/Model"))
+            {
+                StreamReader reader = new StreamReader(file.ToString());
+                var fils=reader.ReadToEnd().Split("\n");
+                for (int i = 0; i< fils.Length; i++)
+                {
+                    if (fils[i].Contains("namespace"))
+                    {
+                        for (int j = i; j < fils.Length; j++)
+                        {
+                            modelCode += fils[j];
+                        }
+                    }
+                }
+            
+            }
+            var result = GenerateCode(modelCode).Emit(streams.Last());
+            streams.Last().Seek(0, SeekOrigin.Begin);
+            if (!result.Success)
+            {
+                string err="";
+                foreach (var item in result.Diagnostics)
+                {
+                    err +="\n"+item;
+                }
+                throw new Exception(err);
+            }
+            return streams;
+
+        }
+
         /// <summary>
         /// ���������� ��� � ������
         /// </summary>
         /// <param name="sourceCode">�������� ��� ���������� </param>
         /// <returns></returns>
-        private static CSharpCompilation GenerateCode(string sourceCode)
+        private static CSharpCompilation GenerateCode(string sourceCode, List<MemoryStream> streams = null, bool isproject = false)
         {
             var codeString = SourceText.From(sourceCode);
             var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
             var assebly = AppDomain.CurrentDomain.GetAssemblies();
             var parsedSyntaxTree = SyntaxFactory.ParseSyntaxTree(codeString, options);
+
             List<MetadataReference> references = new List<MetadataReference>()
             {
                 MetadataReference.CreateFromFile(assebly.First(c=>c.FullName.StartsWith("netstandard")).Location),
@@ -108,22 +144,35 @@ namespace testWeb2.Controllers
                 MetadataReference.CreateFromFile(typeof(Console).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Runtime.AssemblyTargetedPatchBandAttribute).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(DbContext).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(HashSet<>).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(DbContextOptionsBuilder<>).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(SqlServerDbContextOptionsExtensions).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(System.Data.Common.DataAdapter).Assembly.Location)
+
+
+
+
+
             };
-            foreach (var v in Directory.GetFiles(Environment.CurrentDirectory + "\\Model"))
+            if (isproject)
             {
-                references.Add(MetadataReference.CreateFromFile(v));
+                foreach (var stream in streams)
+                {
+                    //BAd il format
+                    references.Add(MetadataReference.CreateFromStream(stream));
+                }
             }
             return CSharpCompilation.Create("CompiledCode.dll",
         new[] { parsedSyntaxTree },
         references: references,
         options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary,
             optimizationLevel: OptimizationLevel.Release,
-            assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default));
+            assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64)); ;
         }
 
         public string ModelGenerate([FromBody] ConectionData data)
         {
-
             try
             {
                 if (string.IsNullOrEmpty(data.ContextName))
@@ -137,7 +186,7 @@ namespace testWeb2.Controllers
                     var executor = new OperationExecutor(reportHandler, new Dictionary<string, string> {
                     { "targetName", "testWeb2" },
                     { "startupTargetName", "testWeb2" },
-                    { "projectDir", Environment.CurrentDirectory },
+                    { "projectDir", Environment.CurrentDirectory},
                     { "rootNamespace", "testWeb2" } });
                     var context = new OperationExecutor.ScaffoldContext(executor, resultHandler, new Dictionary<string, object> {
                     {"connectionString", data.ConnectionString },
@@ -146,7 +195,7 @@ namespace testWeb2.Controllers
                     {"dbContextClassName",data.ContextName},
                     {"outputDbContextDir","Model" },
                     {"schemaFilters",new string[]{"dbo"} },//Фильр схем н-р DBO
-                    {"tableFilters",new string[0] },//Фильр таблиц 
+                    {"tableFilters",new string[0] },//Фильр таблиц
                     {"useDataAnnotations",false },
                     {"overwriteFiles",true },
                     { "useDatabaseNames",false} });
@@ -163,18 +212,17 @@ namespace testWeb2.Controllers
                 return ex.Message;
             }
         }
+
         public class ConectionData
         {
             public string ConnectionString { get; set; }
             public string ContextName { get; set; }
-
-
         }
+
         public class requestData
         {
             public string SourceCode { get; set; }
             public string ContextName { get; set; }
-
         }
     }
 }

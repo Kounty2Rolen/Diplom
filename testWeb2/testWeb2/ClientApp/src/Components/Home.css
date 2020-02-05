@@ -27,16 +27,23 @@ textarea {
     height: 200px;
 }
 
-.connectionComponent {
+input.connectionComponent {
     margin-top: 5px;
-    border: 1px solid transparent;
     border-radius: 12px;
     padding-left: 10px;
+    width: 800px;
+}
+
+input.connectionComponentContext {
+    margin-top: 5px;
+    border-radius: 12px;
+    padding-left: 10px;
+    width: 300px;
 }
 
 .connectionComponentBTN {
     margin-left: 5px;
     padding-top: 0 !important;
-    margin-top: -5px;
+    margin-top: 5px !important;
     height: 30px;
 }
