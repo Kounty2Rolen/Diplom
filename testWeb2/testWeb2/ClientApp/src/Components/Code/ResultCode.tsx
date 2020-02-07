@@ -14,10 +14,10 @@ export class Result extends React.Component<props> {
   render() {
     return (
       <textarea
-        className="txtArea"
+        className="txtArea resultArea"
         rows={20}
         cols={70}
-        value={this.props.codeResult}
+        defaultValue={this.props.codeResult}
         placeholder="result"
       ></textarea>
     );

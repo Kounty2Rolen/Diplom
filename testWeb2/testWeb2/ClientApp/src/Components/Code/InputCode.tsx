@@ -1,7 +1,7 @@
 import React from "react";
 import "../Home.css";
 import { Result } from "./ResultCode";
-import { Button } from "reactstrap";
+import { Button, Row, Col } from "reactstrap";
 
 interface state {
   CodeResult: string;
@@ -50,6 +50,7 @@ export class InpCode extends React.Component<{}, state> {
   render() {
     return (
       <div>
+
         <textarea
           className="txtArea"
           rows={20}
@@ -57,8 +58,9 @@ export class InpCode extends React.Component<{}, state> {
           onChange={this.txtAreaOnChange}
           placeholder="input yours code"
         ></textarea>
+
         <Result codeResult={this.state.CodeResult} />
-        <br />
+<br/>
         <Button
           className="btnConnect"
           color="danger"
@@ -66,6 +68,7 @@ export class InpCode extends React.Component<{}, state> {
         >
           Submit
         </Button>
+
       </div>
     );
   }

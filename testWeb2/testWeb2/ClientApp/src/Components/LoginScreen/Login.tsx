@@ -18,10 +18,14 @@ export const LoginScreen = () => {
     Password: ""
   };
   const Login = () => {
+
     Person.Password = sha256(Person.Password).toString();
-    if (Person.LoginName === "") {
+    console.log(Person);
+    if (Person.LoginName === ""||Person.Password==="") {
+      console.log(Person);
       alert("Please check all fields, login and password not can be empty !");
-    } else if (Person.LoginName !== "") {
+    } else if (Person.LoginName !== "" && Person.Password!="") {
+      console.log(Person);
       fetch("Account/Token", {
         method: "POST",
         headers: { "Content-type": "application/json" },
@@ -60,9 +64,11 @@ export const LoginScreen = () => {
       <Button color="light" onClick={toggle}>
         Login
       </Button>
+      <Link to="/Register">
       <Button color="light" className="RegisterBTN">
-        <Link to="/Register">Register</Link>
+        Register
       </Button>
+      </Link>
       <Modal isOpen={modal} toggle={toggle} className="Modal">
         <ModalHeader toggle={toggle}>Login</ModalHeader>
         <ModalBody>

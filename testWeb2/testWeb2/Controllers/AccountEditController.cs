@@ -10,10 +10,26 @@ using testWeb2.Model;
 namespace testWeb2.Controllers
 {
     [Authorize]
-    public class AccountInfoController : Controller
+    public class AccountEditController : Controller
     {
-        //bool EditPassword(string oldPassword)
-        //{ }
+        public IActionResult EditPassword([FromBody] Passwords passwords)
+        {
+            Context context = new Context();
+            string OldPassword = context.User.Where(c => c.LoginName == User.Identity.Name).Select(c => c.Password).FirstOrDefault();
+
+            if (passwords.OldPassword == OldPassword)
+            {
+                context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Password = passwords.NewPassword;
+                context.SaveChanges();
+                context.Dispose();
+                return Ok("Sucscess");
+            }
+            else
+            {
+                context.Dispose();
+                return BadRequest("Error");
+            }
+        }
         //bool EditFio() { }
         public List<string> GetProjects()
         {
@@ -27,9 +43,11 @@ namespace testWeb2.Controllers
             return projects ?? null;
         }
 
-        public Person getInfo() {
+        public Person getInfo()
+        {
             Context context = new Context();
-            var user=context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
+
+            var user = context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
             Person person = new Person();
             person.LoginName = user.LoginName;
             person.Fname = user.Fname;
@@ -38,7 +56,14 @@ namespace testWeb2.Controllers
             return person;
         }
 
-    }
 
+    }
+    public class Passwords
+    {
+        public string NewPassword { get; set; }
+        public string OldPassword { get; set; }
+
+
+    }
 
 }

@@ -48,7 +48,7 @@ export class Menu extends React.Component<props, state> {
     let func = this.logOut;
 
     return (
-      <Navbar className="menu" color="light" light Marker="false" expand="sm">
+      <Navbar className="menu" color="light" light marker="false" expand="sm">
         <NavbarBrand color="White">
           <Link to="/Home" className="homelink">
             <span role="img">🏠</span>Home
@@ -56,18 +56,16 @@ export class Menu extends React.Component<props, state> {
         </NavbarBrand>
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <Button color="light">
-              <Link to="/About" className="Link">
-                About
-              </Link>
-            </Button>
+            <Link to="/About" className="Link">
+              <Button color="light">About</Button>
+            </Link>
           </NavItem>
           <NavItem>
-            <Button color="light">
+            {token ? (
               <Link to="/Account" className="Link">
-                Edit account
+                <Button color="light">Edit account</Button>
               </Link>
-            </Button>
+            ) : null}
           </NavItem>
         </Nav>
         <NavbarText>
@@ -83,7 +81,6 @@ export class Menu extends React.Component<props, state> {
             <LoginScreen />
           )}
         </NavbarText>
-        
       </Navbar>
     );
   }

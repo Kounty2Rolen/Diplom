@@ -45,9 +45,12 @@ namespace testWeb2.Controllers
 
                 using (var peStream = new MemoryStream())
                 {
-                    var streams = CompileModel();
-                    var result = GenerateCode(sourceCode, streams, true).Emit(peStream);
-
+                    MemoryStream modelStream = new MemoryStream();
+                    var trees = GetSyntaxTrees();
+                   GenerateCode(trees:trees).Emit(modelStream);
+                    modelStream.Seek(0, SeekOrigin.Begin);
+                    var result = GenerateCode(sourceCode, trees,modelStream ,true).Emit(peStream);
+                    modelStream.Dispose();
                     if (!result.Success)
                     {
                         string error = "";
@@ -75,45 +78,21 @@ namespace testWeb2.Controllers
                 return ex.ToString();
             }
         }
-        private static List<MemoryStream> CompileModel()
+        private static List<SyntaxTree> GetSyntaxTrees()
         {
-            List<MemoryStream> streams = new List<MemoryStream>();
-            streams.Add(new MemoryStream());
-            string modelCode = @"using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System.Collections.Generic; ";
-
+            List<SyntaxTree> trees = new List<SyntaxTree>();
             //Обьеденение всех файлов модели в один файл
             foreach (var file in Directory.GetFiles(Environment.CurrentDirectory + "/Model"))
             {
                 StreamReader reader = new StreamReader(file.ToString());
-                var fils=reader.ReadToEnd().Split("\n");
-                for (int i = 0; i< fils.Length; i++)
-                {
-                    if (fils[i].Contains("namespace"))
-                    {
-                        for (int j = i; j < fils.Length; j++)
-                        {
-                            modelCode += fils[j];
-                        }
-                    }
-                }
+                var code = SourceText.From(reader.ReadToEnd());
+                var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
+                trees.Add(SyntaxFactory.ParseSyntaxTree(code, options));
+                reader.Close();
+                reader.Dispose();
+            }
             
-            }
-            var result = GenerateCode(modelCode).Emit(streams.Last());
-            streams.Last().Seek(0, SeekOrigin.Begin);
-            if (!result.Success)
-            {
-                string err="";
-                foreach (var item in result.Diagnostics)
-                {
-                    err +="\n"+item;
-                }
-                throw new Exception(err);
-            }
-            return streams;
-
+            return trees;
         }
 
         /// <summary>
@@ -121,16 +100,21 @@ using System.Collections.Generic; ";
         /// </summary>
         /// <param name="sourceCode">�������� ��� ���������� </param>
         /// <returns></returns>
-        private static CSharpCompilation GenerateCode(string sourceCode, List<MemoryStream> streams = null, bool isproject = false)
+        private static CSharpCompilation GenerateCode(string sourceCode=null, List<SyntaxTree> trees = null,MemoryStream modelStream=null, bool isproject = false)
         {
-            var codeString = SourceText.From(sourceCode);
-            var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
-            var assebly = AppDomain.CurrentDomain.GetAssemblies();
-            var parsedSyntaxTree = SyntaxFactory.ParseSyntaxTree(codeString, options);
+            var assembly = AppDomain.CurrentDomain.GetAssemblies();
+            if (isproject)
+            {
+                trees = new List<SyntaxTree>();
+                var codeString = SourceText.From(sourceCode);
+                var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
+                trees.Add(SyntaxFactory.ParseSyntaxTree(codeString, options));
+
+            }
 
             List<MetadataReference> references = new List<MetadataReference>()
             {
-                MetadataReference.CreateFromFile(assebly.First(c=>c.FullName.StartsWith("netstandard")).Location),
+                MetadataReference.CreateFromFile(assembly.First(c=>c.FullName.StartsWith("netstandard")).Location),
                 //MetadataReference.CreateFromFile(assebly.First(c=>c.FullName.StartsWith("mscorelib")).Location),
                 //MetadataReference.CreateFromFile(@"C:\Program Files\dotnet\sdk\3.1.100\Microsoft\Microsoft.NET.Build.Extensions\net461\lib\netstandard.dll"),
                 MetadataReference.CreateFromFile(typeof(System.Linq.Enumerable).Assembly.Location),
@@ -149,22 +133,14 @@ using System.Collections.Generic; ";
                 MetadataReference.CreateFromFile(typeof(DbContextOptionsBuilder<>).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(SqlServerDbContextOptionsExtensions).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Data.Common.DataAdapter).Assembly.Location)
-
-
-
-
-
             };
             if (isproject)
             {
-                foreach (var stream in streams)
-                {
                     //BAd il format
-                    references.Add(MetadataReference.CreateFromStream(stream));
-                }
+                    references.Add(MetadataReference.CreateFromStream(modelStream));
             }
             return CSharpCompilation.Create("CompiledCode.dll",
-        new[] { parsedSyntaxTree },
+        trees.ToArray(),
         references: references,
         options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary,
             optimizationLevel: OptimizationLevel.Release,
