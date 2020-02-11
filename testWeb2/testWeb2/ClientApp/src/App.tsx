@@ -37,7 +37,7 @@ export class App extends React.Component<{}, state> {
             <Route exact={true} path="/Account" component={Cabinet} />
             <Route
               exact={true}
-              path="/Account/Project"
+              path="/Account/Project/:ProjectId"
               component={ProjectInfo}
             />
             <Redirect from="/" to="/Home" />

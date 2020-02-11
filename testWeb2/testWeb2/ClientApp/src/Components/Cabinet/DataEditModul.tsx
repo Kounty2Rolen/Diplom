@@ -10,7 +10,7 @@ interface state {
     OldPassword: string;
     NewPassword: string;
     projects: string[];
-    Person: {
+    Person:{
       fname: string;
       mname: string;
       loginName: string;
@@ -31,8 +31,8 @@ export class DataEditModul extends React.Component<{},state> {
         };
       }
       init() {
-       GetInfo.getInfo()
-        .then(data=>this.setState({Person:data})
+       GetInfo.getInfo().then((data:any)=>this.setState({Person:data},));
+
    
      }
       componentDidMount() {
@@ -63,8 +63,6 @@ export class DataEditModul extends React.Component<{},state> {
       },
       body: JSON.stringify(Passwords)
     })
-      .then(Response => console.log(Response))
-      .then(data => console.log(data));
   };
 
 

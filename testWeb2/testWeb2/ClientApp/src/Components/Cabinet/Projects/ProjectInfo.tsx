@@ -1,14 +1,21 @@
-import React from "react";
+import React, { Props } from "react";
 import "./ProjectInfo.css";
-import {Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 
-class ProjectInfo extends React.Component {
+interface props {
+  match: {
+    params: { ProjectId: string };
+  };
+}
+
+class ProjectInfo extends React.Component<props> {
+  constructor(props: props) {
+    super(props);
+  }
+  componentDidMount() {}
   render() {
-    return (
-      <div>
-
-      </div>
-    );
+    console.log(this.props.match.params.ProjectId);
+    return <div></div>;
   }
 }
 export default ProjectInfo;

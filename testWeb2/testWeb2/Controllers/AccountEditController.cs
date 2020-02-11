@@ -31,14 +31,14 @@ namespace testWeb2.Controllers
             }
         }
         //bool EditFio() { }
-        public List<string> GetProjects()
+        public List<Projects> GetProjects()
         {
             Context context = new Context();
-            List<string> projects = new List<string>();
+            List<Projects> projects = new List<Projects>();
             int? userid = context.User.Where(c => c.LoginName == User.Identity.Name).Select(c => c.Id).FirstOrDefault();
             if (userid != null)
                 foreach (var item in context.Projects.Where(c => c.OwnerId == userid).ToList())
-                    projects.Add(item.ProjectName);
+                    projects.Add(new Projects(item.Id, item.ProjectName));
             context.Dispose();
             return projects ?? null;
         }
@@ -62,6 +62,18 @@ namespace testWeb2.Controllers
     {
         public string NewPassword { get; set; }
         public string OldPassword { get; set; }
+
+
+    }
+    public class Projects
+    {
+        public Projects(int id, string Name)
+        {
+            this.id = id;
+            this.Name = Name;
+        }
+        public int id { get; set; }
+        public string Name { get; set; }
 
 
     }

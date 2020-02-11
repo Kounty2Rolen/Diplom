@@ -10,6 +10,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace testWeb2.Controllers
 {
@@ -63,13 +65,11 @@ namespace testWeb2.Controllers
                         }
                         return error;
                     }
-
+                     
                     peStream.Seek(0, SeekOrigin.Begin);
-                    var assebly = Assembly.Load(peStream.ToArray());
-                    var instance = assebly.CreateInstance("onfly.TestClass");
-                    //DbContext[] dbs = { context};
-
-                    var resultOut = assebly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
+                    var assembly=Assembly.Load(peStream.ToArray());
+                    var instance = assembly.CreateInstance("onfly.TestClass");
+                    var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
                     return resultOut;
                 }
             }
@@ -133,6 +133,8 @@ namespace testWeb2.Controllers
                 MetadataReference.CreateFromFile(typeof(DbContextOptionsBuilder<>).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(SqlServerDbContextOptionsExtensions).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Data.Common.DataAdapter).Assembly.Location)
+
+
             };
             if (isproject)
             {
