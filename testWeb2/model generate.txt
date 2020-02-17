@@ -1,0 +1,12 @@
+Data Source=pylon\mssqlserverdev; Database=Tempdb;Integrated Security=True
+
+dotnet ef dbcontext scaffold "Data Source=PYLON\MSSQLSERVERDEV;Initial Catalog=WebProject;Integrated Security=True" Microsoft.EntityFrameworkCore.SqlServer -o Model -c "Context"
+
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer  -v 2.1.14
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+
+testWeb2.Model.context context = new testWeb2.Model.context();
+return context.Temp.First();
