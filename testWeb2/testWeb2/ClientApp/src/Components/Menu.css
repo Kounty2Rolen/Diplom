@@ -1,0 +1,22 @@
+.homelink {
+    color: black !important;
+}
+
+.Link {
+    color: black !important;
+}
+
+.RegisterBTN {
+    margin-left: 0;
+}
+
+.menu {
+    border: 1px solid transparent;
+    margin-top: -5px;
+    border-radius: 10px;
+    height: 70px;
+}
+
+.nameonmenu {
+    color: black;
+}

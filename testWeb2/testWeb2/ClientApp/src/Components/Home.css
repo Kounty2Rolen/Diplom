@@ -1,0 +1,69 @@
+textarea {
+    /* background-color: #5D8DCA; */
+}
+
+#btnGenerate {
+}
+
+#btnGenerate {
+    margin-left: 15px;
+}
+
+.InputCode {
+    text-align: left;
+    height: auto;
+    margin-left: 2%;
+    width: 96%;
+}
+
+.CodeMirror {
+    border-radius: 10px;
+}
+
+.ResultCode {
+    margin-top: 15px;
+    text-align: left;
+    height: auto;
+    margin-left: 2%;
+    width: 96%;
+}
+
+.btnConnect {
+    height: 30px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    padding-top: 0 !important;
+    /* padding: 0 !important; */
+}
+
+.txtArea {
+    margin-left: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.conString {
+    height: 200px;
+}
+
+input.connectionComponent {
+    margin-top: 5px;
+    border-radius: 12px;
+    padding-left: 10px;
+    width: 800px;
+}
+
+input.connectionComponentContext {
+    margin-top: 5px;
+    border-radius: 12px;
+    padding-left: 10px;
+    width: 300px;
+}
+
+.connectionComponentBTN {
+    margin-left: 5px;
+    padding-top: 0 !important;
+    margin-top: 5px !important;
+    height: 30px;
+}
