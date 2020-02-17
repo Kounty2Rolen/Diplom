@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using testWeb2.Controllers;
 using testWeb2.Model;
 
 namespace testWeb2.Controllers
@@ -12,9 +8,8 @@ namespace testWeb2.Controllers
     {
         public string RegisterUser([FromBody] Person person)
         {
-
             Context context = new Context();
-            context.User.ToList() ;
+            context.User.ToList();
             if (context.User.FirstOrDefault(c => c.LoginName == person.LoginName) == null)
             {
                 User newUser = new User();
@@ -28,7 +23,6 @@ namespace testWeb2.Controllers
                 return "Sucscess";
             }
             return "User already exists!";
-
         }
     }
 }

@@ -5,9 +5,7 @@ import { DataEditModul } from "./DataEditModul";
 import {ProjectModul} from './Projects/ProjectModul'
 import { CreateProjectModul } from "./CreateProjModul";
 
-
 export class Cabinet extends React.Component{
-
   render() {
     if (sessionStorage.getItem("Token") == null) {
       return <Redirect to="/Home" />;

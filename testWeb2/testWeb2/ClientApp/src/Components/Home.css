@@ -2,10 +2,30 @@ textarea {
     /* background-color: #5D8DCA; */
 }
 
-#btnGenerate {}
+#btnGenerate {
+}
 
 #btnGenerate {
     margin-left: 15px;
+}
+
+.InputCode {
+    text-align: left;
+    height: auto;
+    margin-left: 2%;
+    width: 96%;
+}
+
+.CodeMirror {
+    border-radius: 10px;
+}
+
+.ResultCode {
+    margin-top: 15px;
+    text-align: left;
+    height: auto;
+    margin-left: 2%;
+    width: 96%;
 }
 
 .btnConnect {

@@ -7,15 +7,43 @@ interface props {
     params: { ProjectId: string };
   };
 }
-
-class ProjectInfo extends React.Component<props> {
+interface state{
+  Project:{
+  name:string,
+  connectionString:string,
+  context:string
+  }
+}
+class ProjectInfo extends React.Component<props,state> {
   constructor(props: props) {
     super(props);
+    this.state={
+      Project:{
+      name:"",
+      connectionString:"",
+      context:""
+      }
+    }
   }
-  componentDidMount() {}
+
+  componentDidMount() {
+    fetch('/Project/GetProjectInfo',{
+      method:'POST',
+      headers:{
+        "Content-type": "application/json",
+        Authorization: "Bearer "+sessionStorage.getItem("Token")
+      },
+      body: JSON.stringify(this.props.match.params.ProjectId)
+    }).then(Response=>Response.json()).then(data=>this.setState({Project:data},()=>{console.log(data)}));
+    console.log(this.state.Project);
+  }
   render() {
-    console.log(this.props.match.params.ProjectId);
-    return <div></div>;
+  return (
+    <div>
+      <div className="ModelCode">
+
+      </div>
+    </div>);
   }
 }
 export default ProjectInfo;

@@ -23,11 +23,11 @@ h2 {
     border-radius: 10px;
 }
 
-.createProjectModulBody input {
-    width: auto;
-    border-radius: 10px;
-    width: 88%;
-}
+    .createProjectModulBody input {
+        width: auto;
+        border-radius: 10px;
+        width: 88%;
+    }
 
 .ProjectNameInput {
     margin-top: 10px;

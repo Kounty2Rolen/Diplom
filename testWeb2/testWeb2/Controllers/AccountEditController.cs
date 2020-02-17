@@ -1,11 +1,8 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using testWeb2.Model;
-
 
 namespace testWeb2.Controllers
 {
@@ -30,6 +27,7 @@ namespace testWeb2.Controllers
                 return BadRequest("Error");
             }
         }
+
         //bool EditFio() { }
         public List<Projects> GetProjects()
         {
@@ -56,15 +54,22 @@ namespace testWeb2.Controllers
             return person;
         }
 
+        public void PersonEdit([FromBody]Person person)
+        {
+            Context context = new Context();
+            context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Mname = person.Mname;
+            context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Fname = person.Fname;
 
+            context.SaveChanges();
+        }
     }
+
     public class Passwords
     {
         public string NewPassword { get; set; }
         public string OldPassword { get; set; }
-
-
     }
+
     public class Projects
     {
         public Projects(int id, string Name)
@@ -72,10 +77,8 @@ namespace testWeb2.Controllers
             this.id = id;
             this.Name = Name;
         }
+
         public int id { get; set; }
         public string Name { get; set; }
-
-
     }
-
 }

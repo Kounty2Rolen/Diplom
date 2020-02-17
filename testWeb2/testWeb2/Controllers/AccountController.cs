@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.IdentityModel.Tokens;
+using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using System.Security.Claims;
 using testWeb2.Model; // класс Person
 
@@ -12,7 +12,6 @@ namespace testWeb2.Controllers
 {
     public class AccountController : Controller
     {
-
         private List<Model.User> people;
 
         public IActionResult Token([FromBody] Person person)
@@ -34,17 +33,19 @@ namespace testWeb2.Controllers
 
                 return Content(encodedJwt);
             }
-            else {
+            else
+            {
                 return Content(null);
             }
         }
+
         [Authorize]
         public IActionResult GetLogin()
         {
             Context context = new Context();
-            return Ok(context.User.Where(c=>c.LoginName==User.Identity.Name).Select(c=>c.Fname+" "+c.Mname));
+            return Ok(context.User.Where(c => c.LoginName == User.Identity.Name).Select(c => c.Fname + " " + c.Mname));
+        }
 
-    }
         private ClaimsIdentity GetIdentity([FromBody]Person personfrmbody)
         {
             testWeb2.Model.Context context = new Model.Context();

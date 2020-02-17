@@ -1,0 +1,97 @@
+13.02.2020 17:41:47
+System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2213.02.2020 17:50:58
+System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:08:47
+System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 1813.02.2020 18:09:34
+System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:10:18
+System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:11:02
+System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 1813.02.2020 18:11:55
+System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 1813.02.2020 18:13:26
+System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:59:10|SYSLOG|=>$ Connection
+13.02.2020 19:01:39|SYSLOG|=>$ Connected
+13.02.2020 19:01:40|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:01:42|LOGED_DATA|=>$ Connected
+13.02.2020 19:04:13|SYSLOG|=>$ Connection
+13.02.2020 19:04:14|SYSLOG|=>$ Connected
+13.02.2020 19:04:17|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:04:18|LOGED_DATA|=>$ Connected
+13.02.2020 19:16:27|SYSLOG|=>$ Connection
+13.02.2020 19:16:27|SYSLOG|=>$ Connected
+13.02.2020 19:16:27|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:16:33|LOGED_DATA|=>$ Connected
+13.02.2020 19:19:32|SYSLOG|=>$ Connection
+13.02.2020 19:19:32|SYSLOG|=>$ Connected
+13.02.2020 19:19:32|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:19:32|LOGED_DATA|=>$ Connected
+13.02.2020 19:20:55|SYSLOG|=>$ Connection
+13.02.2020 19:20:55|SYSLOG|=>$ Connected
+13.02.2020 19:20:55|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:20:55|LOGED_DATA|=>$ Connected
+13.02.2020 19:22:51|SYSLOG|=>$ Connection
+13.02.2020 19:22:51|SYSLOG|=>$ Connected
+13.02.2020 19:22:51|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:22:51|LOGED_DATA|=>$ Connected
+13.02.2020 19:27:00|SYSLOG|=>$ Connection
+13.02.2020 19:27:00|SYSLOG|=>$ Connected
+13.02.2020 19:27:00|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:27:00|LOGED_DATA|=>$ Connected
+13.02.2020 19:29:03|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:30:49|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:34:03|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:36:59|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:37:03|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:44:15|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:44:26|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
+   at System.ConsolePal.ReadKey(Boolean intercept)
+   at System.Console.ReadKey()
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
+13.02.2020 19:44:55|SYSLOG|=>$ Connection
+13.02.2020 19:44:55|SYSLOG|=>$ Connected
+13.02.2020 19:44:55|LOGED_DATA|=>$ Data(Lenght):1536
+13.02.2020 19:44:55|LOGED_DATA|=>$ Connected

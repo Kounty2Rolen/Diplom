@@ -1,10 +1,7 @@
 import React from "react";
 import { ContextInput } from "../Context";
 
-
-
 export class CreateProjectModul extends React.Component{
-
     render(){
         return(
             <div className="createProjectModul">
