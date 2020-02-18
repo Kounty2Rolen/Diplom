@@ -11,22 +11,15 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.IO.Pipes;
+using Microsoft.AspNetCore.Authorization;
 
 namespace testWeb2.Controllers
 {
     //[Route("api/[controller]")]
     public class CodeController : Controller
     {
-        public void cout(object sender, DataReceivedEventArgs args)
-        {
-            //TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "/logOUT.txt", true);
-            //logWriter.Write(DateTime.Now + "||=>$" + args.Data);
-            Debug.WriteLine(args.Data);
-            //logWriter.Close();
-            //logWriter.Dispose();
-            //var proc = (Process)sender;
-            //proc.BeginOutputReadLine();
-        }
+
+
 
         /// <summary>
         /// ����������� ���
@@ -39,6 +32,8 @@ namespace testWeb2.Controllers
         {
             try
             {
+                if (text.ContextName == null)
+                    text.ContextName = "Context";
                 string codeHead = @"
                                 using System;
                                 using System.Diagnostics;
@@ -78,13 +73,13 @@ namespace testWeb2.Controllers
                                      {
                                     public static void Main(){}
                                     public static string test()
-                                       { 
-                                        " + text.ContextName + " " + text.ContextName + "= new " + text.ContextName + "();" +
-                                        text.ContextName + ".GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());";
+                                       { " + text.ContextName + " db " + "= new " + text.ContextName + "();" + @"
+                    db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
+
+                                        ";
 
                 string codeFoot = @"}}}";
                 string sourceCode = codeHead + text.SourceCode + codeFoot;
-
                 using (var peStream = new MemoryStream())
                 {
                     MemoryStream modelStream = new MemoryStream();
@@ -115,34 +110,34 @@ namespace testWeb2.Controllers
                         RedirectStandardInput = true,
                         UseShellExecute = false
                     };
-
                     string resultOut = "";
                     using (var proc = new Process())
                     {
-
-                        proc.OutputDataReceived += cout;
                         proc.StartInfo.FileName = Environment.CurrentDirectory + @"\bin\Debug\netcoreapp3.1\CodeExecuter.exe";
                         proc.StartInfo.Arguments = System.Text.Encoding.ASCII.GetString(peStream.ToArray());
                         proc.StartInfo.RedirectStandardOutput = true;
                         proc.StartInfo.RedirectStandardInput = true;
                         proc.StartInfo.UseShellExecute = false;
+                        proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) => {
+                            resultOut += e.Data;
+                        });
                         proc.Start();
-                        proc.BeginOutputReadLine();
 
                         NamedPipeServerStream pipeServer = new NamedPipeServerStream("pipeServer", PipeDirection.InOut);
                         pipeServer.WaitForConnection();
                         var length = BitConverter.GetBytes((int)peStream.Length);
                         pipeServer.Write(length, 0, length.Length);
                         peStream.CopyTo(pipeServer);
+                        proc.BeginOutputReadLine();
+                        proc.WaitForExit();
+
                         //var procin = proc.StandardInput; 
-                        //var procout = proc.StandardOutput;
-                        //resultOut =procout.ReadToEnd();//Вешается
                         //procin.WriteLine("1");
 
                         //var assembly = Assembly.Load(peStream.ToArray());
                         //var instance = assembly.CreateInstance("onfly.TestClass");
                         //var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
-                        proc.WaitForExit();
+                        proc.CancelOutputRead();
                         pipeServer.Close();
                         pipeServer.Dispose();
                     }
@@ -226,13 +221,14 @@ namespace testWeb2.Controllers
         references: references,
         options: new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary,
             optimizationLevel: OptimizationLevel.Release,
-            assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64)); ;
+            assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64));
         }
-
+        [Authorize]
         public string ModelGenerate([FromBody] ConectionData data)
         {
             try
             {
+
                 if (string.IsNullOrEmpty(data.ContextName))
                 {
                     data.ContextName = "Context";
@@ -258,6 +254,27 @@ namespace testWeb2.Controllers
                     {"overwriteFiles",true },
                     { "useDatabaseNames",false} });
                     context.Execute(new Action(() => { }));
+                    Model.Context context1 = new Model.Context();
+                    Model.CompiledContext compiled = new Model.CompiledContext();
+                    var trees = GetSyntaxTrees();
+                    MemoryStream modelStream = new MemoryStream();
+                    GenerateCode(trees: trees).Emit(modelStream);
+                    modelStream.Seek(0, SeekOrigin.Begin);
+                    compiled.CompiledContext1 = modelStream.ToArray();
+                    Model.Projects project = new Model.Projects();
+                    project.ProjectName = data.ProjName;
+                    project.ContextName = data.ContextName;
+                    project.ConnectionString = data.ConnectionString;
+                    project.OwnerId = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Id;
+                    project.Owner = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
+                    project.Id = context1.Projects.LastOrDefault()?.Id + 1 ?? 0;
+                    compiled.Id = context1.CompiledContext.LastOrDefault()?.Id + 1 ?? 0;
+                    context1.Add(project);
+                    compiled.Project = project;
+                    compiled.ProjectId = context1.Projects.LastOrDefault(c => c.OwnerId == project.OwnerId)?.Id ?? 0;
+                    context1.Add(compiled);
+                    context1.SaveChanges();
+
                     return "True";
                 }
                 else
@@ -275,6 +292,7 @@ namespace testWeb2.Controllers
         {
             public string ConnectionString { get; set; }
             public string ContextName { get; set; }
+            public string ProjName { get; set; }
         }
 
         public class requestData

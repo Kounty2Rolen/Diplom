@@ -4,16 +4,14 @@ import { InpCode } from "./Code/InputCode";
 import { ContextInput } from "./Context";
 
 export class Home extends React.Component {
-    render() {
-        return (
-            <div className="homeContainer">
-                <br />
-                <br />
-
-                <ContextInput />
-                <br />
-                <InpCode />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="homeContainer">
+        <br />
+        <ContextInput ProjName=""></ContextInput>
+        <br />
+        <InpCode />
+      </div>
+    );
+  }
 }

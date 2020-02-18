@@ -36,7 +36,7 @@ namespace testWeb2.Controllers
             int? userid = context.User.Where(c => c.LoginName == User.Identity.Name).Select(c => c.Id).FirstOrDefault();
             if (userid != null)
                 foreach (var item in context.Projects.Where(c => c.OwnerId == userid).ToList())
-                    projects.Add(new Projects(item.Id, item.ProjectName));
+                    projects.Add(new Projects((int)item.Id, item.ProjectName));
             context.Dispose();
             return projects ?? null;
         }

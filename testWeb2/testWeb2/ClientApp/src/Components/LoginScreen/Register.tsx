@@ -2,6 +2,7 @@ import React from "react";
 import { Label, Input, Button } from "reactstrap";
 import "./Register.css";
 import sha256 from "crypto-js/sha256";
+import GetInfo from "../../Services/AccountServicesGetInfo"
 
 interface state {
     style: object;
@@ -35,16 +36,8 @@ export class RegScreen extends React.Component<{}, state> {
     Register = (event: React.MouseEvent<HTMLButtonElement>) => {
         if (this.Person.LoginName !== "" && this.Person.Password !== "") {
             this.Person.Password = sha256(this.Person.Password).toString();
-            fetch("Register/RegisterUser", {
-                method: "POST",
-                headers: {
-                    Authorization: "" + sessionStorage.getItem("Token"),
-                    "Content-type": "application/json"
-                },
-                body: JSON.stringify(this.Person)
-            })
-                .then(Response => Response.text())
-                .then(data => this.setState({ message: data }));
+            
+                GetInfo.Register(this.Person).then((data:any) => this.setState({ message: data }));
         } else {
             this.setState({ message: "Check Fields!" });
             this.setState({ style: { border: "2px solid red" } });
