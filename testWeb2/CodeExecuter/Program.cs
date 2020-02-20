@@ -6,6 +6,7 @@ using System.Reflection;
 using System;
 using System.IO;
 using System.IO.Pipes;
+using System.Linq;
 using System.Threading;
 
 namespace CodeExecuter
@@ -16,7 +17,7 @@ namespace CodeExecuter
 
         static int Main(string[] args)
         {
-             TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "/log.txt", true);
+            TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "/log.txt", true);
 
             try
             {
@@ -42,12 +43,16 @@ namespace CodeExecuter
                 pipeClient.Read(PeArray, 0, lenght);
                 logWriter.WriteLine(DateTime.Now + "|LOGED_DATA|=>$ " + "Readed");
 
+
                 var assembly = Assembly.Load(PeArray);
                 var instance = assembly.CreateInstance("onfly.TestClass");
                 var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
-                logWriter.WriteLine(DateTime.Now + "|Result|=>$ " + "\n\t{"+resultOut+"\n\t}");
+                logWriter.WriteLine(DateTime.Now + "|LOGED_DEBUG|=>$ " + String.Join(',', assembly.GetTypes().Select(c => c.FullName)));
+
+                logWriter.WriteLine(DateTime.Now + "|Result|=>$ " + "\n\t{" + resultOut + "\n\t}");
 
                 Console.WriteLine(resultOut);
+
 
 
 

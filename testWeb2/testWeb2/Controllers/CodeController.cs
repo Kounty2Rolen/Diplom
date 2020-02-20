@@ -11,11 +11,14 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.IO.Pipes;
+using System.IO.MemoryMappedFiles;
+
 using Microsoft.AspNetCore.Authorization;
 
 namespace testWeb2.Controllers
 {
-    //[Route("api/[controller]")]
+    [Authorize]
+    [AllowAnonymous]
     public class CodeController : Controller
     {
 
@@ -28,7 +31,7 @@ namespace testWeb2.Controllers
         /// <returns>��������� ���������� ����</returns>
         /// 
 
-        public string Index([FromBody]requestData text)
+        public IActionResult Index([FromBody]requestData text)
         {
             try
             {
@@ -36,58 +39,73 @@ namespace testWeb2.Controllers
                     text.ContextName = "Context";
                 string codeHead = @"
                                 using System;
-                                using System.Diagnostics;
-                                using Microsoft.EntityFrameworkCore;
-                                using Microsoft.Extensions.Logging;
-                                using Microsoft.EntityFrameworkCore.Infrastructure;
-                                using testWeb2.Model;
-                                using System.Linq;
+using System.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using testWeb2.Model;
+using System.Linq;
 
-                                namespace onfly
-                                {
-                                 class MyLoggerProvider : ILoggerProvider
-                                    {
-                                        public ILogger CreateLogger(string categoryName)
-                                        {
-                                           return new MyLogger();
-                                        }
-                                          public void Dispose() { }
-                                        private class MyLogger : ILogger
-                                        {
-                                            public IDisposable BeginScope<TState>(TState state)
-                                                 {
-                                                     return null;
-                                                 }
 
-                                            public bool IsEnabled(LogLevel logLevel)
-                                            {
-                                                return true;
-                                            }            
-                                            public void Log<TState>(LogLevel logLevel, EventId eventId,TState state, Exception exception, Func<TState, Exception, string> formatter)
-                                             {
-                                                Console.WriteLine(formatter(state, exception));
-                                             }
-                                        }
-                                    }
-                                    public class TestClass
-                                     {
-                                    public static void Main(){}
-                                    public static string test()
-                                       { " + text.ContextName + " db " + "= new " + text.ContextName + "();" + @"
-                    db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
 
-                                        ";
+namespace onfly
+{
 
-                string codeFoot = @"}}}";
-                string sourceCode = codeHead + text.SourceCode + codeFoot;
+
+    public class TestClass
+    {
+        static string log="""";
+        public class MyLoggerProvider : ILoggerProvider
+        {
+            public ILogger CreateLogger(string categoryName)
+            {
+                return new MyLogger();
+            }
+
+            public void Dispose() { }
+
+            private class MyLogger : ILogger
+            {
+                public IDisposable BeginScope<TState>(TState state)
+                {
+                    return null;
+                }
+
+                public bool IsEnabled(LogLevel logLevel)
+                {
+                    return true;
+                }
+
+                public void Log<TState>(LogLevel logLevel, EventId eventId,
+                        TState state, Exception exception, Func<TState, Exception, string> formatter)
+                {
+                    Console.WriteLine(formatter(state, exception));
+                }
+            }
+        }
+
+
+        public static void Main() { }
+        public static string test()
+        {
+            var db = new " + text.ContextName + "();" + @";
+            db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
+                ";
+                /* var " + "db" + "= new " + text.ContextName + "();" + @"
+                    db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());*/
+
+
+                string sourceCode = codeHead + text.SourceCode + "}}}";
                 using (var peStream = new MemoryStream())
                 {
-                    MemoryStream modelStream = new MemoryStream();
-                    var trees = GetSyntaxTrees();
-                    GenerateCode(trees: trees).Emit(modelStream);
-                    modelStream.Seek(0, SeekOrigin.Begin);
-                    var result = GenerateCode(sourceCode, trees, modelStream, true).Emit(peStream);
-                    modelStream.Dispose();
+
+                    //MemoryStream modelStream = new MemoryStream();
+                    //var trees = GetModelsCode();
+                    //GenerateCode(trees: trees).Emit(modelStream);
+                    //modelStream.Seek(0, SeekOrigin.Begin);
+                    var result = GenerateCode(sourceCode).Emit(peStream);
+                    peStream.Seek(0, SeekOrigin.Begin);
+                    System.IO.File.WriteAllBytes(Environment.CurrentDirectory + "\\compiled.dll", peStream.ToArray());
                     if (!result.Success)
                     {
                         string error = "";
@@ -98,30 +116,26 @@ namespace testWeb2.Controllers
                         {
                             error += "\n" + diagnostic.ToString();
                         }
-                        return error;
+                        return Ok(error);
                     }
-
                     peStream.Seek(0, SeekOrigin.Begin);
-                    ProcessStartInfo startInfo = new ProcessStartInfo()
-                    {
-                        FileName = Environment.CurrentDirectory + @"\bin\Debug\netcoreapp3.1\CodeExecuter.exe",
-                        Arguments = System.Text.Encoding.ASCII.GetString(peStream.ToArray()),
-                        RedirectStandardOutput = true,
-                        RedirectStandardInput = true,
-                        UseShellExecute = false
-                    };
+                    System.IO.File.WriteAllBytes(Environment.CurrentDirectory + "\\123.dll", peStream.ToArray());
+
                     string resultOut = "";
                     using (var proc = new Process())
                     {
                         proc.StartInfo.FileName = Environment.CurrentDirectory + @"\bin\Debug\netcoreapp3.1\CodeExecuter.exe";
-                        proc.StartInfo.Arguments = System.Text.Encoding.ASCII.GetString(peStream.ToArray());
+                        proc.StartInfo.Arguments = User.Identity?.Name;
                         proc.StartInfo.RedirectStandardOutput = true;
-                        proc.StartInfo.RedirectStandardInput = true;
                         proc.StartInfo.UseShellExecute = false;
-                        proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) => {
+                        proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
+                        {
                             resultOut += e.Data;
                         });
                         proc.Start();
+
+
+
 
                         NamedPipeServerStream pipeServer = new NamedPipeServerStream("pipeServer", PipeDirection.InOut);
                         pipeServer.WaitForConnection();
@@ -137,31 +151,38 @@ namespace testWeb2.Controllers
                         //var assembly = Assembly.Load(peStream.ToArray());
                         //var instance = assembly.CreateInstance("onfly.TestClass");
                         //var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
-                        proc.CancelOutputRead();
+                       
                         pipeServer.Close();
                         pipeServer.Dispose();
+                        Result result1 = new Result();
+                        //result1.sql = message.ToString();
+                        result1.resultcode = resultOut;
+                        //result1.sql = System.IO.File.ReadAllText(Path.GetTempPath() + "\\Model\\Sqllog.txt");
+                        return Ok(result1);
                     }
-                    return resultOut;
+
                 }
             }
             catch (Exception ex)
             {
-                return ex.ToString();
+                return Ok(ex.ToString());
             }
         }
 
-        private static List<SyntaxTree> GetSyntaxTrees()
+        private static List<string> GetModelsCode()
         {
-            List<SyntaxTree> trees = new List<SyntaxTree>();
-            //Обьеденение всех файлов модели в один файл
+            List<string> trees = new List<string>();
             foreach (var file in Directory.GetFiles(Path.GetTempPath() + "/Model"))
             {
-                StreamReader reader = new StreamReader(file.ToString());
-                var code = SourceText.From(reader.ReadToEnd());
-                var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
-                trees.Add(SyntaxFactory.ParseSyntaxTree(code, options));
-                reader.Close();
-                reader.Dispose();
+                if (file.Contains(".cs"))
+                {
+                    using (StreamReader reader = new StreamReader(file.ToString()))
+                    {
+                        //var code = SourceText.From(reader.ReadToEnd());
+                        //var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
+                        trees.Add(reader.ReadToEnd());
+                    }
+                }
             }
 
             return trees;
@@ -172,16 +193,19 @@ namespace testWeb2.Controllers
         /// </summary>
         /// <param name="sourceCode">�������� ��� ���������� </param>
         /// <returns></returns>
-        private static CSharpCompilation GenerateCode(string sourceCode = null, List<SyntaxTree> trees = null, MemoryStream modelStream = null, bool isproject = false)
+        private static CSharpCompilation GenerateCode(string sourceCode = null)
         {
             var assembly = AppDomain.CurrentDomain.GetAssemblies();
-            if (isproject)
+
+            var trees = new List<SyntaxTree>();
+            var codeString = SourceText.From(sourceCode);
+            var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
+            trees.Add(SyntaxFactory.ParseSyntaxTree(codeString, options));
+            trees.AddRange(GetModelsCode().Select(c =>
             {
-                trees = new List<SyntaxTree>();
-                var codeString = SourceText.From(sourceCode);
-                var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
-                trees.Add(SyntaxFactory.ParseSyntaxTree(codeString, options));
-            }
+                return SyntaxFactory.ParseSyntaxTree(SourceText.From(c), options);
+            }));
+
 
             List<MetadataReference> references = new List<MetadataReference>()
             {
@@ -205,17 +229,14 @@ namespace testWeb2.Controllers
                 MetadataReference.CreateFromFile(typeof(SqlServerDbContextOptionsExtensions).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Data.Common.DataAdapter).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Microsoft.EntityFrameworkCore.Infrastructure.ModelCacheKey).Assembly.Location),
-                MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.ILogger).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.EventId).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.Abstractions.NullLogger).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.IServiceProvider).Assembly.Location)
 
 
 
             };
-            if (isproject)
-            {
-                //BAd il format
-                references.Add(MetadataReference.CreateFromStream(modelStream));
-            }
+
             return CSharpCompilation.Create("CompiledCode.dll",
         trees.ToArray(),
         references: references,
@@ -223,7 +244,7 @@ namespace testWeb2.Controllers
             optimizationLevel: OptimizationLevel.Release,
             assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64));
         }
-        [Authorize]
+
         public string ModelGenerate([FromBody] ConectionData data)
         {
             try
@@ -233,6 +254,7 @@ namespace testWeb2.Controllers
                 {
                     data.ContextName = "Context";
                 }
+
                 if (!string.IsNullOrEmpty(data.ConnectionString))
                 {
                     var reportHandler = new OperationReportHandler();
@@ -240,7 +262,7 @@ namespace testWeb2.Controllers
                     var executor = new OperationExecutor(reportHandler, new Dictionary<string, string> {
                     { "targetName", "testWeb2" },
                     { "startupTargetName", "testWeb2" },
-                    { "projectDir", Path.GetTempPath() + "/Model"},
+                    { "projectDir", Path.GetTempPath()},
                     { "rootNamespace", "testWeb2" } });
                     var context = new OperationExecutor.ScaffoldContext(executor, resultHandler, new Dictionary<string, object> {
                     {"connectionString", data.ConnectionString },
@@ -249,31 +271,31 @@ namespace testWeb2.Controllers
                     {"dbContextClassName",data.ContextName},
                     {"outputDbContextDir","Model" },
                     {"schemaFilters",new string[]{"dbo"} },//Фильр схем н-р DBO
-                    {"tableFilters",new string[0] },//Фильр таблиц
+                    {"tableFilters",Array.Empty<string>() },//Фильр таблиц
                     {"useDataAnnotations",false },
                     {"overwriteFiles",true },
                     { "useDatabaseNames",false} });
                     context.Execute(new Action(() => { }));
-                    Model.Context context1 = new Model.Context();
-                    Model.CompiledContext compiled = new Model.CompiledContext();
-                    var trees = GetSyntaxTrees();
-                    MemoryStream modelStream = new MemoryStream();
-                    GenerateCode(trees: trees).Emit(modelStream);
-                    modelStream.Seek(0, SeekOrigin.Begin);
-                    compiled.CompiledContext1 = modelStream.ToArray();
-                    Model.Projects project = new Model.Projects();
-                    project.ProjectName = data.ProjName;
-                    project.ContextName = data.ContextName;
-                    project.ConnectionString = data.ConnectionString;
-                    project.OwnerId = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Id;
-                    project.Owner = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
-                    project.Id = context1.Projects.LastOrDefault()?.Id + 1 ?? 0;
-                    compiled.Id = context1.CompiledContext.LastOrDefault()?.Id + 1 ?? 0;
-                    context1.Add(project);
-                    compiled.Project = project;
-                    compiled.ProjectId = context1.Projects.LastOrDefault(c => c.OwnerId == project.OwnerId)?.Id ?? 0;
-                    context1.Add(compiled);
-                    context1.SaveChanges();
+                    //Model.Context context1 = new Model.Context();
+                    //Model.CompiledContext compiled = new Model.CompiledContext();
+                    //var trees = GetModelsCode();
+                    //MemoryStream modelStream = new MemoryStream();
+                    //GenerateCode(trees: trees).Emit(modelStream);
+                    //modelStream.Seek(0, SeekOrigin.Begin);
+                    //compiled.CompiledContext1 = modelStream.ToArray();
+                    //Model.Projects project = new Model.Projects();
+                    //project.ProjectName = data.ProjName;
+                    //project.ContextName = data.ContextName;
+                    //project.ConnectionString = data.ConnectionString;
+                    //project.OwnerId = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Id;
+                    //project.Owner = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
+                    //project.Id = context1.Projects.LastOrDefault()?.Id + 1 ?? 0;
+                    //compiled.Id = context1.CompiledContext.LastOrDefault()?.Id + 1 ?? 0;
+                    //context1.Add(project);
+                    //compiled.Project = project;
+                    //compiled.ProjectId = context1.Projects.LastOrDefault(c => c.OwnerId == project.OwnerId)?.Id ?? 0;
+                    //context1.Add(compiled);
+                    //context1.SaveChanges();
 
                     return "True";
                 }
@@ -288,6 +310,11 @@ namespace testWeb2.Controllers
             }
         }
 
+        public class Result
+        {
+            public string resultcode { get; set; }
+            public string sql { get; set; }
+        }
         public class ConectionData
         {
             public string ConnectionString { get; set; }
