@@ -4,6 +4,7 @@ using testWeb2.Model;
 
 namespace testWeb2.Controllers
 {
+    [Route("/[controller]/[action]")]
     public class RegisterController : Controller
     {
         public string RegisterUser([FromBody] Person person)

@@ -24,7 +24,7 @@ namespace testWeb2.Model
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=PYLON\\MSSQLSERVERDEV;Initial Catalog=WebProject;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Data Source=31.31.196.199;Initial Catalog=u0963077_webproject;Persist Security Info=True;User ID=u0963077_root;Password=89049564969dD");
             }
         }
 

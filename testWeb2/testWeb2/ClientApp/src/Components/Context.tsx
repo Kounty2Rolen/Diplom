@@ -21,8 +21,9 @@ export class ContextInput extends React.Component<props, state> {
       connectionString: "",
       Context: ""
     };
-  }
+  } 
 
+  
   btnOnClickModelGenerate = () => {
     //Отправка названия контекста и вызов генерации модели
     let ConectionData = {

@@ -70,7 +70,6 @@ namespace testWeb2
             }
 
             app.UseAuthentication();
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
