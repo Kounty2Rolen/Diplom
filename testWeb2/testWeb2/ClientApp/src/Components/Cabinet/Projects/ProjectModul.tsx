@@ -7,7 +7,7 @@ interface state {
   projects: [
     {
       id: 0;
-      name: "";
+      name: string;
     }
   ];
 }

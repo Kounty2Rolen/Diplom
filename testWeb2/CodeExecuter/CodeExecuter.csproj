@@ -4,11 +4,16 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <ApplicationIcon />
-    <StartupObject />
+    <StartupObject>CodeExecuter.Program</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>C:\Users\mdm\Desktop\testWeb2\testWeb2\bin\Debug\</OutputPath>
+    <OutputPath>C:\Users\mdm\Desktop\Diplom\testWeb2\testWeb2\CodeExecuter\</OutputPath>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Users\mdm\Desktop\Diplom\testWeb2\testWeb2\CodeExecuter\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

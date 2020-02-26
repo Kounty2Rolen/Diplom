@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testWeb2", "testWeb2\testWeb2.csproj", "{7F3A09A1-B73B-4110-B666-30857CE60EB6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{73F90D03-3F1B-447C-9A4C-97ED20C7B830} = {73F90D03-3F1B-447C-9A4C-97ED20C7B830}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeExecuter", "CodeExecuter\CodeExecuter.csproj", "{73F90D03-3F1B-447C-9A4C-97ED20C7B830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeExecuter", "CodeExecuter\CodeExecuter.csproj", "{73F90D03-3F1B-447C-9A4C-97ED20C7B830}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

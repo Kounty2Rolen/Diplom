@@ -8,6 +8,7 @@
     <SpaRoot>ClientApp\</SpaRoot>
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UserSecretsId>6e180a71-2acf-4c5c-ac4f-615acace11ff</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,7 +37,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="Model\Class.cs" />
+    <None Remove="log.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

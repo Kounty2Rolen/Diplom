@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -8,12 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Threading;
 using System.IO.Pipes;
-using System.IO.MemoryMappedFiles;
-
-using Microsoft.AspNetCore.Authorization;
+using System.Linq;
 
 namespace testWeb2.Controllers
 {
@@ -22,14 +19,6 @@ namespace testWeb2.Controllers
     public class CodeController : Controller
     {
 
-
-
-        /// <summary>
-        /// ����������� ���
-        /// </summary>
-        /// <param name="text">��� ������� ���������� ���������</param>
-        /// <returns>��������� ���������� ����</returns>
-        /// 
 
         public IActionResult Index([FromBody]requestData text)
         {
@@ -46,12 +35,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using testWeb2.Model;
 using System.Linq;
 
-
-
 namespace onfly
 {
-
-
     public class TestClass
     {
         static string log="""";
@@ -79,14 +64,14 @@ namespace onfly
                 public void Log<TState>(LogLevel logLevel, EventId eventId,
                         TState state, Exception exception, Func<TState, Exception, string> formatter)
                 {
-                    Console.WriteLine(formatter(state, exception));
+                Console.WriteLine(formatter(state, exception));
                 }
             }
         }
 
-
-        public static void Main() { }
-        public static string test()
+        public static void Main() {
+}
+        public static string CodeCompile()
         {
             var db = new " + text.ContextName + "();" + @";
             db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
@@ -94,18 +79,15 @@ namespace onfly
                 /* var " + "db" + "= new " + text.ContextName + "();" + @"
                     db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());*/
 
-
                 string sourceCode = codeHead + text.SourceCode + "}}}";
                 using (var peStream = new MemoryStream())
                 {
-
                     //MemoryStream modelStream = new MemoryStream();
                     //var trees = GetModelsCode();
                     //GenerateCode(trees: trees).Emit(modelStream);
                     //modelStream.Seek(0, SeekOrigin.Begin);
                     var result = GenerateCode(sourceCode).Emit(peStream);
                     peStream.Seek(0, SeekOrigin.Begin);
-                    System.IO.File.WriteAllBytes(Environment.CurrentDirectory + "\\compiled.dll", peStream.ToArray());
                     if (!result.Success)
                     {
                         string error = "";
@@ -116,56 +98,64 @@ namespace onfly
                         {
                             error += "\n" + diagnostic.ToString();
                         }
-                        return Ok(error);
+                        Result result1 = new Result();
+                        result1.resultcode = error;
+                        return Ok(result1);
                     }
                     peStream.Seek(0, SeekOrigin.Begin);
-                    System.IO.File.WriteAllBytes(Environment.CurrentDirectory + "\\123.dll", peStream.ToArray());
-
-                    string resultOut = "";
+                    string sql = "";
+                    string resultcode = "";
                     using (var proc = new Process())
                     {
-                        proc.StartInfo.FileName = Environment.CurrentDirectory + @"\bin\Debug\netcoreapp3.1\CodeExecuter.exe";
-                        proc.StartInfo.Arguments = User.Identity?.Name;
+                        proc.StartInfo.FileName = Environment.CurrentDirectory + @"\CodeExecuter\netcoreapp3.1\CodeExecuter.exe";
                         proc.StartInfo.RedirectStandardOutput = true;
                         proc.StartInfo.UseShellExecute = false;
+                        proc.StartInfo.RedirectStandardError = true;
+                        proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
+                        {
+                            resultcode += e.Data;
+
+                        });
                         proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
                         {
-                            resultOut += e.Data;
+                            sql += e.Data;
                         });
+
                         proc.Start();
-
-
-
-
+                        proc.BeginOutputReadLine();
+                        proc.BeginErrorReadLine();
                         NamedPipeServerStream pipeServer = new NamedPipeServerStream("pipeServer", PipeDirection.InOut);
                         pipeServer.WaitForConnection();
                         var length = BitConverter.GetBytes((int)peStream.Length);
                         pipeServer.Write(length, 0, length.Length);
                         peStream.CopyTo(pipeServer);
-                        proc.BeginOutputReadLine();
-                        proc.WaitForExit();
 
-                        //var procin = proc.StandardInput; 
+
+                        proc.WaitForExit(15000); //BUG
+                        proc.Close();
+
+                        //var procin = proc.StandardInput;
                         //procin.WriteLine("1");
 
                         //var assembly = Assembly.Load(peStream.ToArray());
                         //var instance = assembly.CreateInstance("onfly.TestClass");
                         //var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
-                       
                         pipeServer.Close();
                         pipeServer.Dispose();
                         Result result1 = new Result();
                         //result1.sql = message.ToString();
-                        result1.resultcode = resultOut;
+                        result1.sql = sql;
+                        result1.resultcode = resultcode;
                         //result1.sql = System.IO.File.ReadAllText(Path.GetTempPath() + "\\Model\\Sqllog.txt");
                         return Ok(result1);
                     }
-
                 }
             }
             catch (Exception ex)
             {
-                return Ok(ex.ToString());
+                Result result = new Result();
+                result.resultcode = ex.ToString();
+                return Ok(result);
             }
         }
 
@@ -188,11 +178,7 @@ namespace onfly
             return trees;
         }
 
-        /// <summary>
-        /// ���������� ��� � ������
-        /// </summary>
-        /// <param name="sourceCode">�������� ��� ���������� </param>
-        /// <returns></returns>
+
         private static CSharpCompilation GenerateCode(string sourceCode = null)
         {
             var assembly = AppDomain.CurrentDomain.GetAssemblies();
@@ -205,7 +191,6 @@ namespace onfly
             {
                 return SyntaxFactory.ParseSyntaxTree(SourceText.From(c), options);
             }));
-
 
             List<MetadataReference> references = new List<MetadataReference>()
             {
@@ -232,9 +217,6 @@ namespace onfly
                 MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.EventId).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.Abstractions.NullLogger).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.IServiceProvider).Assembly.Location)
-
-
-
             };
 
             return CSharpCompilation.Create("CompiledCode.dll",
@@ -249,7 +231,6 @@ namespace onfly
         {
             try
             {
-
                 if (string.IsNullOrEmpty(data.ContextName))
                 {
                     data.ContextName = "Context";
@@ -315,6 +296,7 @@ namespace onfly
             public string resultcode { get; set; }
             public string sql { get; set; }
         }
+
         public class ConectionData
         {
             public string ConnectionString { get; set; }

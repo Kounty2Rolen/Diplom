@@ -1,487 +1,927 @@
-19.02.2020 16:03:29|SYSLOG|=>$ Connection
-19.02.2020 16:03:29|SYSLOG|=>$ Connected
-19.02.2020 16:03:29|LOGED_DATA|=>$ Data(Lenght):11264
-19.02.2020 16:03:29|LOGED_DATA|=>$ Readed
-19.02.2020 16:03:29|Result|=>$ 
+21.02.2020 15:21:02|SYSLOG|=>$ Connection
+21.02.2020 15:21:02|SYSLOG|=>$ Connected
+21.02.2020 15:21:02|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:21:02|LOGED_DATA|=>$ Readed
+21.02.2020 15:21:02|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+21.02.2020 15:21:51|SYSLOG|=>$ Connection
+21.02.2020 15:21:51|SYSLOG|=>$ Connected
+21.02.2020 15:21:51|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:21:51|LOGED_DATA|=>$ Readed
+21.02.2020 15:21:51|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+21.02.2020 15:22:54|SYSLOG|=>$ Connection
+21.02.2020 15:22:54|SYSLOG|=>$ Connected
+21.02.2020 15:22:54|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:22:54|LOGED_DATA|=>$ Readed
+21.02.2020 15:22:54|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+21.02.2020 15:36:50|SYSLOG|=>$ Connection
+21.02.2020 15:36:50|SYSLOG|=>$ Connected
+21.02.2020 15:36:50|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:36:50|LOGED_DATA|=>$ Readed
+21.02.2020 15:36:50|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+21.02.2020 15:39:26|SYSLOG|=>$ Connection
+21.02.2020 15:39:26|SYSLOG|=>$ Connected
+21.02.2020 15:39:26|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:39:26|LOGED_DATA|=>$ Readed
+21.02.2020 15:39:26|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+21.02.2020 15:39:35|SYSLOG|=>$ Connection
+21.02.2020 15:39:35|SYSLOG|=>$ Connected
+21.02.2020 15:39:35|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:39:35|LOGED_DATA|=>$ Readed
+21.02.2020 15:39:35|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+21.02.2020 15:39:47|SYSLOG|=>$ Connection
+21.02.2020 15:39:47|SYSLOG|=>$ Connected
+21.02.2020 15:39:47|LOGED_DATA|=>$ Data(Lenght):10752
+21.02.2020 15:39:47|LOGED_DATA|=>$ Readed
+21.02.2020 15:39:47|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 13:17:38|SYSLOG|=>$ Connection
+25.02.2020 13:17:38|SYSLOG|=>$ Connected
+25.02.2020 13:17:38|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:17:38|LOGED_DATA|=>$ Readed
+25.02.2020 13:17:39|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:17:39|Result|=>$ 
 	{hello
 	}
-19.02.2020 16:03:29|SYSLOG|=>$Disconected19.02.2020 16:14:02|SYSLOG|=>$ Connection
-19.02.2020 16:14:02|SYSLOG|=>$ Connected
-19.02.2020 16:14:02|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:14:02|LOGED_DATA|=>$ Readed
-19.02.2020 16:14:02|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:18:08|SYSLOG|=>$ Connection
-19.02.2020 16:18:08|SYSLOG|=>$ Connected
-19.02.2020 16:18:08|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:18:08|LOGED_DATA|=>$ Readed
-19.02.2020 16:18:08|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:27:47|SYSLOG|=>$ Connection
-19.02.2020 16:27:47|SYSLOG|=>$ Connected
-19.02.2020 16:27:47|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:27:47|LOGED_DATA|=>$ Readed
-19.02.2020 16:27:47|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:41:36|SYSLOG|=>$ Connection
-19.02.2020 16:41:36|SYSLOG|=>$ Connected
-19.02.2020 16:41:36|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:41:36|LOGED_DATA|=>$ Readed
-19.02.2020 16:41:36|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:45:04|SYSLOG|=>$ Connection
-19.02.2020 16:45:04|SYSLOG|=>$ Connected
-19.02.2020 16:45:04|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:45:04|LOGED_DATA|=>$ Readed
-19.02.2020 16:45:04|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:46:46|SYSLOG|=>$ Connection
-19.02.2020 16:46:46|SYSLOG|=>$ Connected
-19.02.2020 16:46:46|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:46:46|LOGED_DATA|=>$ Readed
-19.02.2020 16:46:46|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:50:19|SYSLOG|=>$ Connection
-19.02.2020 16:50:19|SYSLOG|=>$ Connected
-19.02.2020 16:50:20|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:50:20|LOGED_DATA|=>$ Readed
-19.02.2020 16:50:20|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-19.02.2020 16:50:27|SYSLOG|=>$ Connection
-19.02.2020 16:50:27|SYSLOG|=>$ Connected
-19.02.2020 16:50:27|LOGED_DATA|=>$ Data(Lenght):12288
-19.02.2020 16:50:27|LOGED_DATA|=>$ Readed
-19.02.2020 16:50:27|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:19:03|SYSLOG|=>$ Connection
-20.02.2020 18:19:03|SYSLOG|=>$ Connected
-20.02.2020 18:19:03|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:19:03|LOGED_DATA|=>$ Readed
-20.02.2020 18:19:03|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:19:58|SYSLOG|=>$ Connection
-20.02.2020 18:19:58|SYSLOG|=>$ Connected
-20.02.2020 18:19:58|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:19:58|LOGED_DATA|=>$ Readed
-20.02.2020 18:19:58|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:22:11|SYSLOG|=>$ Connection
-20.02.2020 18:22:11|SYSLOG|=>$ Connected
-20.02.2020 18:22:11|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:22:11|LOGED_DATA|=>$ Readed
-20.02.2020 18:22:11|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:23:57|SYSLOG|=>$ Connection
-20.02.2020 18:23:57|SYSLOG|=>$ Connected
-20.02.2020 18:23:57|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:23:57|LOGED_DATA|=>$ Readed
-20.02.2020 18:23:57|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:26:41|SYSLOG|=>$ Connection
-20.02.2020 18:26:41|SYSLOG|=>$ Connected
-20.02.2020 18:26:41|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:26:41|LOGED_DATA|=>$ Readed
-20.02.2020 18:26:41|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:29:18|SYSLOG|=>$ Connection
-20.02.2020 18:29:18|SYSLOG|=>$ Connected
-20.02.2020 18:29:18|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:29:18|LOGED_DATA|=>$ Readed
-20.02.2020 18:29:18|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:29:39|SYSLOG|=>$ Connection
-20.02.2020 18:29:39|SYSLOG|=>$ Connected
-20.02.2020 18:29:39|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:29:39|LOGED_DATA|=>$ Readed
-20.02.2020 18:29:39|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:29:56|SYSLOG|=>$ Connection
-20.02.2020 18:29:56|SYSLOG|=>$ Connected
-20.02.2020 18:29:56|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:29:56|LOGED_DATA|=>$ Readed
-20.02.2020 18:29:56|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:37:11|SYSLOG|=>$ Connection
-20.02.2020 18:37:11|SYSLOG|=>$ Connected
-20.02.2020 18:37:11|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:37:11|LOGED_DATA|=>$ Readed
-20.02.2020 18:37:11|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:37:47|SYSLOG|=>$ Connection
-20.02.2020 18:37:47|SYSLOG|=>$ Connected
-20.02.2020 18:37:47|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:37:47|LOGED_DATA|=>$ Readed
-20.02.2020 18:37:47|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:38:14|SYSLOG|=>$ Connection
-20.02.2020 18:38:14|SYSLOG|=>$ Connected
-20.02.2020 18:38:14|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:38:14|LOGED_DATA|=>$ Readed
-20.02.2020 18:38:14|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:38:33|SYSLOG|=>$ Connection
-20.02.2020 18:38:33|SYSLOG|=>$ Connected
-20.02.2020 18:38:33|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:38:33|LOGED_DATA|=>$ Readed
-20.02.2020 18:38:33|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:39:21|SYSLOG|=>$ Connection
-20.02.2020 18:39:21|SYSLOG|=>$ Connected
-20.02.2020 18:39:21|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:39:21|LOGED_DATA|=>$ Readed
-20.02.2020 18:39:21|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:47:20|SYSLOG|=>$ Connection
-20.02.2020 18:47:20|SYSLOG|=>$ Connected
-20.02.2020 18:47:20|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:47:20|LOGED_DATA|=>$ Readed
-20.02.2020 18:47:20|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:48:27|SYSLOG|=>$ Connection
-20.02.2020 18:48:27|SYSLOG|=>$ Connected
-20.02.2020 18:48:27|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:48:27|LOGED_DATA|=>$ Readed
-20.02.2020 18:48:27|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:48:43|SYSLOG|=>$ Connection
-20.02.2020 18:48:43|SYSLOG|=>$ Connected
-20.02.2020 18:48:43|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:48:43|LOGED_DATA|=>$ Readed
-20.02.2020 18:48:43|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:49:02|SYSLOG|=>$ Connection
-20.02.2020 18:49:02|SYSLOG|=>$ Connected
-20.02.2020 18:49:02|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:49:02|LOGED_DATA|=>$ Readed
-20.02.2020 18:49:02|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:50:54|SYSLOG|=>$ Connection
-20.02.2020 18:50:54|SYSLOG|=>$ Connected
-20.02.2020 18:50:54|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:50:54|LOGED_DATA|=>$ Readed
-20.02.2020 18:50:54|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:52:32|SYSLOG|=>$ Connection
-20.02.2020 18:52:32|SYSLOG|=>$ Connected
-20.02.2020 18:52:32|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:52:32|LOGED_DATA|=>$ Readed
-20.02.2020 18:52:32|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:56:20|SYSLOG|=>$ Connection
-20.02.2020 18:56:20|SYSLOG|=>$ Connected
-20.02.2020 18:56:20|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:56:20|LOGED_DATA|=>$ Readed
-20.02.2020 18:56:20|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:57:06|SYSLOG|=>$ Connection
-20.02.2020 18:57:06|SYSLOG|=>$ Connected
-20.02.2020 18:57:06|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:57:06|LOGED_DATA|=>$ Readed
-20.02.2020 18:57:06|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:58:50|SYSLOG|=>$ Connection
-20.02.2020 18:58:50|SYSLOG|=>$ Connected
-20.02.2020 18:58:50|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:58:50|LOGED_DATA|=>$ Readed
-20.02.2020 18:58:50|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 18:59:35|SYSLOG|=>$ Connection
-20.02.2020 18:59:35|SYSLOG|=>$ Connected
-20.02.2020 18:59:35|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 18:59:35|LOGED_DATA|=>$ Readed
-20.02.2020 18:59:35|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
-20.02.2020 19:00:45|SYSLOG|=>$ Connection
-20.02.2020 19:00:45|SYSLOG|=>$ Connected
-20.02.2020 19:00:45|LOGED_DATA|=>$ Data(Lenght):10752
-20.02.2020 19:00:45|LOGED_DATA|=>$ Readed
-20.02.2020 19:00:45|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
- ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
-File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
-   at onfly.TestClass.test()
-
-
-   --- End of inner exception stack trace ---
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
-   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
-   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+hello
+hello
+hello
+25.02.2020 13:17:42|SYSLOG|=>$Disconected
+25.02.2020 13:18:07|SYSLOG|=>$ Connection
+25.02.2020 13:18:07|SYSLOG|=>$ Connected
+25.02.2020 13:18:07|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:18:07|LOGED_DATA|=>$ Readed
+25.02.2020 13:18:08|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:18:08|Result|=>$ 
+	{hello
+	}
+hello
+hello
+hello
+25.02.2020 13:18:11|SYSLOG|=>$Disconected
+25.02.2020 13:34:18|SYSLOG|=>$ Connection
+25.02.2020 13:34:18|SYSLOG|=>$ Connected
+25.02.2020 13:34:18|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:34:18|LOGED_DATA|=>$ Readed
+25.02.2020 13:34:19|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:34:19|Result|=>$ 
+	{hello
+	}
+hello
+hello
+hello
+25.02.2020 13:34:22|SYSLOG|=>$Disconected
+25.02.2020 13:34:42|SYSLOG|=>$ Connection
+25.02.2020 13:34:42|SYSLOG|=>$ Connected
+25.02.2020 13:34:42|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:34:42|LOGED_DATA|=>$ Readed
+25.02.2020 13:34:42|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:34:42|Result|=>$ 
+	{hello
+	}
+hello
+hello
+hello
+25.02.2020 13:34:45|SYSLOG|=>$Disconected
+25.02.2020 13:35:34|SYSLOG|=>$ Connection
+25.02.2020 13:35:34|SYSLOG|=>$ Connected
+25.02.2020 13:35:34|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:35:34|LOGED_DATA|=>$ Readed
+25.02.2020 13:35:35|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:35:35|Result|=>$ 
+	{hello
+	}
+hello
+hello
+hello
+25.02.2020 13:35:38|SYSLOG|=>$Disconected
+25.02.2020 13:36:31|SYSLOG|=>$ Connection
+25.02.2020 13:36:31|SYSLOG|=>$ Connected
+25.02.2020 13:36:31|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:36:31|LOGED_DATA|=>$ Readed
+25.02.2020 13:36:32|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:36:32|Result|=>$ 
+	{hello
+	}
+hello
+hello
+hello
+25.02.2020 13:36:35|SYSLOG|=>$Disconected
+25.02.2020 13:39:38|SYSLOG|=>$ Connection
+25.02.2020 13:39:38|SYSLOG|=>$ Connected
+25.02.2020 13:39:38|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:40:42|LOGED_DATA|=>$ Readed
+25.02.2020 13:40:42|Exception|=>$ System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 48
+25.02.2020 13:41:03|SYSLOG|=>$ Connection
+25.02.2020 13:41:03|SYSLOG|=>$ Connected
+25.02.2020 13:41:03|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 13:41:15|LOGED_DATA|=>$ Readed
+25.02.2020 13:41:15|Exception|=>$ System.BadImageFormatException: Bad IL format.
+   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 48
+25.02.2020 14:24:24|SYSLOG|=>$ Connection
+25.02.2020 14:24:51|SYSLOG|=>$ Connected
+25.02.2020 14:24:51|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 14:24:51|LOGED_DATA|=>$ Readed
+25.02.2020 14:24:52|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 14:24:52|Result|=>$ 
+	{213123123
+	}
+213123123
+213123123
+213123123
+25.02.2020 14:24:55|SYSLOG|=>$Disconected
+25.02.2020 14:58:34|SYSLOG|=>$ Connection
+25.02.2020 14:59:05|SYSLOG|=>$ Connected
+25.02.2020 14:59:05|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 14:59:05|LOGED_DATA|=>$ Readed
+25.02.2020 14:59:06|Result|=>$ 
+	{123123
+	}
+25.02.2020 14:59:06|SYSLOG|=>$Disconected
+25.02.2020 14:59:20|SYSLOG|=>$ Connection
+25.02.2020 14:59:20|SYSLOG|=>$ Connected
+25.02.2020 14:59:20|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 14:59:20|LOGED_DATA|=>$ Readed
+25.02.2020 14:59:20|Result|=>$ 
+	{123123
+	}
+25.02.2020 14:59:20|SYSLOG|=>$Disconected
+25.02.2020 14:59:42|SYSLOG|=>$ Connection
+25.02.2020 14:59:42|SYSLOG|=>$ Connected
+25.02.2020 14:59:42|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 14:59:42|LOGED_DATA|=>$ Readed
+25.02.2020 14:59:43|Result|=>$ 
+	{123123
+	}
+25.02.2020 14:59:43|SYSLOG|=>$Disconected
+25.02.2020 14:59:52|SYSLOG|=>$ Connection
+25.02.2020 14:59:52|SYSLOG|=>$ Connected
+25.02.2020 14:59:52|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 14:59:52|LOGED_DATA|=>$ Readed
+25.02.2020 14:59:53|Result|=>$ 
+	{123123
+	}
+25.02.2020 14:59:53|SYSLOG|=>$Disconected
+25.02.2020 15:10:34|SYSLOG|=>$ Connection
+25.02.2020 15:11:00|SYSLOG|=>$ Connected
+25.02.2020 15:11:00|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:11:00|LOGED_DATA|=>$ Readed
+25.02.2020 15:11:01|Result|=>$ 
+	{123
+	}
+25.02.2020 15:11:01|SYSLOG|=>$Disconected
+25.02.2020 15:11:37|SYSLOG|=>$ Connection
+25.02.2020 15:11:37|SYSLOG|=>$ Connected
+25.02.2020 15:11:37|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:11:37|LOGED_DATA|=>$ Readed
+25.02.2020 15:11:37|Result|=>$ 
+	{123
+	}
+25.02.2020 15:11:37|SYSLOG|=>$Disconected
+25.02.2020 15:11:57|SYSLOG|=>$ Connection
+25.02.2020 15:11:57|SYSLOG|=>$ Connected
+25.02.2020 15:11:57|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:11:57|LOGED_DATA|=>$ Readed
+25.02.2020 15:11:57|Result|=>$ 
+	{123
+	}
+25.02.2020 15:11:57|SYSLOG|=>$Disconected
+25.02.2020 15:12:30|SYSLOG|=>$ Connection
+25.02.2020 15:12:30|SYSLOG|=>$ Connected
+25.02.2020 15:12:30|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:12:30|LOGED_DATA|=>$ Readed
+25.02.2020 15:12:30|Result|=>$ 
+	{123
+	}
+25.02.2020 15:12:30|SYSLOG|=>$Disconected
+25.02.2020 15:12:39|SYSLOG|=>$ Connection
+25.02.2020 15:12:39|SYSLOG|=>$ Connected
+25.02.2020 15:12:39|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:12:39|LOGED_DATA|=>$ Readed
+25.02.2020 15:12:40|Result|=>$ 
+	{123
+	}
+25.02.2020 15:12:40|SYSLOG|=>$Disconected
+25.02.2020 15:12:49|SYSLOG|=>$ Connection
+25.02.2020 15:12:49|SYSLOG|=>$ Connected
+25.02.2020 15:12:49|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:12:49|LOGED_DATA|=>$ Readed
+25.02.2020 15:12:49|Result|=>$ 
+	{123
+	}
+25.02.2020 15:12:49|SYSLOG|=>$Disconected
+25.02.2020 15:15:20|SYSLOG|=>$ Connection
+25.02.2020 15:15:20|SYSLOG|=>$ Connected
+25.02.2020 15:15:20|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:15:20|LOGED_DATA|=>$ Readed
+25.02.2020 15:15:21|Result|=>$ 
+	{123
+	}
+25.02.2020 15:15:21|SYSLOG|=>$Disconected
+25.02.2020 15:16:13|SYSLOG|=>$ Connection
+25.02.2020 15:16:13|SYSLOG|=>$ Connected
+25.02.2020 15:16:13|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:16:13|LOGED_DATA|=>$ Readed
+25.02.2020 15:16:13|Result|=>$ 
+	{123
+	}
+25.02.2020 15:16:13|SYSLOG|=>$Disconected
+25.02.2020 15:18:31|SYSLOG|=>$ Connection
+25.02.2020 15:18:31|SYSLOG|=>$ Connected
+25.02.2020 15:18:31|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:18:31|LOGED_DATA|=>$ Readed
+25.02.2020 15:18:31|Result|=>$ 
+	{123
+	}
+25.02.2020 15:18:31|SYSLOG|=>$Disconected
+25.02.2020 15:20:42|SYSLOG|=>$ Connection
+25.02.2020 15:20:42|SYSLOG|=>$ Connected
+25.02.2020 15:20:42|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:20:42|LOGED_DATA|=>$ Readed
+25.02.2020 15:20:42|Result|=>$ 
+	{123
+	}
+25.02.2020 15:20:42|SYSLOG|=>$Disconected
+25.02.2020 15:20:51|SYSLOG|=>$ Connection
+25.02.2020 15:20:51|SYSLOG|=>$ Connected
+25.02.2020 15:20:51|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:20:51|LOGED_DATA|=>$ Readed
+25.02.2020 15:20:51|Result|=>$ 
+	{123
+	}
+25.02.2020 15:20:51|SYSLOG|=>$Disconected
+25.02.2020 15:21:35|SYSLOG|=>$ Connection
+25.02.2020 15:21:35|SYSLOG|=>$ Connected
+25.02.2020 15:21:35|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:21:35|LOGED_DATA|=>$ Readed
+25.02.2020 15:21:36|Result|=>$ 
+	{123
+	}
+25.02.2020 15:21:36|SYSLOG|=>$Disconected
+25.02.2020 15:23:45|SYSLOG|=>$ Connection
+25.02.2020 15:23:45|SYSLOG|=>$ Connected
+25.02.2020 15:23:45|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:23:45|LOGED_DATA|=>$ Readed
+25.02.2020 15:23:45|Result|=>$ 
+	{123
+	}
+25.02.2020 15:23:45|SYSLOG|=>$Disconected
+25.02.2020 15:25:21|SYSLOG|=>$ Connection
+25.02.2020 15:25:21|SYSLOG|=>$ Connected
+25.02.2020 15:25:21|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:25:21|LOGED_DATA|=>$ Readed
+25.02.2020 15:25:21|Result|=>$ 
+	{123
+	}
+25.02.2020 15:25:21|SYSLOG|=>$Disconected
+25.02.2020 15:27:08|SYSLOG|=>$ Connection
+25.02.2020 15:27:08|SYSLOG|=>$ Connected
+25.02.2020 15:27:08|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:27:08|LOGED_DATA|=>$ Readed
+25.02.2020 15:27:09|Result|=>$ 
+	{123
+	}
+25.02.2020 15:27:09|SYSLOG|=>$Disconected
+25.02.2020 15:27:54|SYSLOG|=>$ Connection
+25.02.2020 15:27:54|SYSLOG|=>$ Connected
+25.02.2020 15:27:54|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:27:54|LOGED_DATA|=>$ Readed
+25.02.2020 15:27:54|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:27:54|SYSLOG|=>$Disconected
+25.02.2020 15:30:32|SYSLOG|=>$ Connection
+25.02.2020 15:31:05|SYSLOG|=>$ Connected
+25.02.2020 15:31:05|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:31:05|LOGED_DATA|=>$ Readed
+25.02.2020 15:31:05|Result|=>$ 
+	{123
+	}
+25.02.2020 15:31:05|SYSLOG|=>$Disconected
+25.02.2020 15:31:13|SYSLOG|=>$ Connection
+25.02.2020 15:31:13|SYSLOG|=>$ Connected
+25.02.2020 15:31:13|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:31:13|LOGED_DATA|=>$ Readed
+25.02.2020 15:31:13|Result|=>$ 
+	{123
+	}
+25.02.2020 15:31:13|SYSLOG|=>$Disconected
+25.02.2020 15:32:17|SYSLOG|=>$ Connection
+25.02.2020 15:32:38|SYSLOG|=>$ Connected
+25.02.2020 15:32:38|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:32:38|LOGED_DATA|=>$ Readed
+25.02.2020 15:32:39|Result|=>$ 
+	{123
+	}
+25.02.2020 15:32:39|SYSLOG|=>$Disconected
+25.02.2020 15:32:45|SYSLOG|=>$ Connection
+25.02.2020 15:32:45|SYSLOG|=>$ Connected
+25.02.2020 15:32:45|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:32:45|LOGED_DATA|=>$ Readed
+25.02.2020 15:32:46|Result|=>$ 
+	{123
+	}
+25.02.2020 15:32:46|SYSLOG|=>$Disconected
+25.02.2020 15:33:57|SYSLOG|=>$ Connection
+25.02.2020 15:34:18|SYSLOG|=>$ Connected
+25.02.2020 15:34:18|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:34:18|LOGED_DATA|=>$ Readed
+25.02.2020 15:34:19|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:34:19|SYSLOG|=>$Disconected
+25.02.2020 15:34:28|SYSLOG|=>$ Connection
+25.02.2020 15:34:28|SYSLOG|=>$ Connected
+25.02.2020 15:34:28|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:34:28|LOGED_DATA|=>$ Readed
+25.02.2020 15:34:29|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:34:29|SYSLOG|=>$Disconected
+25.02.2020 15:34:38|SYSLOG|=>$ Connection
+25.02.2020 15:34:38|SYSLOG|=>$ Connected
+25.02.2020 15:34:38|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:34:38|LOGED_DATA|=>$ Readed
+25.02.2020 15:34:39|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:34:39|SYSLOG|=>$Disconected
+25.02.2020 15:34:51|SYSLOG|=>$ Connection
+25.02.2020 15:34:51|SYSLOG|=>$ Connected
+25.02.2020 15:34:51|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:34:51|LOGED_DATA|=>$ Readed
+25.02.2020 15:34:52|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:34:52|SYSLOG|=>$Disconected
+25.02.2020 15:37:44|SYSLOG|=>$ Connection
+25.02.2020 15:37:59|SYSLOG|=>$ Connected
+25.02.2020 15:37:59|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:37:59|LOGED_DATA|=>$ Readed
+25.02.2020 15:38:00|Result|=>$ 
+	{123
+	}
+25.02.2020 15:38:00|SYSLOG|=>$Disconected
+25.02.2020 15:38:12|SYSLOG|=>$ Connection
+25.02.2020 15:38:12|SYSLOG|=>$ Connected
+25.02.2020 15:38:12|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:38:12|LOGED_DATA|=>$ Readed
+25.02.2020 15:38:12|Result|=>$ 
+	{123
+	}
+25.02.2020 15:38:12|SYSLOG|=>$Disconected
+25.02.2020 15:38:19|SYSLOG|=>$ Connection
+25.02.2020 15:38:19|SYSLOG|=>$ Connected
+25.02.2020 15:38:19|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:38:19|LOGED_DATA|=>$ Readed
+25.02.2020 15:38:19|Result|=>$ 
+	{123
+	}
+25.02.2020 15:38:19|SYSLOG|=>$Disconected
+25.02.2020 15:44:46|SYSLOG|=>$ Connection
+25.02.2020 15:45:04|SYSLOG|=>$ Connected
+25.02.2020 15:45:04|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:45:04|LOGED_DATA|=>$ Readed
+25.02.2020 15:45:05|Result|=>$ 
+	{123
+	}
+25.02.2020 15:45:05|SYSLOG|=>$Disconected
+25.02.2020 15:45:25|SYSLOG|=>$ Connection
+25.02.2020 15:45:25|SYSLOG|=>$ Connected
+25.02.2020 15:45:25|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:45:25|LOGED_DATA|=>$ Readed
+25.02.2020 15:45:26|Result|=>$ 
+	{123
+	}
+25.02.2020 15:45:26|SYSLOG|=>$Disconected
+25.02.2020 15:45:32|SYSLOG|=>$ Connection
+25.02.2020 15:45:32|SYSLOG|=>$ Connected
+25.02.2020 15:45:32|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:45:32|LOGED_DATA|=>$ Readed
+25.02.2020 15:45:33|Result|=>$ 
+	{123
+	}
+25.02.2020 15:45:33|SYSLOG|=>$Disconected
+25.02.2020 15:45:47|SYSLOG|=>$ Connection
+25.02.2020 15:45:47|SYSLOG|=>$ Connected
+25.02.2020 15:45:47|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:45:47|LOGED_DATA|=>$ Readed
+25.02.2020 15:45:48|Result|=>$ 
+	{123
+	}
+25.02.2020 15:45:48|SYSLOG|=>$Disconected
+25.02.2020 15:45:53|SYSLOG|=>$ Connection
+25.02.2020 15:45:53|SYSLOG|=>$ Connected
+25.02.2020 15:45:53|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:45:53|LOGED_DATA|=>$ Readed
+25.02.2020 15:45:54|Result|=>$ 
+	{123
+	}
+25.02.2020 15:45:54|SYSLOG|=>$Disconected
+25.02.2020 15:45:59|SYSLOG|=>$ Connection
+25.02.2020 15:45:59|SYSLOG|=>$ Connected
+25.02.2020 15:45:59|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:45:59|LOGED_DATA|=>$ Readed
+25.02.2020 15:45:59|Result|=>$ 
+	{123
+	}
+25.02.2020 15:45:59|SYSLOG|=>$Disconected
+25.02.2020 15:48:46|SYSLOG|=>$ Connection
+25.02.2020 15:49:03|SYSLOG|=>$ Connected
+25.02.2020 15:49:03|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:49:03|LOGED_DATA|=>$ Readed
+25.02.2020 15:49:04|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:49:04|SYSLOG|=>$Disconected
+25.02.2020 15:52:38|SYSLOG|=>$ Connection
+25.02.2020 15:53:16|SYSLOG|=>$ Connected
+25.02.2020 15:53:16|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:53:16|LOGED_DATA|=>$ Readed
+25.02.2020 15:53:16|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:53:16|SYSLOG|=>$Disconected
+25.02.2020 15:53:25|SYSLOG|=>$ Connection
+25.02.2020 15:53:25|SYSLOG|=>$ Connected
+25.02.2020 15:53:25|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:53:25|LOGED_DATA|=>$ Readed
+25.02.2020 15:53:25|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:53:25|SYSLOG|=>$Disconected
+25.02.2020 15:53:57|SYSLOG|=>$ Connection
+25.02.2020 15:53:57|SYSLOG|=>$ Connected
+25.02.2020 15:53:57|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:53:57|LOGED_DATA|=>$ Readed
+25.02.2020 15:53:58|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:53:58|SYSLOG|=>$Disconected
+25.02.2020 15:54:14|SYSLOG|=>$ Connection
+25.02.2020 15:54:14|SYSLOG|=>$ Connected
+25.02.2020 15:54:14|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:54:14|LOGED_DATA|=>$ Readed
+25.02.2020 15:54:14|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:54:14|SYSLOG|=>$Disconected
+25.02.2020 15:54:36|SYSLOG|=>$ Connection
+25.02.2020 15:54:37|SYSLOG|=>$ Connected
+25.02.2020 15:54:37|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:54:37|LOGED_DATA|=>$ Readed
+25.02.2020 15:54:37|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:54:37|SYSLOG|=>$Disconected
+25.02.2020 15:56:28|SYSLOG|=>$ Connection
+25.02.2020 15:56:28|SYSLOG|=>$ Connected
+25.02.2020 15:56:28|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:56:28|LOGED_DATA|=>$ Readed
+25.02.2020 15:56:29|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:56:29|SYSLOG|=>$Disconected
+25.02.2020 15:56:41|SYSLOG|=>$ Connection
+25.02.2020 15:56:41|SYSLOG|=>$ Connected
+25.02.2020 15:56:41|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:56:41|LOGED_DATA|=>$ Readed
+25.02.2020 15:56:42|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:56:42|SYSLOG|=>$Disconected
+25.02.2020 15:57:29|SYSLOG|=>$ Connection
+25.02.2020 15:57:29|SYSLOG|=>$ Connected
+25.02.2020 15:57:29|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:57:29|LOGED_DATA|=>$ Readed
+25.02.2020 15:57:30|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:57:30|SYSLOG|=>$Disconected
+25.02.2020 15:59:08|SYSLOG|=>$ Connection
+25.02.2020 15:59:08|SYSLOG|=>$ Connected
+25.02.2020 15:59:08|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 15:59:08|LOGED_DATA|=>$ Readed
+25.02.2020 15:59:08|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 15:59:08|SYSLOG|=>$Disconected
+25.02.2020 16:05:47|SYSLOG|=>$ Connection
+25.02.2020 16:06:25|SYSLOG|=>$ Connected
+25.02.2020 16:06:25|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:06:25|LOGED_DATA|=>$ Readed
+25.02.2020 16:06:25|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:33:50|SYSLOG|=>$ Connection
+25.02.2020 16:34:36|SYSLOG|=>$ Connected
+25.02.2020 16:34:36|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:34:36|LOGED_DATA|=>$ Readed
+25.02.2020 16:34:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:34:36|SYSLOG|=>$ Connection
+25.02.2020 16:35:07|SYSLOG|=>$ Connected
+25.02.2020 16:35:07|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:35:07|LOGED_DATA|=>$ Readed
+25.02.2020 16:35:07|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:35:07|SYSLOG|=>$ Connection
+25.02.2020 16:36:40|SYSLOG|=>$ Connected
+25.02.2020 16:36:40|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:36:40|LOGED_DATA|=>$ Readed
+25.02.2020 16:36:40|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:36:40|SYSLOG|=>$ Connection
+25.02.2020 16:37:02|SYSLOG|=>$ Connected
+25.02.2020 16:37:02|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:37:02|LOGED_DATA|=>$ Readed
+25.02.2020 16:37:02|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:37:02|SYSLOG|=>$ Connection
+25.02.2020 16:38:21|SYSLOG|=>$ Connected
+25.02.2020 16:38:21|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:38:21|LOGED_DATA|=>$ Readed
+25.02.2020 16:38:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:39:01|SYSLOG|=>$ Connection
+25.02.2020 16:39:28|SYSLOG|=>$ Connected
+25.02.2020 16:39:28|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:39:28|LOGED_DATA|=>$ Readed
+25.02.2020 16:39:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:40:06|SYSLOG|=>$ Connection
+25.02.2020 16:40:40|SYSLOG|=>$ Connected
+25.02.2020 16:40:40|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:40:40|LOGED_DATA|=>$ Readed
+25.02.2020 16:40:40|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:41:48|SYSLOG|=>$ Connection
+25.02.2020 16:43:58|SYSLOG|=>$ Connected
+25.02.2020 16:43:58|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:43:58|LOGED_DATA|=>$ Readed
+25.02.2020 16:43:58|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:44:20|SYSLOG|=>$ Connection
+25.02.2020 16:44:20|SYSLOG|=>$ Connected
+25.02.2020 16:44:20|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:44:20|LOGED_DATA|=>$ Readed
+25.02.2020 16:44:20|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:44:36|SYSLOG|=>$ Connection
+25.02.2020 16:44:36|SYSLOG|=>$ Connected
+25.02.2020 16:44:36|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:44:36|LOGED_DATA|=>$ Readed
+25.02.2020 16:44:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:44:44|SYSLOG|=>$ Connection
+25.02.2020 16:44:44|SYSLOG|=>$ Connected
+25.02.2020 16:44:44|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:44:44|LOGED_DATA|=>$ Readed
+25.02.2020 16:44:44|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:45:08|SYSLOG|=>$ Connection
+25.02.2020 16:45:08|SYSLOG|=>$ Connected
+25.02.2020 16:45:08|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:45:08|LOGED_DATA|=>$ Readed
+25.02.2020 16:45:08|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:50:24|SYSLOG|=>$ Connection
+25.02.2020 16:50:53|SYSLOG|=>$ Connected
+25.02.2020 16:50:53|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:50:53|LOGED_DATA|=>$ Readed
+25.02.2020 16:50:53|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:50:53|SYSLOG|=>$ Connection
+25.02.2020 16:51:10|SYSLOG|=>$ Connected
+25.02.2020 16:51:10|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:51:10|LOGED_DATA|=>$ Readed
+25.02.2020 16:51:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:55:07|SYSLOG|=>$ Connection
+25.02.2020 16:55:25|SYSLOG|=>$ Connected
+25.02.2020 16:55:25|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:55:25|LOGED_DATA|=>$ Readed
+25.02.2020 16:55:25|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 16:55:25|SYSLOG|=>$ Connection
+25.02.2020 16:55:44|SYSLOG|=>$ Connected
+25.02.2020 16:55:44|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 16:55:44|LOGED_DATA|=>$ Readed
+25.02.2020 16:55:44|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:17:30|SYSLOG|=>$ Connection
+25.02.2020 17:17:30|SYSLOG|=>$ Connected
+25.02.2020 17:17:30|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:17:30|LOGED_DATA|=>$ Readed
+25.02.2020 17:17:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:17:59|SYSLOG|=>$ Connection
+25.02.2020 17:17:59|SYSLOG|=>$ Connected
+25.02.2020 17:17:59|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:17:59|LOGED_DATA|=>$ Readed
+25.02.2020 17:17:59|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:18:10|SYSLOG|=>$ Connection
+25.02.2020 17:18:10|SYSLOG|=>$ Connected
+25.02.2020 17:18:10|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:18:10|LOGED_DATA|=>$ Readed
+25.02.2020 17:18:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:18:48|SYSLOG|=>$ Connection
+25.02.2020 17:18:48|SYSLOG|=>$ Connected
+25.02.2020 17:18:48|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:18:48|LOGED_DATA|=>$ Readed
+25.02.2020 17:18:48|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:19:12|SYSLOG|=>$ Connection
+25.02.2020 17:19:12|SYSLOG|=>$ Connected
+25.02.2020 17:19:12|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:19:12|LOGED_DATA|=>$ Readed
+25.02.2020 17:19:12|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:19:21|SYSLOG|=>$ Connection
+25.02.2020 17:19:21|SYSLOG|=>$ Connected
+25.02.2020 17:19:21|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:19:21|LOGED_DATA|=>$ Readed
+25.02.2020 17:19:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:22:59|SYSLOG|=>$ Connection
+25.02.2020 17:24:17|SYSLOG|=>$ Connected
+25.02.2020 17:24:17|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:24:17|LOGED_DATA|=>$ Readed
+25.02.2020 17:24:17|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:24:17|SYSLOG|=>$ Connection
+25.02.2020 17:24:38|SYSLOG|=>$ Connected
+25.02.2020 17:24:38|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:24:38|LOGED_DATA|=>$ Readed
+25.02.2020 17:24:38|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:25:38|SYSLOG|=>$ Connection
+25.02.2020 17:26:03|SYSLOG|=>$ Connected
+25.02.2020 17:26:03|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:26:03|LOGED_DATA|=>$ Readed
+25.02.2020 17:26:03|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:26:03|SYSLOG|=>$ Connection
+25.02.2020 17:26:10|SYSLOG|=>$ Connected
+25.02.2020 17:26:10|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:26:10|LOGED_DATA|=>$ Readed
+25.02.2020 17:26:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:26:10|SYSLOG|=>$ Connection
+25.02.2020 17:26:18|SYSLOG|=>$ Connected
+25.02.2020 17:26:18|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:26:18|LOGED_DATA|=>$ Readed
+25.02.2020 17:26:18|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:27:12|SYSLOG|=>$ Connection
+25.02.2020 17:28:55|SYSLOG|=>$ Connected
+25.02.2020 17:28:55|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:28:55|LOGED_DATA|=>$ Readed
+25.02.2020 17:28:55|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:28:55|SYSLOG|=>$ Connection
+25.02.2020 17:29:52|SYSLOG|=>$ Connected
+25.02.2020 17:29:52|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:29:52|LOGED_DATA|=>$ Readed
+25.02.2020 17:29:52|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:40:02|SYSLOG|=>$ Connection
+25.02.2020 17:40:02|SYSLOG|=>$ Connected
+25.02.2020 17:40:02|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:40:02|LOGED_DATA|=>$ Readed
+25.02.2020 17:40:02|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:40:13|SYSLOG|=>$ Connection
+25.02.2020 17:40:13|SYSLOG|=>$ Connected
+25.02.2020 17:40:13|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:40:13|LOGED_DATA|=>$ Readed
+25.02.2020 17:40:13|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:40:23|SYSLOG|=>$ Connection
+25.02.2020 17:40:23|SYSLOG|=>$ Connected
+25.02.2020 17:40:23|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:40:23|LOGED_DATA|=>$ Readed
+25.02.2020 17:40:23|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:40:28|SYSLOG|=>$ Connection
+25.02.2020 17:40:28|SYSLOG|=>$ Connected
+25.02.2020 17:40:28|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:40:28|LOGED_DATA|=>$ Readed
+25.02.2020 17:40:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:40:35|SYSLOG|=>$ Connection
+25.02.2020 17:40:35|SYSLOG|=>$ Connected
+25.02.2020 17:40:35|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:40:35|LOGED_DATA|=>$ Readed
+25.02.2020 17:40:35|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:41:58|SYSLOG|=>$ Connection
+25.02.2020 17:41:58|SYSLOG|=>$ Connected
+25.02.2020 17:41:58|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:41:58|LOGED_DATA|=>$ Readed
+25.02.2020 17:41:58|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:42:30|SYSLOG|=>$ Connection
+25.02.2020 17:42:30|SYSLOG|=>$ Connected
+25.02.2020 17:42:30|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:42:30|LOGED_DATA|=>$ Readed
+25.02.2020 17:42:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 17:48:00|SYSLOG|=>$ Connection
+25.02.2020 17:48:00|SYSLOG|=>$ Connected
+25.02.2020 17:48:00|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 17:48:00|LOGED_DATA|=>$ Readed
+25.02.2020 17:48:00|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:02:28|SYSLOG|=>$ Connection
+25.02.2020 18:02:28|SYSLOG|=>$ Connected
+25.02.2020 18:02:28|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:02:28|LOGED_DATA|=>$ Readed
+25.02.2020 18:02:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:02:35|SYSLOG|=>$ Connection
+25.02.2020 18:02:35|SYSLOG|=>$ Connected
+25.02.2020 18:02:35|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:02:35|LOGED_DATA|=>$ Readed
+25.02.2020 18:02:35|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:02:40|SYSLOG|=>$ Connection
+25.02.2020 18:02:41|SYSLOG|=>$ Connected
+25.02.2020 18:02:41|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:02:41|LOGED_DATA|=>$ Readed
+25.02.2020 18:02:41|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:03:28|SYSLOG|=>$ Connection
+25.02.2020 18:03:28|SYSLOG|=>$ Connected
+25.02.2020 18:03:28|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:03:28|LOGED_DATA|=>$ Readed
+25.02.2020 18:03:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:04:01|SYSLOG|=>$ Connection
+25.02.2020 18:04:01|SYSLOG|=>$ Connected
+25.02.2020 18:04:01|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:04:01|LOGED_DATA|=>$ Readed
+25.02.2020 18:04:01|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:20:03|SYSLOG|=>$ Connection
+25.02.2020 18:20:03|SYSLOG|=>$ Connected
+25.02.2020 18:20:03|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:20:03|LOGED_DATA|=>$ Readed
+25.02.2020 18:20:03|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+25.02.2020 18:21:44|SYSLOG|=>$ Connection
+25.02.2020 18:21:44|SYSLOG|=>$ Connected
+25.02.2020 18:21:44|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:21:44|LOGED_DATA|=>$ Readed
+25.02.2020 18:21:45|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:21:49|SYSLOG|=>$Disconected
+25.02.2020 18:22:31|SYSLOG|=>$ Connection
+25.02.2020 18:22:31|SYSLOG|=>$ Connected
+25.02.2020 18:22:31|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:22:31|LOGED_DATA|=>$ Readed
+25.02.2020 18:22:32|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:22:36|SYSLOG|=>$Disconected
+25.02.2020 18:23:46|SYSLOG|=>$ Connection
+25.02.2020 18:23:46|SYSLOG|=>$ Connected
+25.02.2020 18:23:46|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:23:46|LOGED_DATA|=>$ Readed
+25.02.2020 18:23:47|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:23:51|SYSLOG|=>$Disconected
+25.02.2020 18:23:56|SYSLOG|=>$ Connection
+25.02.2020 18:23:56|SYSLOG|=>$ Connected
+25.02.2020 18:23:56|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:23:56|LOGED_DATA|=>$ Readed
+25.02.2020 18:23:57|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:24:01|SYSLOG|=>$Disconected
+25.02.2020 18:29:23|SYSLOG|=>$ Connection
+25.02.2020 18:29:23|SYSLOG|=>$ Connected
+25.02.2020 18:29:23|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:29:23|LOGED_DATA|=>$ Readed
+25.02.2020 18:29:23|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:29:23|SYSLOG|=>$Disconected
+25.02.2020 18:33:02|SYSLOG|=>$ Connection
+25.02.2020 18:33:02|SYSLOG|=>$ Connected
+25.02.2020 18:33:02|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:33:02|LOGED_DATA|=>$ Readed
+25.02.2020 18:33:03|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:33:03|SYSLOG|=>$Disconected
+25.02.2020 18:33:15|SYSLOG|=>$ Connection
+25.02.2020 18:33:15|SYSLOG|=>$ Connected
+25.02.2020 18:33:15|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:33:15|LOGED_DATA|=>$ Readed
+25.02.2020 18:33:16|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:33:16|SYSLOG|=>$Disconected
+25.02.2020 18:33:42|SYSLOG|=>$ Connection
+25.02.2020 18:33:42|SYSLOG|=>$ Connected
+25.02.2020 18:33:42|LOGED_DATA|=>$ Data(Lenght):10752
+25.02.2020 18:33:42|LOGED_DATA|=>$ Readed
+25.02.2020 18:33:43|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+25.02.2020 18:33:43|SYSLOG|=>$Disconected
+26.02.2020 14:32:43|SYSLOG|=>$ Connection
+26.02.2020 14:32:43|SYSLOG|=>$ Connected
+26.02.2020 14:32:43|LOGED_DATA|=>$ Data(Lenght):10752
+26.02.2020 14:32:43|LOGED_DATA|=>$ Readed
+26.02.2020 14:32:44|Result|=>$ 
+	{hello
+	}
+26.02.2020 14:32:44|SYSLOG|=>$Disconected
+26.02.2020 14:33:13|SYSLOG|=>$ Connection
+26.02.2020 14:33:13|SYSLOG|=>$ Connected
+26.02.2020 14:33:13|LOGED_DATA|=>$ Data(Lenght):10752
+26.02.2020 14:33:13|LOGED_DATA|=>$ Readed
+26.02.2020 14:33:14|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+26.02.2020 14:33:14|SYSLOG|=>$Disconected

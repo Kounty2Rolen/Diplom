@@ -17,7 +17,7 @@ namespace CodeExecuter
 
         static int Main(string[] args)
         {
-            TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "/log.txt", true);
+            TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "\\log.txt", true);
 
             try
             {
@@ -27,14 +27,13 @@ namespace CodeExecuter
                 Console.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connection");
 #endif
                 logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connection");
-                pipeClient.Connect(-1);
+                pipeClient.Connect(15000);
 #if debug
                 Console.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connected");
 #endif
                 logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connected");
 
                 //StreamReader reader = new StreamReader(pipeClient);
-
                 byte[] array = new byte[4];
                 pipeClient.Read(array, 0, 4);
                 var lenght = BitConverter.ToInt32(array, 0);
@@ -46,19 +45,18 @@ namespace CodeExecuter
 
                 var assembly = Assembly.Load(PeArray);
                 var instance = assembly.CreateInstance("onfly.TestClass");
-                var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
-                logWriter.WriteLine(DateTime.Now + "|LOGED_DEBUG|=>$ " + String.Join(',', assembly.GetTypes().Select(c => c.FullName)));
+                var resultOut = assembly.GetType("onfly.TestClass").GetMethod("CodeCompile").Invoke(instance, null).ToString();
 
                 logWriter.WriteLine(DateTime.Now + "|Result|=>$ " + "\n\t{" + resultOut + "\n\t}");
 
-                Console.WriteLine(resultOut);
+
+                Console.Error.WriteLine(resultOut);
 
 
-
-
+                
                 pipeClient.Close();
                 pipeClient.Dispose();
-                logWriter.Write(DateTime.Now + "|SYSLOG|=>$" + "Disconected");
+                logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$" + "Disconected");
                 logWriter.Close();
                 logWriter.Dispose();
             }
@@ -69,17 +67,12 @@ namespace CodeExecuter
                 logWriter.Close();
                 logWriter.Dispose();
             }
-
+            Thread.Sleep(1000);
             return 0;
 
         }
 
-        static void Disconnect(object sender, EventArgs args)
-        {
-            TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "/log.txt", true);
-            logWriter.Close();
-            logWriter.Dispose();
-        }
+
     }
 
 
