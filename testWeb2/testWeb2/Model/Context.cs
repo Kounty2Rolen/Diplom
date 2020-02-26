@@ -16,7 +16,6 @@ namespace testWeb2.Model
         }
 
         public virtual DbSet<CompiledContext> CompiledContext { get; set; }
-        public virtual DbSet<Model> Model { get; set; }
         public virtual DbSet<Projects> Projects { get; set; }
         public virtual DbSet<User> User { get; set; }
 
@@ -43,15 +42,6 @@ namespace testWeb2.Model
                     .WithMany(p => p.CompiledContext)
                     .HasForeignKey(d => d.ProjectId)
                     .HasConstraintName("FK__CompiledC__Proje__4CA06362");
-            });
-
-            modelBuilder.Entity<Model>(entity =>
-            {
-                entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.Model1)
-                    .HasColumnName("Model")
-                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Projects>(entity =>
@@ -97,16 +87,9 @@ namespace testWeb2.Model
                     .HasMaxLength(250)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ModelIds).HasColumnName("ModelIDs");
-
                 entity.Property(e => e.Password)
                     .HasMaxLength(1024)
                     .IsUnicode(false);
-
-                entity.HasOne(d => d.ModelIdsNavigation)
-                    .WithMany(p => p.User)
-                    .HasForeignKey(d => d.ModelIds)
-                    .HasConstraintName("FK__Users__ModelIDs__398D8EEE");
             });
         }
     }

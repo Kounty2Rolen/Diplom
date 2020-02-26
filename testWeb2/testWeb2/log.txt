@@ -1,97 +1,487 @@
-13.02.2020 17:41:47
-System.BadImageFormatException: Bad IL format.
-   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2213.02.2020 17:50:58
-System.BadImageFormatException: Bad IL format.
-   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:08:47
-System.TimeoutException: The operation has timed out.
-   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
-   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 1813.02.2020 18:09:34
-System.BadImageFormatException: Bad IL format.
-   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:10:18
-System.BadImageFormatException: Bad IL format.
-   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:11:02
-System.TimeoutException: The operation has timed out.
-   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
-   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 1813.02.2020 18:11:55
-System.TimeoutException: The operation has timed out.
-   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
-   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 1813.02.2020 18:13:26
-System.BadImageFormatException: Bad IL format.
-   at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
-   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 2413.02.2020 18:59:10|SYSLOG|=>$ Connection
-13.02.2020 19:01:39|SYSLOG|=>$ Connected
-13.02.2020 19:01:40|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:01:42|LOGED_DATA|=>$ Connected
-13.02.2020 19:04:13|SYSLOG|=>$ Connection
-13.02.2020 19:04:14|SYSLOG|=>$ Connected
-13.02.2020 19:04:17|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:04:18|LOGED_DATA|=>$ Connected
-13.02.2020 19:16:27|SYSLOG|=>$ Connection
-13.02.2020 19:16:27|SYSLOG|=>$ Connected
-13.02.2020 19:16:27|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:16:33|LOGED_DATA|=>$ Connected
-13.02.2020 19:19:32|SYSLOG|=>$ Connection
-13.02.2020 19:19:32|SYSLOG|=>$ Connected
-13.02.2020 19:19:32|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:19:32|LOGED_DATA|=>$ Connected
-13.02.2020 19:20:55|SYSLOG|=>$ Connection
-13.02.2020 19:20:55|SYSLOG|=>$ Connected
-13.02.2020 19:20:55|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:20:55|LOGED_DATA|=>$ Connected
-13.02.2020 19:22:51|SYSLOG|=>$ Connection
-13.02.2020 19:22:51|SYSLOG|=>$ Connected
-13.02.2020 19:22:51|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:22:51|LOGED_DATA|=>$ Connected
-13.02.2020 19:27:00|SYSLOG|=>$ Connection
-13.02.2020 19:27:00|SYSLOG|=>$ Connected
-13.02.2020 19:27:00|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:27:00|LOGED_DATA|=>$ Connected
-13.02.2020 19:29:03|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:30:49|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:34:03|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:36:59|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:37:03|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:44:15|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:44:26|Exception|=>$ System.InvalidOperationException: Cannot read keys when either application does not have a console or when console input has been redirected. Try Console.Read.
-   at System.ConsolePal.ReadKey(Boolean intercept)
-   at System.Console.ReadKey()
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 16
-13.02.2020 19:44:55|SYSLOG|=>$ Connection
-13.02.2020 19:44:55|SYSLOG|=>$ Connected
-13.02.2020 19:44:55|LOGED_DATA|=>$ Data(Lenght):1536
-13.02.2020 19:44:55|LOGED_DATA|=>$ Connected
+19.02.2020 16:03:29|SYSLOG|=>$ Connection
+19.02.2020 16:03:29|SYSLOG|=>$ Connected
+19.02.2020 16:03:29|LOGED_DATA|=>$ Data(Lenght):11264
+19.02.2020 16:03:29|LOGED_DATA|=>$ Readed
+19.02.2020 16:03:29|Result|=>$ 
+	{hello
+	}
+19.02.2020 16:03:29|SYSLOG|=>$Disconected19.02.2020 16:14:02|SYSLOG|=>$ Connection
+19.02.2020 16:14:02|SYSLOG|=>$ Connected
+19.02.2020 16:14:02|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:14:02|LOGED_DATA|=>$ Readed
+19.02.2020 16:14:02|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:18:08|SYSLOG|=>$ Connection
+19.02.2020 16:18:08|SYSLOG|=>$ Connected
+19.02.2020 16:18:08|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:18:08|LOGED_DATA|=>$ Readed
+19.02.2020 16:18:08|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:27:47|SYSLOG|=>$ Connection
+19.02.2020 16:27:47|SYSLOG|=>$ Connected
+19.02.2020 16:27:47|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:27:47|LOGED_DATA|=>$ Readed
+19.02.2020 16:27:47|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:41:36|SYSLOG|=>$ Connection
+19.02.2020 16:41:36|SYSLOG|=>$ Connected
+19.02.2020 16:41:36|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:41:36|LOGED_DATA|=>$ Readed
+19.02.2020 16:41:36|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:45:04|SYSLOG|=>$ Connection
+19.02.2020 16:45:04|SYSLOG|=>$ Connected
+19.02.2020 16:45:04|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:45:04|LOGED_DATA|=>$ Readed
+19.02.2020 16:45:04|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:46:46|SYSLOG|=>$ Connection
+19.02.2020 16:46:46|SYSLOG|=>$ Connected
+19.02.2020 16:46:46|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:46:46|LOGED_DATA|=>$ Readed
+19.02.2020 16:46:46|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:50:19|SYSLOG|=>$ Connection
+19.02.2020 16:50:19|SYSLOG|=>$ Connected
+19.02.2020 16:50:20|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:50:20|LOGED_DATA|=>$ Readed
+19.02.2020 16:50:20|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+19.02.2020 16:50:27|SYSLOG|=>$ Connection
+19.02.2020 16:50:27|SYSLOG|=>$ Connected
+19.02.2020 16:50:27|LOGED_DATA|=>$ Data(Lenght):12288
+19.02.2020 16:50:27|LOGED_DATA|=>$ Readed
+19.02.2020 16:50:27|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:19:03|SYSLOG|=>$ Connection
+20.02.2020 18:19:03|SYSLOG|=>$ Connected
+20.02.2020 18:19:03|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:19:03|LOGED_DATA|=>$ Readed
+20.02.2020 18:19:03|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:19:58|SYSLOG|=>$ Connection
+20.02.2020 18:19:58|SYSLOG|=>$ Connected
+20.02.2020 18:19:58|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:19:58|LOGED_DATA|=>$ Readed
+20.02.2020 18:19:58|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:22:11|SYSLOG|=>$ Connection
+20.02.2020 18:22:11|SYSLOG|=>$ Connected
+20.02.2020 18:22:11|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:22:11|LOGED_DATA|=>$ Readed
+20.02.2020 18:22:11|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:23:57|SYSLOG|=>$ Connection
+20.02.2020 18:23:57|SYSLOG|=>$ Connected
+20.02.2020 18:23:57|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:23:57|LOGED_DATA|=>$ Readed
+20.02.2020 18:23:57|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:26:41|SYSLOG|=>$ Connection
+20.02.2020 18:26:41|SYSLOG|=>$ Connected
+20.02.2020 18:26:41|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:26:41|LOGED_DATA|=>$ Readed
+20.02.2020 18:26:41|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:29:18|SYSLOG|=>$ Connection
+20.02.2020 18:29:18|SYSLOG|=>$ Connected
+20.02.2020 18:29:18|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:29:18|LOGED_DATA|=>$ Readed
+20.02.2020 18:29:18|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:29:39|SYSLOG|=>$ Connection
+20.02.2020 18:29:39|SYSLOG|=>$ Connected
+20.02.2020 18:29:39|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:29:39|LOGED_DATA|=>$ Readed
+20.02.2020 18:29:39|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:29:56|SYSLOG|=>$ Connection
+20.02.2020 18:29:56|SYSLOG|=>$ Connected
+20.02.2020 18:29:56|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:29:56|LOGED_DATA|=>$ Readed
+20.02.2020 18:29:56|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:37:11|SYSLOG|=>$ Connection
+20.02.2020 18:37:11|SYSLOG|=>$ Connected
+20.02.2020 18:37:11|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:37:11|LOGED_DATA|=>$ Readed
+20.02.2020 18:37:11|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:37:47|SYSLOG|=>$ Connection
+20.02.2020 18:37:47|SYSLOG|=>$ Connected
+20.02.2020 18:37:47|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:37:47|LOGED_DATA|=>$ Readed
+20.02.2020 18:37:47|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:38:14|SYSLOG|=>$ Connection
+20.02.2020 18:38:14|SYSLOG|=>$ Connected
+20.02.2020 18:38:14|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:38:14|LOGED_DATA|=>$ Readed
+20.02.2020 18:38:14|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:38:33|SYSLOG|=>$ Connection
+20.02.2020 18:38:33|SYSLOG|=>$ Connected
+20.02.2020 18:38:33|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:38:33|LOGED_DATA|=>$ Readed
+20.02.2020 18:38:33|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:39:21|SYSLOG|=>$ Connection
+20.02.2020 18:39:21|SYSLOG|=>$ Connected
+20.02.2020 18:39:21|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:39:21|LOGED_DATA|=>$ Readed
+20.02.2020 18:39:21|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:47:20|SYSLOG|=>$ Connection
+20.02.2020 18:47:20|SYSLOG|=>$ Connected
+20.02.2020 18:47:20|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:47:20|LOGED_DATA|=>$ Readed
+20.02.2020 18:47:20|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:48:27|SYSLOG|=>$ Connection
+20.02.2020 18:48:27|SYSLOG|=>$ Connected
+20.02.2020 18:48:27|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:48:27|LOGED_DATA|=>$ Readed
+20.02.2020 18:48:27|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:48:43|SYSLOG|=>$ Connection
+20.02.2020 18:48:43|SYSLOG|=>$ Connected
+20.02.2020 18:48:43|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:48:43|LOGED_DATA|=>$ Readed
+20.02.2020 18:48:43|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:49:02|SYSLOG|=>$ Connection
+20.02.2020 18:49:02|SYSLOG|=>$ Connected
+20.02.2020 18:49:02|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:49:02|LOGED_DATA|=>$ Readed
+20.02.2020 18:49:02|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:50:54|SYSLOG|=>$ Connection
+20.02.2020 18:50:54|SYSLOG|=>$ Connected
+20.02.2020 18:50:54|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:50:54|LOGED_DATA|=>$ Readed
+20.02.2020 18:50:54|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:52:32|SYSLOG|=>$ Connection
+20.02.2020 18:52:32|SYSLOG|=>$ Connected
+20.02.2020 18:52:32|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:52:32|LOGED_DATA|=>$ Readed
+20.02.2020 18:52:32|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:56:20|SYSLOG|=>$ Connection
+20.02.2020 18:56:20|SYSLOG|=>$ Connected
+20.02.2020 18:56:20|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:56:20|LOGED_DATA|=>$ Readed
+20.02.2020 18:56:20|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:57:06|SYSLOG|=>$ Connection
+20.02.2020 18:57:06|SYSLOG|=>$ Connected
+20.02.2020 18:57:06|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:57:06|LOGED_DATA|=>$ Readed
+20.02.2020 18:57:06|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:58:50|SYSLOG|=>$ Connection
+20.02.2020 18:58:50|SYSLOG|=>$ Connected
+20.02.2020 18:58:50|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:58:50|LOGED_DATA|=>$ Readed
+20.02.2020 18:58:50|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 18:59:35|SYSLOG|=>$ Connection
+20.02.2020 18:59:35|SYSLOG|=>$ Connected
+20.02.2020 18:59:35|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 18:59:35|LOGED_DATA|=>$ Readed
+20.02.2020 18:59:35|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+20.02.2020 19:00:45|SYSLOG|=>$ Connection
+20.02.2020 19:00:45|SYSLOG|=>$ Connected
+20.02.2020 19:00:45|LOGED_DATA|=>$ Data(Lenght):10752
+20.02.2020 19:00:45|LOGED_DATA|=>$ Readed
+20.02.2020 19:00:45|Exception|=>$ System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Не удается найти указанный файл.
+File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at onfly.TestClass.test()
+
+
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47

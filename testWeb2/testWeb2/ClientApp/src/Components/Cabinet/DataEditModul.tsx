@@ -53,14 +53,7 @@ export class DataEditModul extends React.Component<{}, state> {
         Passwords.OldPassword = sha256(this.state.OldPassword).toString();
         Passwords.NewPassword = sha256(this.state.NewPassword).toString();
 
-        fetch("AccountEdit/EditPassword", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: "Bearer " + sessionStorage.getItem("Token")
-            },
-            body: JSON.stringify(Passwords)
-        }).then(Response => {
+        GetInfo.PasswordEdit(Passwords).then((Response:any )=> {
             if (Response.ok) {
                 alert("Sucscess");
             } else {
@@ -87,14 +80,7 @@ export class DataEditModul extends React.Component<{}, state> {
         });
     };
     fioChange = () => {
-        fetch("AccountEdit/PersonEdit", {
-            method: "POST",
-            headers: {
-                Authorization: "Bearer " + sessionStorage.getItem("Token"),
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(this.state.Person)
-        });
+        GetInfo.FioChange(this.state.Person);
         alert('Sucscess');
         window.location.reload();
     };

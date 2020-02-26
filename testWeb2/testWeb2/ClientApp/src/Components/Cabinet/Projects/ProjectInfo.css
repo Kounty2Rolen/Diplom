@@ -1,0 +1,14 @@
+.FileTree {
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+h3 {
+    color: black !important;
+}
+
+.tree {
+    background-color: ghostwhite;
+}
