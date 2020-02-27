@@ -1,26 +1,26 @@
 import React from "react";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { Home } from "./Components/Home";
-import { Route, Switch, Redirect, BrowserRouter } from "react-router-dom";
-import { Menu } from "./Components/Menu";
 import { About } from "./Components/About";
-import { RegScreen } from "./Components/LoginScreen/Register";
 import { Cabinet } from "./Components/Cabinet/Cabinet";
 import ProjectInfo from "./Components/Cabinet/Projects/ProjectInfo";
+import { Home } from "./Components/Home";
+import { RegScreen } from "./Components/LoginScreen/Register";
+import { Menu } from "./Components/Menu";
 
 interface state {
     currentPage: string;
 }
 
 export class App extends React.Component<{}, state> {
-    state = {
-        currentPage: "home"
+    public state = {
+        currentPage: "home",
     };
-    OnMenuClick = (currentPage: string) => {
-        this.setState({ currentPage: currentPage });
-    };
+    public OnMenuClick = (currentPage: string) => {
+        this.setState({ currentPage });
+    }
 
-    render() {
+    public render() {
         return (
             <div className="App">
                 <BrowserRouter>

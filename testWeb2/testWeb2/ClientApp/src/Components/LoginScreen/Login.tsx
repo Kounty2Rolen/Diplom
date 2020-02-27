@@ -1,22 +1,22 @@
+import sha256 from "crypto-js/sha256";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
     Button,
-    Label,
     Input,
+    Label,
     Modal,
-    ModalHeader,
     ModalBody,
-    ModalFooter
+    ModalFooter,
+    ModalHeader,
 } from "reactstrap";
-import "./LoginScreen.css";
-import { Link } from "react-router-dom";
-import sha256 from "crypto-js/sha256";
 import GetInfo from "../../Services/AccountServicesGetInfo";
+import "./LoginScreen.css";
 
 export const LoginScreen = () => {
-    let Person = {
+    const Person = {
         LoginName: "",
-        Password: ""
+        Password: "",
     };
     const Login = () => {
         Person.Password = sha256(Person.Password).toString();
@@ -39,11 +39,11 @@ export const LoginScreen = () => {
         }
     };
 
-    let loginOnChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const loginOnChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         Person.LoginName = event.target.value;
     };
-    let passwordOnChangeHandler = (
-        event: React.ChangeEvent<HTMLInputElement>
+    const passwordOnChangeHandler = (
+        event: React.ChangeEvent<HTMLInputElement>,
     ) => {
         Person.Password = event.target.value;
     };

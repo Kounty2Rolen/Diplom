@@ -7,7 +7,7 @@ interface props {
     currentPage: string;
 }
 export class Main extends React.Component<props> {
-    render() {
+    public render() {
         switch (this.props.currentPage) {
             case "home":
                 return <Home />;

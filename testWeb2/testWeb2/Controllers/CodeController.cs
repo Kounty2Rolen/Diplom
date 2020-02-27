@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.IO;
 using System.IO.Pipes;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace testWeb2.Controllers
 {
@@ -18,8 +20,6 @@ namespace testWeb2.Controllers
     [AllowAnonymous]
     public class CodeController : Controller
     {
-
-
         public IActionResult Index([FromBody]requestData text)
         {
             try
@@ -103,51 +103,72 @@ namespace onfly
                         return Ok(result1);
                     }
                     peStream.Seek(0, SeekOrigin.Begin);
+
                     string sql = "";
                     string resultcode = "";
                     using (var proc = new Process())
                     {
-                        proc.StartInfo.FileName = Environment.CurrentDirectory + @"\CodeExecuter\netcoreapp3.1\CodeExecuter.exe";
-                        proc.StartInfo.RedirectStandardOutput = true;
-                        proc.StartInfo.UseShellExecute = false;
-                        proc.StartInfo.RedirectStandardError = true;
-                        proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
+                        CancellationTokenSource cts = new CancellationTokenSource();
+                        Task<Result> newTask = Task.Run(() =>
                         {
-                            resultcode += e.Data;
+                            try
+                            {
+                                proc.StartInfo.FileName = Environment.CurrentDirectory + @"\CodeExecuter\netcoreapp3.1\CodeExecuter.exe";
+                                proc.StartInfo.RedirectStandardOutput = true;
+                                proc.StartInfo.UseShellExecute = false;
+                                proc.StartInfo.RedirectStandardError = true;
+                                proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
+                                {
+                                    resultcode += e.Data;
+                                });
+                                proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
+                                {
+                                    sql += e.Data;
+                                });
+                                proc.StartInfo.Arguments = User.Identity?.Name ?? Request.HttpContext.TraceIdentifier;
+                                proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
 
-                        });
-                        proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
+                                proc.Start();
+                                proc.BeginOutputReadLine();
+                                proc.BeginErrorReadLine();
+                                var a = "pipeServer" + proc.StartInfo.Arguments;
+                                NamedPipeServerStream pipeServer = new NamedPipeServerStream("pipeServer" + proc.StartInfo.Arguments, PipeDirection.InOut);
+                                pipeServer.WaitForConnection();
+                                var length = BitConverter.GetBytes((int)peStream.Length);
+                                pipeServer.Write(length, 0, length.Length);
+                                peStream.CopyTo(pipeServer);
+                                proc.WaitForExit(15000); //BUG
+                                proc.Close();
+
+                                //var procin = proc.StandardInput;
+                                //procin.WriteLine("1");
+
+                                //var assembly = Assembly.Load(peStream.ToArray());
+                                //var instance = assembly.CreateInstance("onfly.TestClass");
+                                //var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
+                                pipeServer.Close();
+                                pipeServer.Dispose();
+                                Result result1 = new Result();
+                                //result1.sql = message.ToString();
+                                result1.sql = sql;
+                                result1.resultcode = resultcode;
+                                //result1.sql = System.IO.File.ReadAllText(Path.GetTempPath() + "\\Model\\Sqllog.txt");
+                                return result1;
+                            }
+                            catch (Exception ex)
+                            {
+                                throw ex;
+                            }
+                        }, cts.Token);
+                        newTask.Wait(300000);//Timeout 5 min 300000
+                        if (newTask.IsCompleted)
+                            return Ok(newTask.Result);
+                        else
                         {
-                            sql += e.Data;
-                        });
-
-                        proc.Start();
-                        proc.BeginOutputReadLine();
-                        proc.BeginErrorReadLine();
-                        NamedPipeServerStream pipeServer = new NamedPipeServerStream("pipeServer", PipeDirection.InOut);
-                        pipeServer.WaitForConnection();
-                        var length = BitConverter.GetBytes((int)peStream.Length);
-                        pipeServer.Write(length, 0, length.Length);
-                        peStream.CopyTo(pipeServer);
-
-
-                        proc.WaitForExit(15000); //BUG
-                        proc.Close();
-
-                        //var procin = proc.StandardInput;
-                        //procin.WriteLine("1");
-
-                        //var assembly = Assembly.Load(peStream.ToArray());
-                        //var instance = assembly.CreateInstance("onfly.TestClass");
-                        //var resultOut = assembly.GetType("onfly.TestClass").GetMethod("test").Invoke(instance, null).ToString();
-                        pipeServer.Close();
-                        pipeServer.Dispose();
-                        Result result1 = new Result();
-                        //result1.sql = message.ToString();
-                        result1.sql = sql;
-                        result1.resultcode = resultcode;
-                        //result1.sql = System.IO.File.ReadAllText(Path.GetTempPath() + "\\Model\\Sqllog.txt");
-                        return Ok(result1);
+                            proc.Kill();
+                            cts.Cancel();
+                            throw new Exception("TimeOut too long operation");
+                        }
                     }
                 }
             }
@@ -177,7 +198,6 @@ namespace onfly
 
             return trees;
         }
-
 
         private static CSharpCompilation GenerateCode(string sourceCode = null)
         {
@@ -227,8 +247,14 @@ namespace onfly
             assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64));
         }
 
-        public string ModelGenerate([FromBody] ConectionData data)
+        public IActionResult ModelGenerate([FromBody] ConectionData data)
         {
+            Random random = new Random();
+            string randomEndingForFolder;
+            if (!User.Identity.IsAuthenticated)
+                randomEndingForFolder = random.Next(minValue: 0, maxValue: int.MaxValue).ToString();
+            else
+                randomEndingForFolder = User.Identity.Name;
             try
             {
                 if (string.IsNullOrEmpty(data.ContextName))
@@ -250,46 +276,96 @@ namespace onfly
                     {"provider", "Microsoft.EntityFrameworkCore.SqlServer"},
                     { "outputDir", "Model" },
                     {"dbContextClassName",data.ContextName},
-                    {"outputDbContextDir","Model" },
+                    {"outputDbContextDir","Model"/*+randomEndingForFolder */},
                     {"schemaFilters",new string[]{"dbo"} },//Фильр схем н-р DBO
                     {"tableFilters",Array.Empty<string>() },//Фильр таблиц
                     {"useDataAnnotations",false },
                     {"overwriteFiles",true },
                     { "useDatabaseNames",false} });
                     context.Execute(new Action(() => { }));
-                    //Model.Context context1 = new Model.Context();
-                    //Model.CompiledContext compiled = new Model.CompiledContext();
-                    //var trees = GetModelsCode();
-                    //MemoryStream modelStream = new MemoryStream();
-                    //GenerateCode(trees: trees).Emit(modelStream);
-                    //modelStream.Seek(0, SeekOrigin.Begin);
-                    //compiled.CompiledContext1 = modelStream.ToArray();
-                    //Model.Projects project = new Model.Projects();
-                    //project.ProjectName = data.ProjName;
-                    //project.ContextName = data.ContextName;
-                    //project.ConnectionString = data.ConnectionString;
-                    //project.OwnerId = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault().Id;
-                    //project.Owner = context1.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
-                    //project.Id = context1.Projects.LastOrDefault()?.Id + 1 ?? 0;
-                    //compiled.Id = context1.CompiledContext.LastOrDefault()?.Id + 1 ?? 0;
-                    //context1.Add(project);
-                    //compiled.Project = project;
-                    //compiled.ProjectId = context1.Projects.LastOrDefault(c => c.OwnerId == project.OwnerId)?.Id ?? 0;
-                    //context1.Add(compiled);
-                    //context1.SaveChanges();
+                    //var id = new tempproj();
+                    //if (User.Identity.IsAuthenticated)
+                    //{
+                    //    addProjToUser(data);
+                    //}
+                    //else
+                    //{
+                    //    id = GenerateTempProject(data, randomEndingForFolder);
+                    //}
 
-                    return "True";
+                    return Ok();
                 }
                 else
                 {
-                    return "False";
+                    return BadRequest("ConnectionString empty");
                 }
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return BadRequest(ex.Message);
             }
         }
+
+        //public void addProjToUser(ConectionData data)
+        //{
+        //    Model.Context context = new Model.Context();
+        //    Model.User user = context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
+
+        //    Model.Projects project = new Model.Projects();
+        //    project.Owner = user;
+        //    project.OwnerId = user.Id;
+        //    project.ProjectName = data.ProjName;
+        //    project.ContextName = data.ContextName;
+        //    project.ConnectionString = data.ConnectionString;
+        //    context.Add(project);
+        //    foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model" + User.Identity.Name))
+        //    {
+        //        Model.Model model = new Model.Model();
+        //        model.Project = project;
+        //        model.Projectid = project.Id;
+        //        model.Model1 = System.IO.File.ReadAllText(file);
+        //        model.Filename = Path.GetFileName(file);
+        //        context.Add(model);
+        //    }
+        //    context.SaveChanges();
+        //    context.Dispose();
+        //}
+        //public tempproj GenerateTempProject(ConectionData data, string ending)
+        //{
+        //    testWeb2.Model.Context context = new Model.Context();
+        //    Model.TempProjects tempProject = new Model.TempProjects();
+        //    tempProject.ConnectionString = data.ConnectionString;
+        //    tempProject.ContextName = data.ContextName;
+        //    tempProject.ProjectName = data.ProjName;
+        //    tempproj tempproj = new tempproj();
+        //    context.Add(tempProject);
+        //    tempproj.modelids = new List<int>();
+        //    foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model" + ending))
+        //    {
+        //        testWeb2.Model.Model model = new testWeb2.Model.Model();
+        //        model.Tempproject = tempProject.Id;
+        //        model.Model1 = System.IO.File.ReadAllText(file);
+        //        model.Filename = Path.GetFileName(file);
+        //        model.TempprojectNavigation = tempProject;
+        //        context.Add(model);
+        //        context.SaveChanges();
+        //        tempproj.modelids.Add(context.Model.Last().Id);
+
+        //    }
+        //    context.SaveChanges();
+        //    tempproj.id = tempProject.Id;
+        //    tempproj.randomEnding = ending;
+
+        //    context.Dispose();
+        //    return tempproj;
+        //}
+
+        //public class tempproj
+        //{
+        //    public int id { get; set; }
+        //    public List<int> modelids { get; set; }
+        //    public string randomEnding { get; set; }
+        //}
 
         public class Result
         {
@@ -308,6 +384,7 @@ namespace onfly
         {
             public string SourceCode { get; set; }
             public string ContextName { get; set; }
+            public string serializeAnonProj { get; set; }
         }
     }
 }

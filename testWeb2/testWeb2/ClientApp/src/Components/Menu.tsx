@@ -1,10 +1,10 @@
 import React from "react";
-import "./Menu.css";
-import { Button, NavbarText } from "reactstrap";
-import { Navbar, NavbarBrand, Nav, NavItem } from "reactstrap";
-import { LoginScreen } from "./LoginScreen/Login";
 import { Link } from "react-router-dom";
+import { Button, NavbarText } from "reactstrap";
+import { Nav, Navbar, NavbarBrand, NavItem } from "reactstrap";
 import GetInfo from "../Services/AccountServicesGetInfo";
+import { LoginScreen } from "./LoginScreen/Login";
+import "./Menu.css";
 
 interface props {
     OnMenuClick: (currentPage: string) => void;
@@ -18,7 +18,7 @@ export class Menu extends React.Component<props, state> {
         super(props);
         this.state = { name: "" };
     }
-    componentDidMount() {
+    public componentDidMount() {
         this.GetIdentity();
     }
     // componentDidUpdate(prevProps: props, prevState: state) {
@@ -30,14 +30,14 @@ export class Menu extends React.Component<props, state> {
         if (sessionStorage.getItem("Token")) {
             GetInfo.getIdentity().then((data: any) => this.setState({ name: data }));
         }
-    };
-    logOut = () => {
+    }
+    public logOut = () => {
         sessionStorage.removeItem("Token");
-    };
-    render() {
-        let name = this.state.name;
-        let token = sessionStorage.getItem("Token");
-        let func = this.logOut;
+    }
+    public render() {
+        const name = this.state.name;
+        const token = sessionStorage.getItem("Token");
+        const func = this.logOut;
 
         return (
             <Navbar className="menu" color="light" light marker="false" expand="sm">

@@ -2,11 +2,10 @@
 
 namespace testWeb2.Model
 {
-    public partial class Projects
+    public partial class TempProjects
     {
-        public Projects()
+        public TempProjects()
         {
-            CompiledContext = new HashSet<CompiledContext>();
             Model = new HashSet<Model>();
         }
 
@@ -14,10 +13,7 @@ namespace testWeb2.Model
         public string ProjectName { get; set; }
         public string ConnectionString { get; set; }
         public string ContextName { get; set; }
-        public int? OwnerId { get; set; }
 
-        public User Owner { get; set; }
-        public ICollection<CompiledContext> CompiledContext { get; set; }
         public ICollection<Model> Model { get; set; }
     }
 }
