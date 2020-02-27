@@ -925,3 +925,252 @@ hello
 	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
 	}
 26.02.2020 14:33:14|SYSLOG|=>$Disconected
+27.02.2020 15:10:50|SYSLOG|=>$ Connection
+27.02.2020 15:10:50|SYSLOG|=>$ Connected
+27.02.2020 15:10:50|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:10:50|LOGED_DATA|=>$ Readed
+27.02.2020 15:10:51|Result|=>$ 
+	{true
+	}
+27.02.2020 15:10:51|SYSLOG|=>$Disconected
+27.02.2020 15:11:07|SYSLOG|=>$ Connection
+27.02.2020 15:11:07|SYSLOG|=>$ Connected
+27.02.2020 15:11:07|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:11:07|LOGED_DATA|=>$ Readed
+27.02.2020 15:11:08|Result|=>$ 
+	{true
+	}
+27.02.2020 15:11:08|SYSLOG|=>$Disconected
+27.02.2020 15:17:38|SYSLOG|=>$ Connection
+27.02.2020 15:17:38|SYSLOG|=>$ Connected
+27.02.2020 15:17:38|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:17:38|LOGED_DATA|=>$ Readed
+27.02.2020 15:17:39|Result|=>$ 
+	{true
+	}
+27.02.2020 15:17:39|SYSLOG|=>$Disconected
+27.02.2020 15:17:39|SYSLOG|=>$ Connection
+27.02.2020 15:17:47|SYSLOG|=>$ Connected
+27.02.2020 15:17:47|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:17:47|LOGED_DATA|=>$ Readed
+27.02.2020 15:17:48|Result|=>$ 
+	{true
+	}
+27.02.2020 15:17:48|SYSLOG|=>$Disconected
+27.02.2020 15:19:20|SYSLOG|=>$ Connection
+27.02.2020 15:19:20|SYSLOG|=>$ Connected
+27.02.2020 15:19:20|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:19:20|LOGED_DATA|=>$ Readed
+27.02.2020 15:19:20|Result|=>$ 
+	{true
+	}
+27.02.2020 15:19:20|SYSLOG|=>$Disconected
+27.02.2020 15:19:41|SYSLOG|=>$ Connection
+27.02.2020 15:19:41|SYSLOG|=>$ Connected
+27.02.2020 15:19:41|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:19:41|LOGED_DATA|=>$ Readed
+27.02.2020 15:19:42|Result|=>$ 
+	{true
+	}
+27.02.2020 15:19:42|SYSLOG|=>$Disconected
+27.02.2020 15:24:52|SYSLOG|=>$ Connection
+27.02.2020 15:24:52|SYSLOG|=>$ Connected
+27.02.2020 15:24:52|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:24:52|LOGED_DATA|=>$ Readed
+27.02.2020 15:25:07|Result|=>$ 
+	{true
+	}
+27.02.2020 15:25:07|SYSLOG|=>$Disconected
+27.02.2020 15:26:44|SYSLOG|=>$ Connection
+27.02.2020 15:26:44|SYSLOG|=>$ Connected
+27.02.2020 15:26:44|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:26:44|LOGED_DATA|=>$ Readed
+27.02.2020 15:26:59|Result|=>$ 
+	{true
+	}
+27.02.2020 15:26:59|SYSLOG|=>$Disconected
+27.02.2020 15:35:28|SYSLOG|=>$ Connection
+27.02.2020 15:35:28|SYSLOG|=>$ Connected
+27.02.2020 15:35:28|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:35:28|LOGED_DATA|=>$ Readed
+27.02.2020 15:35:43|Result|=>$ 
+	{true
+	}
+27.02.2020 15:35:43|SYSLOG|=>$Disconected
+27.02.2020 15:36:30|SYSLOG|=>$ Connection
+27.02.2020 15:36:30|SYSLOG|=>$ Connected
+27.02.2020 15:36:30|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 15:36:30|LOGED_DATA|=>$ Readed
+27.02.2020 15:36:31|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+27.02.2020 15:36:31|SYSLOG|=>$Disconected
+27.02.2020 16:00:44|SYSLOG|=>$ Connection
+27.02.2020 16:00:44|SYSLOG|=>$ Connected
+27.02.2020 16:00:44|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 16:00:44|LOGED_DATA|=>$ Readed
+27.02.2020 16:00:59|Result|=>$ 
+	{true
+	}
+27.02.2020 16:00:59|SYSLOG|=>$Disconected
+27.02.2020 16:24:20|SYSLOG|=>$ Connection
+27.02.2020 16:24:20|SYSLOG|=>$ Connected
+27.02.2020 16:24:20|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 16:24:20|LOGED_DATA|=>$ Readed
+27.02.2020 16:25:27|Result|=>$ 
+	{true
+	}
+27.02.2020 16:25:27|SYSLOG|=>$Disconected
+27.02.2020 16:32:07|SYSLOG|=>$ Connection
+27.02.2020 16:32:09|SYSLOG|=>$ Connected
+27.02.2020 16:32:14|LOGED_DATA|=>$ Data(Lenght):0
+27.02.2020 16:32:14|LOGED_DATA|=>$ Readed
+27.02.2020 16:32:14|Exception|=>$ System.BadImageFormatException: Bad IL format.
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 46
+27.02.2020 16:34:19|SYSLOG|=>$ Connection
+27.02.2020 16:34:19|SYSLOG|=>$ Connected
+27.02.2020 16:34:19|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 16:34:19|LOGED_DATA|=>$ Readed
+27.02.2020 16:34:34|Result|=>$ 
+	{true
+	}
+27.02.2020 16:34:34|SYSLOG|=>$Disconected
+27.02.2020 16:35:17|SYSLOG|=>$ Connection
+27.02.2020 16:35:22|SYSLOG|=>$ Connected
+27.02.2020 16:35:22|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 16:35:22|LOGED_DATA|=>$ Readed
+27.02.2020 16:35:23|Result|=>$ 
+	{true
+	}
+27.02.2020 16:35:23|SYSLOG|=>$Disconected
+27.02.2020 16:35:33|SYSLOG|=>$ Connection
+27.02.2020 16:35:33|SYSLOG|=>$ Connected
+27.02.2020 16:35:33|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 16:35:33|LOGED_DATA|=>$ Readed
+27.02.2020 16:35:33|Result|=>$ 
+	{true
+	}
+27.02.2020 16:35:33|SYSLOG|=>$Disconected
+27.02.2020 16:41:01|SYSLOG|=>$ Connection
+27.02.2020 16:41:01|SYSLOG|=>$ Connected
+27.02.2020 16:41:01|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 16:41:01|LOGED_DATA|=>$ Readed
+27.02.2020 16:41:20|Result|=>$ 
+	{true
+	}
+27.02.2020 16:41:20|SYSLOG|=>$Disconected
+27.02.2020 16:46:38|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHDBFNDT5:00000007
+27.02.2020 16:46:53|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 30
+27.02.2020 16:49:36|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHF4HLRUD:00000002
+27.02.2020 16:49:51|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 30
+27.02.2020 16:51:31|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHGF4TBPN:00000003
+27.02.2020 16:51:46|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 30
+1
+27.02.2020 17:04:42|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHNPO5DGS:00000002
+27.02.2020 17:04:57|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+27.02.2020 17:05:38|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHOCDT5NO:00000002
+27.02.2020 17:05:53|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+27.02.2020 17:07:32|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHPE9U42A:00000002
+27.02.2020 17:07:47|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+27.02.2020 17:09:10|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHQAPLBQ0:00000003
+27.02.2020 17:09:25|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+27.02.2020 17:11:41|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHRM2073D:00000003
+27.02.2020 17:11:56|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+27.02.2020 17:12:48|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHSC7HGCI:00000002
+27.02.2020 17:12:48|SYSLOG|=>$ Connected
+27.02.2020 17:12:48|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:12:48|LOGED_DATA|=>$ Readed
+27.02.2020 17:12:48|Result|=>$ 
+	{true
+	}
+27.02.2020 17:12:48|SYSLOG|=>$Disconected
+27.02.2020 17:14:25|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLD7:00000003
+27.02.2020 17:14:25|SYSLOG|=>$ Connected
+27.02.2020 17:14:25|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:14:25|LOGED_DATA|=>$ Readed
+27.02.2020 17:14:26|Result|=>$ 
+	{true
+	}
+27.02.2020 17:14:26|SYSLOG|=>$Disconected
+27.02.2020 17:14:38|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLDA:00000002
+27.02.2020 17:14:38|SYSLOG|=>$ Connected
+27.02.2020 17:14:38|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:14:38|LOGED_DATA|=>$ Readed
+27.02.2020 17:14:39|Result|=>$ 
+	{true
+	}
+27.02.2020 17:14:39|SYSLOG|=>$Disconected
+27.02.2020 17:14:43|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLDB:00000003
+27.02.2020 17:14:43|SYSLOG|=>$ Connected
+27.02.2020 17:14:43|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:14:43|LOGED_DATA|=>$ Readed
+27.02.2020 17:14:44|Result|=>$ 
+	{true
+	}
+27.02.2020 17:14:44|SYSLOG|=>$Disconected
+27.02.2020 17:14:46|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLD7:00000007
+27.02.2020 17:14:46|SYSLOG|=>$ Connected
+27.02.2020 17:14:46|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:14:46|LOGED_DATA|=>$ Readed
+27.02.2020 17:14:46|Result|=>$ 
+	{true
+	}
+27.02.2020 17:14:46|SYSLOG|=>$Disconected
+27.02.2020 17:14:48|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLDA:00000003
+27.02.2020 17:14:48|SYSLOG|=>$ Connected
+27.02.2020 17:14:48|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:14:48|LOGED_DATA|=>$ Readed
+27.02.2020 17:14:49|Result|=>$ 
+	{true
+	}
+27.02.2020 17:14:49|SYSLOG|=>$Disconected
+27.02.2020 17:14:50|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLDB:00000004
+27.02.2020 17:14:50|SYSLOG|=>$ Connected
+27.02.2020 17:14:50|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:14:50|LOGED_DATA|=>$ Readed
+27.02.2020 17:14:51|Result|=>$ 
+	{true
+	}
+27.02.2020 17:14:51|SYSLOG|=>$Disconected
+27.02.2020 17:15:00|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLD7:00000008
+27.02.2020 17:15:00|SYSLOG|=>$ Connected
+27.02.2020 17:15:00|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:15:00|LOGED_DATA|=>$ Readed
+27.02.2020 17:15:00|Result|=>$ 
+	{true
+	}
+27.02.2020 17:15:00|SYSLOG|=>$Disconected
+27.02.2020 17:15:01|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHT68TLDA:00000004
+27.02.2020 17:15:01|SYSLOG|=>$ Connected
+27.02.2020 17:15:01|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:15:01|LOGED_DATA|=>$ Readed
+27.02.2020 17:15:01|Result|=>$ 
+	{true
+	}
+27.02.2020 17:15:01|SYSLOG|=>$Disconected

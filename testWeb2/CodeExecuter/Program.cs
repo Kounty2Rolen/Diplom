@@ -17,16 +17,16 @@ namespace CodeExecuter
 
         static int Main(string[] args)
         {
+            
             TextWriter logWriter = new StreamWriter(Environment.CurrentDirectory + "\\log.txt", true);
-
             try
             {
 
-                NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", "pipeServer", PipeDirection.InOut);
+                NamedPipeClientStream pipeClient = new NamedPipeClientStream(".", "pipeServer"+args[0], PipeDirection.InOut);
 #if debug
                 Console.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connection");
 #endif
-                logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connection");
+                logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connection.... Iddentificator:"+args[0]);
                 pipeClient.Connect(15000);
 #if debug
                 Console.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connected");
@@ -57,6 +57,7 @@ namespace CodeExecuter
                 pipeClient.Close();
                 pipeClient.Dispose();
                 logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$" + "Disconected");
+                logWriter.Flush();
                 logWriter.Close();
                 logWriter.Dispose();
             }
@@ -64,6 +65,8 @@ namespace CodeExecuter
             {
 
                 logWriter.WriteLine(DateTime.Now + "|Exception|=>$ " + ex.ToString());
+                Console.WriteLine(ex.ToString());
+                logWriter.Flush();
                 logWriter.Close();
                 logWriter.Dispose();
             }

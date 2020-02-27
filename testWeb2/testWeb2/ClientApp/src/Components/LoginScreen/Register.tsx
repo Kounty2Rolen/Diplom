@@ -1,53 +1,53 @@
-import React from "react";
-import { Label, Input, Button } from "reactstrap";
-import "./Register.css";
 import sha256 from "crypto-js/sha256";
-import GetInfo from "../../Services/AccountServicesGetInfo"
+import React from "react";
+import { Button, Input, Label } from "reactstrap";
+import GetInfo from "../../Services/AccountServicesGetInfo";
+import "./Register.css";
 
 interface state {
     style: object;
     message: string;
 }
 export class RegScreen extends React.Component<{}, state> {
+
+    public Person = {
+        Fname: "",
+        Mname: "",
+        LoginName: "",
+        Password: "",
+    };
     constructor(props: state) {
         super(props);
         this.state = { style: {}, message: "" };
     }
 
-    Person = {
-        Fname: "",
-        Mname: "",
-        LoginName: "",
-        Password: ""
-    };
-
-    fnameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    public fnameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.Person.Fname = event.target.value;
-    };
-    mnameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    }
+    public mnameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.Person.Mname = event.target.value;
-    };
-    loginChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    }
+    public loginChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.Person.LoginName = event.target.value;
-    };
-    passwordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    }
+    public passwordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.Person.Password = event.target.value;
-    };
-    Register = (event: React.MouseEvent<HTMLButtonElement>) => {
+    }
+    public Register = (event: React.MouseEvent<HTMLButtonElement>) => {
         if (this.Person.LoginName !== "" && this.Person.Password !== "") {
             this.Person.Password = sha256(this.Person.Password).toString();
-            
-                GetInfo.Register(this.Person).then((data:any) => this.setState({ message: data }));
+
+            GetInfo.Register(this.Person).then((data: any) => this.setState({ message: data }));
         } else {
             this.setState({ message: "Check Fields!" });
             this.setState({ style: { border: "2px solid red" } });
         }
-    };
-    logininputclick = (event: React.MouseEvent<HTMLInputElement>) => {
+    }
+    public logininputclick = (event: React.MouseEvent<HTMLInputElement>) => {
         this.setState({ style: { border: "" } });
         this.setState({ message: "" });
-    };
-    render() {
+    }
+    public render() {
         return (
             <div className="Register">
                 <div className="regBlocks">

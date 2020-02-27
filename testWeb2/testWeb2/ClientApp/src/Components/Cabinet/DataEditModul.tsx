@@ -1,9 +1,9 @@
-import React from "react";
-import { Button, Label, Input } from "reactstrap";
-import { ContextInput } from "../Context";
-import { Link, Redirect } from "react-router-dom";
 import sha256 from "crypto-js/sha256";
+import React from "react";
+import { Link, Redirect } from "react-router-dom";
+import { Button, Input, Label } from "reactstrap";
 import GetInfo from "../../Services/AccountServicesGetInfo";
+import { ContextInput } from "../Context";
 
 interface state {
     OldPassword: string;
@@ -26,65 +26,65 @@ export class DataEditModul extends React.Component<{}, state> {
             Person: {
                 fname: "",
                 mname: "",
-                loginName: ""
-            }
+                loginName: "",
+            },
         };
     }
-    init() {
+    public init() {
         GetInfo.getInfo().then((data: any) => this.setState({ Person: data }));
     }
-    componentDidMount() {
+    public componentDidMount() {
         this.init();
     }
 
-    onChangeOldPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    public onChangeOldPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({ OldPassword: event.target.value });
-    };
+    }
 
-    onChangeNewPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    public onChangeNewPassword = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({ NewPassword: event.target.value });
-    };
+    }
 
-    buttonOnClickChangePassword = () => {
-        let Passwords = {
+    public buttonOnClickChangePassword = () => {
+        const Passwords = {
             NewPassword: "",
-            OldPassword: ""
+            OldPassword: "",
         };
         Passwords.OldPassword = sha256(this.state.OldPassword).toString();
         Passwords.NewPassword = sha256(this.state.NewPassword).toString();
 
-        GetInfo.PasswordEdit(Passwords).then((Response:any )=> {
+        GetInfo.PasswordEdit(Passwords).then((Response: any) => {
             if (Response.ok) {
                 alert("Sucscess");
             } else {
                 alert("Error");
             }
         });
-    };
-    fnameOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    }
+    public fnameOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({
             Person: {
                 fname: e.target.value,
                 mname: this.state.Person.mname,
-                loginName: ""
-            }
+                loginName: "",
+            },
         });
-    };
-    mnameOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    }
+    public mnameOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({
             Person: {
                 fname: this.state.Person.fname,
                 mname: e.target.value,
-                loginName: ""
-            }
+                loginName: "",
+            },
         });
-    };
-    fioChange = () => {
+    }
+    public fioChange = () => {
         GetInfo.FioChange(this.state.Person);
-        alert('Sucscess');
+        alert("Sucscess");
         window.location.reload();
-    };
-    render() {
+    }
+    public render() {
         return (
             <div className="dataEditModul">
                 <h2>Edit Profile</h2>
