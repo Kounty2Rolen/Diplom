@@ -28,7 +28,6 @@ namespace testWeb2.Controllers
             }
         }
 
-        //bool EditFio() { }
         public List<Projects> GetProjects()
         {
             Context context = new Context();
@@ -42,7 +41,7 @@ namespace testWeb2.Controllers
                 }
             }
             context.Dispose();
-            return projects;
+            return projects;        
         }
 
         public Person getInfo()

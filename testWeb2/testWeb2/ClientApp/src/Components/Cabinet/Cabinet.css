@@ -28,6 +28,7 @@ h2 {
 
 .ProjectNameInput {
     margin-top: 10px;
+    width: 300px !important;
 }
 
 .FieldsModul {
@@ -68,4 +69,8 @@ h2 {
     margin-left: 5.2%;
     margin-top: 20px;
     width: 18%;
+}
+
+input.connectionComponent {
+    width: 300px !important;
 }

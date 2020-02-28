@@ -41,8 +41,7 @@ export class ContextInput extends React.Component<props, state> {
       CodeServices.ModelGenerateService(ConectionData).then(
         (Response: string) => {
           this.setState({ spin: false });
-          localStorage.setItem("temp", Response);
-          console.log(localStorage.getItem("temp"));
+          localStorage.setItem("AnonymObject", Response);
         }
       );
     } else {

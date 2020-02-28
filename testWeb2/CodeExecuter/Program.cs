@@ -34,7 +34,6 @@ namespace CodeExecuter
 #endif
                 logWriter.WriteLine(DateTime.Now + "|SYSLOG|=>$ " + "Connected");
 
-                //StreamReader reader = new StreamReader(pipeClient);
                 byte[] array = new byte[4];
                 pipeClient.Read(array, 0, 4);
                 var lenght = BitConverter.ToInt32(array, 0);

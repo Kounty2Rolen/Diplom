@@ -1198,3 +1198,80 @@ hello
 	{321
 	}
 27.02.2020 17:54:41|SYSLOG|=>$Disconected
+28.02.2020 16:51:53|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAL1DSULK:00000003
+28.02.2020 16:51:53|SYSLOG|=>$ Connected
+28.02.2020 16:51:53|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:51:53|LOGED_DATA|=>$ Readed
+28.02.2020 16:51:54|Result|=>$ 
+	{true
+	}
+28.02.2020 16:51:54|SYSLOG|=>$Disconected
+28.02.2020 16:52:11|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAL1DSULK:00000004
+28.02.2020 16:52:11|SYSLOG|=>$ Connected
+28.02.2020 16:52:11|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:52:11|LOGED_DATA|=>$ Readed
+28.02.2020 16:52:11|Result|=>$ 
+	{true
+	}
+28.02.2020 16:52:11|SYSLOG|=>$Disconected
+28.02.2020 16:52:46|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAL1DSULK:00000005
+28.02.2020 16:52:46|SYSLOG|=>$ Connected
+28.02.2020 16:52:46|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:52:46|LOGED_DATA|=>$ Readed
+28.02.2020 16:52:46|Result|=>$ 
+	{true
+	}
+28.02.2020 16:52:46|SYSLOG|=>$Disconected
+28.02.2020 16:52:54|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAL1DSULK:00000006
+28.02.2020 16:52:54|SYSLOG|=>$ Connected
+28.02.2020 16:52:54|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:52:54|LOGED_DATA|=>$ Readed
+28.02.2020 16:52:54|Result|=>$ 
+	{true
+	}
+28.02.2020 16:52:54|SYSLOG|=>$Disconected
+28.02.2020 16:55:24|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAM32MNII:00000003
+28.02.2020 16:55:39|Exception|=>$ System.TimeoutException: The operation has timed out.
+   at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
+   at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+28.02.2020 16:55:48|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAM32MNIJ:00000005
+28.02.2020 16:55:48|SYSLOG|=>$ Connected
+28.02.2020 16:55:48|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:55:48|LOGED_DATA|=>$ Readed
+28.02.2020 16:55:48|Result|=>$ 
+	{true
+	}
+28.02.2020 16:55:48|SYSLOG|=>$Disconected
+28.02.2020 16:56:13|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAM32MNIM:00000003
+28.02.2020 16:56:13|SYSLOG|=>$ Connected
+28.02.2020 16:56:13|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:56:13|LOGED_DATA|=>$ Readed
+28.02.2020 16:56:13|Result|=>$ 
+	{123
+	}
+28.02.2020 16:56:13|SYSLOG|=>$Disconected
+28.02.2020 16:56:44|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAM32MNIO:00000003
+28.02.2020 16:56:44|SYSLOG|=>$ Connected
+28.02.2020 16:56:44|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:56:44|LOGED_DATA|=>$ Readed
+28.02.2020 16:56:44|Result|=>$ 
+	{123
+	}
+28.02.2020 16:56:44|SYSLOG|=>$Disconected
+28.02.2020 16:56:52|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAM32MNIM:00000006
+28.02.2020 16:56:52|SYSLOG|=>$ Connected
+28.02.2020 16:56:52|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 16:56:52|LOGED_DATA|=>$ Readed
+28.02.2020 16:56:52|Result|=>$ 
+	{123
+	}
+28.02.2020 16:56:52|SYSLOG|=>$Disconected
+28.02.2020 17:05:33|SYSLOG|=>$ Connection.... Iddentificator:0HLTSASMB02M3:00000004
+28.02.2020 17:05:33|SYSLOG|=>$ Connected
+28.02.2020 17:05:33|LOGED_DATA|=>$ Data(Lenght):14336
+28.02.2020 17:05:33|LOGED_DATA|=>$ Readed
+28.02.2020 17:05:33|Result|=>$ 
+	{123
+	}
+28.02.2020 17:05:33|SYSLOG|=>$Disconected

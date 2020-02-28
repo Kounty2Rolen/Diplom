@@ -5,6 +5,7 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -26,6 +27,11 @@ namespace testWeb2.Controllers
         {
             try
             {
+                Tempproj tempproj;
+                if (text.serializeAnonProj != null)
+                {
+                    tempproj = JsonConvert.DeserializeObject<Tempproj>(text.serializeAnonProj);
+                }
                 if (text.ContextName == null)
                 {
                     text.ContextName = "Context";
@@ -274,7 +280,7 @@ namespace onfly
                     {"overwriteFiles",true },
                     { "useDatabaseNames",false} });
                     context.Execute(new Action(() => { }));
-                    var id = new tempproj();
+                    var id = new Tempproj();
                     if (User.Identity.IsAuthenticated)
                     {
                         addProjToUser(data);
@@ -321,16 +327,16 @@ namespace onfly
             context.SaveChanges();
             context.Dispose();
         }
-        public tempproj GenerateTempProject(ConectionData data, string ending)
+        public Tempproj GenerateTempProject(ConectionData data, string ending)
         {
             testWeb2.Model.Context context = new Model.Context();
             Model.TempProjects tempProject = new Model.TempProjects();
             tempProject.ConnectionString = data.ConnectionString;
             tempProject.ContextName = data.ContextName;
             tempProject.ProjectName = data.ProjName;
-            tempproj tempproj = new tempproj();
+            Tempproj tempproj = new Tempproj();
             context.Add(tempProject);
-            tempproj.modelids = new List<int>();
+            tempproj.Models = new List<string>();
             foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model" + ending))
             {
                 testWeb2.Model.Model model = new testWeb2.Model.Model();
@@ -340,22 +346,24 @@ namespace onfly
                 model.TempprojectNavigation = tempProject;
                 context.Add(model);
                 context.SaveChanges();
-                tempproj.modelids.Add(context.Model.Last().Id);
+                tempproj.Models.Add(System.IO.File.ReadAllText(file));
 
             }
             context.SaveChanges();
-            tempproj.id = tempProject.Id;
-            tempproj.randomEnding = ending;
-
+            tempproj.Id = tempProject.Id;
+            tempproj.RandomEnding = ending;
+            tempproj.Data = data;
             context.Dispose();
             return tempproj;
         }
 
-        public class tempproj
+        public class Tempproj
         {
-            public int id { get; set; }
-            public List<int> modelids { get; set; }
-            public string randomEnding { get; set; }
+            public int Id { get; set; }
+            public ConectionData Data { get; set; }
+            public List<string> Models { get; set; }
+
+            public string RandomEnding { get; set; }
         }
 
         public class Result

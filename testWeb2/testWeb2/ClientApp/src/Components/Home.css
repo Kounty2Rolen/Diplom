@@ -49,7 +49,7 @@ input.connectionComponent {
     margin-top: 5px;
     border-radius: 12px;
     padding-left: 10px;
-    width: 800px;
+    width: 800px !important;
 }
 
 input.connectionComponentContext {
