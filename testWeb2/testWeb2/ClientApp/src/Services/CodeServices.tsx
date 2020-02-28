@@ -8,7 +8,7 @@ class CodeService {
           Accept: "application/json"
         },
         body: JSON.stringify(Code)
-      }).then(Response => result(Response.json()));
+      }).then((Response) => result(Response.json()));
     });
   }
   public ModelGenerateService(ConectionData: object) {
@@ -20,7 +20,7 @@ class CodeService {
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       },
       body: JSON.stringify(ConectionData)
-    }).then(Response => Response.text());
+    }).then((Response) => Response.text());
   }
 }
 
