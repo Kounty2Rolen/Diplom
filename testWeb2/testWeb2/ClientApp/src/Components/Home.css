@@ -2,8 +2,7 @@ textarea {
     /* background-color: #5D8DCA; */
 }
 
-#btnGenerate {
-}
+#btnGenerate {}
 
 #btnGenerate {
     margin-left: 15px;
@@ -32,8 +31,7 @@ textarea {
     height: 30px;
     margin-left: 5px;
     margin-bottom: 5px;
-    padding-top: 0 !important;
-    /* padding: 0 !important; */
+    padding-top: 0;
 }
 
 .txtArea {
@@ -63,7 +61,7 @@ input.connectionComponentContext {
 
 .connectionComponentBTN {
     margin-left: 5px;
-    padding-top: 0 !important;
-    margin-top: 5px !important;
+    padding-top: 0;
+    margin-top: 5px;
     height: 30px;
 }

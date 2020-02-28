@@ -16,18 +16,15 @@ h2 {
 
 .createProjectModulBody {
     background-color: ghostwhite;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 10px;
     border-radius: 10px;
 }
 
-    .createProjectModulBody input {
-        width: auto;
-        border-radius: 10px;
-        width: 88%;
-    }
+.createProjectModulBody input {
+    width: auto;
+    border-radius: 10px;
+    width: 88%;
+}
 
 .ProjectNameInput {
     margin-top: 10px;
@@ -35,10 +32,7 @@ h2 {
 
 .FieldsModul {
     background-color: ghostwhite;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 10px;
     border-radius: 10px;
 }
 

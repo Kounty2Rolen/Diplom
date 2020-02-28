@@ -8,6 +8,7 @@ using System.IO;
 using System.IO.Pipes;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace CodeExecuter
 {
@@ -37,11 +38,10 @@ namespace CodeExecuter
                 byte[] array = new byte[4];
                 pipeClient.Read(array, 0, 4);
                 var lenght = BitConverter.ToInt32(array, 0);
-                logWriter.WriteLine(DateTime.Now + "|LOGED_DATA|=>$ " + "Data(Lenght):" + lenght.ToString());
+                logWriter.WriteLine(DateTime.Now + "|LOGED_DATA|=>$ " + "Data(Lenght):" + lenght);
                 byte[] PeArray = new byte[lenght];
                 pipeClient.Read(PeArray, 0, lenght);
                 logWriter.WriteLine(DateTime.Now + "|LOGED_DATA|=>$ " + "Readed");
-
 
                 var assembly = Assembly.Load(PeArray);
                 var instance = assembly.CreateInstance("onfly.TestClass");
@@ -64,8 +64,7 @@ namespace CodeExecuter
             catch (Exception ex)
             {
 
-                logWriter.WriteLine(DateTime.Now + "|Exception|=>$ " + ex.ToString());
-                Console.WriteLine(ex.ToString());
+                logWriter.WriteLine(DateTime.Now + "|Exception|=>$ " + ex);
                 logWriter.Flush();
                 logWriter.Close();
                 logWriter.Dispose();

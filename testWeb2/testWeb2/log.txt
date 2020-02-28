@@ -1174,3 +1174,27 @@ hello
 	{true
 	}
 27.02.2020 17:15:01|SYSLOG|=>$Disconected
+27.02.2020 17:47:00|SYSLOG|=>$ Connection.... Iddentificator:0HLTRIDDNF7HF:00000001
+27.02.2020 17:47:00|SYSLOG|=>$ Connected
+27.02.2020 17:47:00|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:47:00|LOGED_DATA|=>$ Readed
+27.02.2020 17:47:00|Result|=>$ 
+	{true
+	}
+27.02.2020 17:47:00|SYSLOG|=>$Disconected
+27.02.2020 17:53:19|SYSLOG|=>$ Connection.... Iddentificator:0HLTRIIKIU5JQ:00000003
+27.02.2020 17:53:19|SYSLOG|=>$ Connected
+27.02.2020 17:53:19|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:53:19|LOGED_DATA|=>$ Readed
+27.02.2020 17:53:19|Result|=>$ 
+	{8d23cf6c86e834a7aa6eded54c26ce2bb2e74903538c61bdd5d2197997ab2f72
+	}
+27.02.2020 17:53:19|SYSLOG|=>$Disconected
+27.02.2020 17:54:40|SYSLOG|=>$ Connection.... Iddentificator:0HLTRIIKIU5JS:00000001
+27.02.2020 17:54:40|SYSLOG|=>$ Connected
+27.02.2020 17:54:40|LOGED_DATA|=>$ Data(Lenght):14848
+27.02.2020 17:54:40|LOGED_DATA|=>$ Readed
+27.02.2020 17:54:41|Result|=>$ 
+	{321
+	}
+27.02.2020 17:54:41|SYSLOG|=>$Disconected
