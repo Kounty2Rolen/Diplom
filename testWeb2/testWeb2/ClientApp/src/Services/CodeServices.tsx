@@ -18,7 +18,14 @@ class CodeService {
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       },
       body: JSON.stringify(ConectionData)
-    }).then(Response => Response.text());
+    }).then(Response => {
+      if (!Response.ok) {
+        alert("Model compilation error, check the connection string.");
+        return "";
+      }else{
+        return Response.text();
+      }
+    });
   }
 }
 

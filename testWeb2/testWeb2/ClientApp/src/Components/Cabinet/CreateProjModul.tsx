@@ -1,5 +1,7 @@
 import React from "react";
 import { ContextInput } from "../Context";
+import { Input } from "reactstrap";
+import "../Cabinet/Cabinet.css"
 
 interface state {
     ProjectName: string;
@@ -21,12 +23,12 @@ export class CreateProjectModul extends React.Component<{}, state> {
                 <h2>Create project</h2>
                 <div className="createProjectModulBody">
                     <div className="createProjectFields">
-                        <input
+                        <Input
                             placeholder="Project name"
                             className="ProjectNameInput"
                             onChange={this.inpOnChange}
                             value={this.state.ProjectName}
-                        ></input>
+                        ></Input>
                     </div>
                     <div className="contextGenerate">
                         <ContextInput ProjName={this.state.ProjectName} />

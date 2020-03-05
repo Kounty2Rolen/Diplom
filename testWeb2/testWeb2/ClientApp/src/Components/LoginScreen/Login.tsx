@@ -27,7 +27,7 @@ export const LoginScreen = () => {
         } else if (Person.LoginName !== "" && Person.Password != "") {
             console.log(Person);
             GetInfo.getToken(Person)
-                .then((token: any) => sessionStorage.setItem("Token", token))
+                .then((token: any) =>sessionStorage.setItem("Token", token))
                 .then(() => {
                     if (sessionStorage.getItem("Token") !== "") {
                         toggle();

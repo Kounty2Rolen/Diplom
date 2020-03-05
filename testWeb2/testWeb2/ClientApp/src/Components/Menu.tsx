@@ -7,73 +7,73 @@ import { LoginScreen } from "./LoginScreen/Login";
 import "./Menu.css";
 
 interface props {
-    OnMenuClick: (currentPage: string) => void;
+  OnMenuClick: (currentPage: string) => void;
 }
 interface state {
-    name: string;
+  name: string;
 }
 
 export class Menu extends React.Component<props, state> {
-    constructor(props: props) {
-        super(props);
-        this.state = { name: "" };
+  constructor(props: props) {
+    super(props);
+    this.state = { name: "" };
+  }
+  public componentDidMount() {
+    this.GetIdentity();
+  }
+  // componentDidUpdate(prevProps: props, prevState: state) {
+  //     if (prevState.name !== this.state.name) {
+  //         this.GetIdentity();
+  //     }
+  // }
+  public GetIdentity = () => {
+    if (sessionStorage.getItem("Token")) {
+      GetInfo.getIdentity().then((data: any) => this.setState({ name: data }));
     }
-    public componentDidMount() {
-        this.GetIdentity();
-    }
-    // componentDidUpdate(prevProps: props, prevState: state) {
-    //     if (prevState.name !== this.state.name) {
-    //         this.GetIdentity();
-    //     }
-    // }
-    public GetIdentity = () => {
-        if (sessionStorage.getItem("Token")) {
-            GetInfo.getIdentity().then((data: any) => this.setState({ name: data }));
-        }
-    }
-    public logOut = () => {
-        sessionStorage.removeItem("Token");
-    }
-    public render() {
-        const name = this.state.name;
-        const token = sessionStorage.getItem("Token");
-        const func = this.logOut;
+  };
+  public logOut = () => {
+    sessionStorage.removeItem("Token");
+  };
+  public render() {
+    const name = this.state.name;
+    const token = sessionStorage.getItem("Token");
+    const func = this.logOut;
 
-        return (
-            <Navbar className="menu" color="light" light marker="false" expand="sm">
-                <NavbarBrand color="White">
-                    <Link to="/Home" className="homelink">
-                        <span role="img">🏠</span>Home
+    return (
+      <Navbar className="menu" color="light" light marker="false" expand="sm">
+        <NavbarBrand color="White">
+          <Link to="/Home" className="homelink">
+            <span role="img">🏠</span>Home
           </Link>
-                </NavbarBrand>
-                <Nav className="mr-auto" navbar>
-                    <NavItem>
-                        <Link to="/About" className="Link">
-                            <Button color="light">About</Button>
-                        </Link>
-                    </NavItem>
-                    <NavItem>
-                        {token ? (
-                            <Link to="/Account" className="Link">
-                                <Button color="light">Edit account</Button>
-                            </Link>
-                        ) : null}
-                    </NavItem>
-                </Nav>
-                <NavbarText>
-                    {token ? (
-                        <p className="nameonmenu">
-                            {" "}
-                            Hello {name}
-                            <a onClick={func} href="">
-                                , LogOut
+        </NavbarBrand>
+        <Nav className="mr-auto" navbar>
+          <NavItem>
+            <Link to="/About" className="Link">
+              <Button color="light">About</Button>
+            </Link>
+          </NavItem>
+          <NavItem>
+            {token ? (
+              <Link to="/Account" className="Link">
+                <Button color="light">Edit account</Button>
+              </Link>
+            ) : null}
+          </NavItem>
+        </Nav>
+        <NavbarText>
+          {token ? (
+            <p className="nameonmenu">
+              {" "}
+              Hello {name}
+              <a onClick={func} href="">
+                , LogOut
               </a>
-                        </p>
-                    ) : (
-                            <LoginScreen />
-                        )}
-                </NavbarText>
-            </Navbar>
-        );
-    }
+            </p>
+          ) : (
+            <LoginScreen />
+          )}
+        </NavbarText>
+      </Navbar>
+    );
+  }
 }

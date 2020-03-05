@@ -8,7 +8,9 @@ export class Home extends React.Component {
         return (
             <div className="homeContainer">
                 <br />
+                <div className={"homeConnectionContainer"}>
                 <ContextInput ProjName=""></ContextInput>
+                </div>
                 <br />
                 <InpCode />
             </div>

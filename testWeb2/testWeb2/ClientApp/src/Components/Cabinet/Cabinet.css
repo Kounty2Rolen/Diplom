@@ -23,12 +23,12 @@ h2 {
 .createProjectModulBody input {
     width: auto;
     border-radius: 10px;
-    width: 88%;
+    width: 300px;
 }
 
 .ProjectNameInput {
     margin-top: 10px;
-    width: 300px !important;
+    width: 300px;
 }
 
 .FieldsModul {
@@ -71,6 +71,19 @@ h2 {
     width: 18%;
 }
 
-input.connectionComponent {
-    width: 300px !important;
+.contextGenerate .ConnectionConteiner .connectionComponent {
+    margin-top: 1%;
+}
+
+.createProjectModul .ButtonsDiv {
+    margin-top: -8%;
+}
+
+.createProjectModul .checker {
+    margin-left: -128%;
+    color: black;
+}
+
+.contextGenerate .ConnectionConteiner .connectionComponentContext {
+    margin-top: -7%;
 }

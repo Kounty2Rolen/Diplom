@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace testWeb2.Controllers
@@ -12,8 +13,8 @@ namespace testWeb2.Controllers
         {
             try
             {
-                Model.Context context = new Model.Context();
-                Project project = new Project();
+                var context = new Model.Context();
+                var project = new Project();
                 var projectdb = context.Projects.Where(c => c.Id == Convert.ToInt32(ProjectID)).FirstOrDefault();
                 project.Name = projectdb.ProjectName;
                 project.ConnectionString = projectdb.ConnectionString;
@@ -26,10 +27,27 @@ namespace testWeb2.Controllers
             }
         }
 
+        public IActionResult RemoveProject([FromBody]int projectID)
+        {
+            var context = new Model.Context();
+            var project = context.Projects.Where(c => c.Id == projectID).FirstOrDefault();
+            var models = context.Model.Where(c => c.Projectid == projectID);
+            var compiledContext = context.CompiledContext.Where(c => c.ProjectId == projectID).FirstOrDefault();
+            if (compiledContext != null)
+                context.Remove(compiledContext);
+            if (models != null)
+                context.RemoveRange(models.AsEnumerable());
+            if (project != null)
+                context.Remove(project);
+            context.SaveChanges();
+            context.Dispose();
+            return Ok();
+        }
+
         public IActionResult Newproject(Project project)
         {
-            Model.Context context = new Model.Context();
-            Model.Projects newproject = new Model.Projects();
+            var context = new Model.Context();
+            var newproject = new Model.Projects();
             newproject.ConnectionString = project.ConnectionString;
             newproject.ContextName = project.Context;
             newproject.ProjectName = project.Name;

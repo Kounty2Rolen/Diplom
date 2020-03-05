@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using testWeb2.Controllers;
+using Microsoft.AspNetCore.SignalR;
 
 namespace testWeb2
 {
@@ -22,6 +23,7 @@ namespace testWeb2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddSignalR();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                     .AddJwtBearer(options =>
                     {
@@ -64,6 +66,7 @@ namespace testWeb2
                 app.UseDeveloperExceptionPage();
             }
             else
+
             {
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
@@ -73,6 +76,7 @@ namespace testWeb2
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
+            //app.UseDefaultFiles();
 
             app.UseMvc(routes =>
             {
