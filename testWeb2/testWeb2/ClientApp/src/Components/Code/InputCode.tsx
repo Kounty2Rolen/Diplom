@@ -105,7 +105,6 @@ export class InpCode extends React.Component<{}, state> {
     );
   };
   public render() {
-    console.log(this.state.Spin);
     const options = {
       lineNumbers: true,
       matchBrackets: true,

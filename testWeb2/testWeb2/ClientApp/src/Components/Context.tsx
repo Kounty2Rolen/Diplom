@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import {
   Button,
   Spinner,
@@ -21,6 +21,7 @@ interface state {
   modal: boolean;
   check: boolean;
   tables: string[];
+  selectedTables: string[];
 }
 interface props {
   ProjName: string;
@@ -37,7 +38,8 @@ export class ContextInput extends React.Component<props, state> {
       spin: false,
       modal: false,
       check: true,
-      tables: []
+      tables: [],
+      selectedTables: []
     };
   }
 
@@ -51,8 +53,7 @@ export class ContextInput extends React.Component<props, state> {
 
   public GetTables() {
     DBService.GetTables(this.state.connectionString).then((Response: any) => {
-      this.setState({ tables: Response },()=>{console.log(this.state.tables)}
-      );
+      this.setState({ tables: Response });
     });
   }
   public toggle = () => {
@@ -105,6 +106,24 @@ export class ContextInput extends React.Component<props, state> {
     this.setState({ Context: event.target.value });
   };
 
+  tableSelect = (e: ChangeEvent<HTMLInputElement>) => {
+    if (e.target.checked) {
+      this.setState(prevState => {
+        const arr = prevState.selectedTables;
+        return {
+          selectedTables: [...arr, e.target.id]
+        };
+      });
+    } else {
+      this.setState(prevState => {
+        const arr = prevState.selectedTables;
+        return {
+          selectedTables: arr.slice(arr.indexOf(e.target.id), 1)
+        };
+      });
+    }
+  };
+
   public render() {
     return (
       <div className="ConnectionConteiner">
@@ -143,9 +162,18 @@ export class ContextInput extends React.Component<props, state> {
         >
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
-            {/* {this.state?.tables.map(item => (
-              <Input type="checkbox">{item}</Input>
-            )) ?? null} */}
+            <ul>
+              {this.state?.tables.map(item => (
+                <li>
+                  <Input
+                    type="checkbox"
+                    onChange={this.tableSelect}
+                    id={item}
+                  ></Input>
+                  <p>{item}</p>
+                </li>
+              )) ?? "Tables not found"}
+            </ul>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.doSomthing}>

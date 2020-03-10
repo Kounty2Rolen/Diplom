@@ -11,7 +11,6 @@ export class Spin extends React.Component<props> {
     }
     public render() {
         debugger;
-        console.log(this.props.Spin);
         if (this.props.Spin) {
             return <Spinner color="Primary"></Spinner>;
         } else {

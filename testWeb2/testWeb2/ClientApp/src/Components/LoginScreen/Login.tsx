@@ -20,12 +20,9 @@ export const LoginScreen = () => {
   };
   const Login = () => {
     Person.Password = sha256(Person.Password).toString();
-    console.log(Person);
     if (Person.LoginName === "" || Person.Password === "") {
-      console.log(Person);
       alert("Please check all fields, login and password not can be empty !");
     } else if (Person.LoginName !== "" && Person.Password !== "") {
-      console.log(Person);
       GetInfo.getToken(Person)
         .then((token: any) => sessionStorage.setItem("Token", token))
         .then(() => {

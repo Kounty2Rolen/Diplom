@@ -29,7 +29,6 @@ export class Result extends React.Component<props> {
             readOnly: true,
             value: this.props.Result.resultcode + "\n\n\n" + this.props.Result.sql,
         };
-        console.log(this.props.Result);
 
         return (
             <ReactCodeMirror

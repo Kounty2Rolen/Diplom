@@ -30,8 +30,8 @@ class ProjectInfo extends React.Component<props, state> {
   }
 
   public componentDidMount() {
-     GetInfo.GetProjectInfo(this.props.match.params.ProjectId).then((data: any) => this.setState({Project: data}, () => {console.log(data); }));
-     console.log(this.state.Project);
+     GetInfo.GetProjectInfo(this.props.match.params.ProjectId).then((data: any) => this.setState({Project: data}));
+
   }
   public render() {
   return (

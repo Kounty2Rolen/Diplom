@@ -27,8 +27,7 @@ export class ProjectModul extends React.Component<{}, state> {
   }
 
   public btnClick(item: any) {
-    console.log(typeof item);
-    console.log(typeof item.id);
+
     var result = window.confirm(
       "Are you sure you want to delete this project?"
     );
@@ -45,7 +44,6 @@ export class ProjectModul extends React.Component<{}, state> {
     );
   }
   public render() {
-    console.log(this.state.projects);
     return (
       <div className="ProjectsModul">
         <div className="ProjectSelect">
