@@ -5,7 +5,7 @@ import { Button, Col, Row } from "reactstrap";
 import "../../../node_modules/codemirror/lib/codemirror.css";
 import "../../../node_modules/codemirror/mode/clike/clike";
 import "../Home.css";
-// import signalr,{ HubConnectionBuilder } from "@aspnet/signalr"
+import * as SignalR from "@aspnet/signalr"
 
 interface props {
     Result: {
@@ -20,7 +20,8 @@ export class Result extends React.Component<props> {
     }
 
     public render() {
-        // const hub =new HubConnectionBuilder().withUrl("/rtt").build();
+         const hub =new SignalR.HubConnectionBuilder().withUrl("/rtt").build();
+         hub.start();
         const options = {
             lineNumbers: true,
             matchBrackets: true,

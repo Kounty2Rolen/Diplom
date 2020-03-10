@@ -30,7 +30,6 @@ namespace testWeb2.Controllers
                         expires: now.Add(TimeSpan.FromMinutes(AuthOptions.LIFETIME)),
                         signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
                 var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
-
                 return Content(encodedJwt);
             }
             else
@@ -56,8 +55,10 @@ namespace testWeb2.Controllers
             {
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimsIdentity.DefaultNameClaimType, person.LoginName)
-                };
+                    new Claim(ClaimsIdentity.DefaultNameClaimType, person.LoginName),
+                    new Claim("DateTime", DateTime.Now.ToString("s",System.Globalization.CultureInfo.InvariantCulture))
+
+            };
                 ClaimsIdentity claimsIdentity =
                 new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType,
                     ClaimsIdentity.DefaultRoleClaimType);

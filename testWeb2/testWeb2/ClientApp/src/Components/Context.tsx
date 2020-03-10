@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import { serialize } from "v8";
 import CodeServices from "../Services/CodeServices";
+import DBService from "../Services/DataBasesService";
 
 interface state {
   CodeResult: string;
@@ -19,6 +20,7 @@ interface state {
   spin: boolean;
   modal: boolean;
   check: boolean;
+  tables: string[];
 }
 interface props {
   ProjName: string;
@@ -34,7 +36,8 @@ export class ContextInput extends React.Component<props, state> {
       Context: "",
       spin: false,
       modal: false,
-      check: true
+      check: true,
+      tables: []
     };
   }
 
@@ -45,16 +48,25 @@ export class ContextInput extends React.Component<props, state> {
       };
     });
   };
+
+  public GetTables() {
+    DBService.GetTables(this.state.connectionString).then((Response: any) => {
+
+      this.setState({ tables: Response },()=>{console.log(Response);
+      });
+    });
+  }
   public toggle = () => {
+    this.GetTables();
     this.setState(prevState => {
       return {
         modal: !prevState.modal
       };
     });
   };
-  doSomthing = () => {
+  public doSomthing = () => {
     this.GenerateModel();
-    this.toggle;
+    this.toggle();
   };
   public btnOnClickModelGenerate = () => {
     this.setState({ spin: true });
@@ -131,11 +143,15 @@ export class ContextInput extends React.Component<props, state> {
           className={"SelectTable"}
         >
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-          <ModalBody></ModalBody>
+          <ModalBody>
+            {/* {this.state?.tables.map(item => (
+              <Input type="checkbox">{item}</Input>
+            )) ?? null} */}
+          </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.doSomthing}>
               Do Something
-            </Button>{" "}
+            </Button>
             <Button color="secondary" onClick={this.toggle}>
               Cancel
             </Button>

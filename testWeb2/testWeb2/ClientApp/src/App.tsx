@@ -20,6 +20,8 @@ export class App extends React.Component<{}, state> {
         this.setState({ currentPage });
     }
 
+
+
     public render() {
         return (
             <div className="App">

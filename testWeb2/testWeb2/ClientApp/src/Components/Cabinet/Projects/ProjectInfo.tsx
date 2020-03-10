@@ -1,5 +1,4 @@
 import React, { Props } from "react";
-import { Col, Row } from "reactstrap";
 import GetInfo from "../../../Services/AccountServicesGetInfo";
 import { InpCode } from "../../Code/InputCode";
 import "./ProjectInfo.css";

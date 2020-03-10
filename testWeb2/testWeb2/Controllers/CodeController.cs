@@ -96,7 +96,6 @@ namespace onfly
                     peStream.Seek(0, SeekOrigin.Begin);
                     if (!result.Success)
                     {
-                        string error = "";
 
                         var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
 

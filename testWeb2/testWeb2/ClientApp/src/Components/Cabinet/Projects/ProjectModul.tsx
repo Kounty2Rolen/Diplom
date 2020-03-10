@@ -1,7 +1,6 @@
-import React, { MouseEvent, EventHandler } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import GetInfo from "../../../Services/AccountServicesGetInfo";
-import ProjectInfo from "./ProjectInfo";
 import { Button } from "reactstrap";
 import "./ProjectModul.css";
 import projsevice from "../../../Services/ProjectService";
@@ -30,16 +29,20 @@ export class ProjectModul extends React.Component<{}, state> {
   public btnClick(item: any) {
     console.log(typeof item);
     console.log(typeof item.id);
-
-    if (confirm("Are you sure you want to delete this project?")) {
+    var result = window.confirm(
+      "Are you sure you want to delete this project?"
+    );
+    if (result) {
       projsevice.RemoveProj(item.id);
       let project = this.state.projects;
       project.splice(project.indexOf(item), 1);
-      this.setState({projects:project})
+      this.setState({ projects: project });
     }
   }
   public componentDidMount() {
-    GetInfo.getProjects().then((projects: any) => this.setState({ projects }));
+    GetInfo.getProjects().then((projects: any) =>
+      this.setState({ projects: projects })
+    );
   }
   public render() {
     console.log(this.state.projects);
