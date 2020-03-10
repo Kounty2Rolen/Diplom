@@ -36,7 +36,7 @@ namespace testWeb2.Controllers
             }
 
 
-            return Ok(Json(tables));
+            return Ok(tables);
         }
     }
 }

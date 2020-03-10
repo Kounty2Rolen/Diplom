@@ -4,15 +4,13 @@ class DBService {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       },
       body: JSON.stringify(connectionString)
     }).then(Response => {
-      console.log(Response);
-      
-      Response.json()
-    }).then(data=>{console.log(data)})
-
+      return Response.json();
+    });
   }
 }
 export default new DBService();

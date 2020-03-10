@@ -51,9 +51,8 @@ export class ContextInput extends React.Component<props, state> {
 
   public GetTables() {
     DBService.GetTables(this.state.connectionString).then((Response: any) => {
-
-      this.setState({ tables: Response },()=>{console.log(Response);
-      });
+      this.setState({ tables: Response },()=>{console.log(this.state.tables)}
+      );
     });
   }
   public toggle = () => {
