@@ -9,6 +9,18 @@ h3 {
     color: black;
 }
 
+textarea.ModelRecord {
+    border: 1px solid black;
+    float: left;
+    background-color: floralwhite;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}
+
 .tree {
     background-color: ghostwhite;
+    display: inline-flexbox;
+    width: 300%;
+    row-gap: 3;
+    margin-left: -114%;
 }

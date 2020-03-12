@@ -26,3 +26,9 @@
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
    at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+12.03.2020 16:56:53|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 26
+12.03.2020 16:58:05|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 26
+12.03.2020 16:58:14|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 26

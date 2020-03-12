@@ -27,7 +27,7 @@ namespace testWeb2.Controllers
         {
             try
             {
-                Tempproj tempproj;
+                Tempproj tempproj = null;
                 if (text.serializeAnonProj != null)
                 {
                     tempproj = JsonConvert.DeserializeObject<Tempproj>(text.serializeAnonProj);
@@ -42,7 +42,7 @@ using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using testWeb2.Model;
+using testWeb2.Model_" + tempproj.RandomEnding + @";
 using System.Linq;
 
 namespace onfly
@@ -74,14 +74,14 @@ namespace onfly
                 public void Log<TState>(LogLevel logLevel, EventId eventId,
                         TState state, Exception exception, Func<TState, Exception, string> formatter)
                 {
-                Console.WriteLine(formatter(state, exception));
+                Console.Error.WriteLine(formatter(state, exception));
                 }
             }
         }
 
         public static void Main() {
 }
-        public static string CodeCompile()
+        public static void CodeCompile()
         {
             var db = new " + text.ContextName + "();" + @";
             db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
@@ -92,7 +92,16 @@ namespace onfly
                 string sourceCode = codeHead + text.SourceCode + "}}}";
                 using (var peStream = new MemoryStream())
                 {
-                    var result = GenerateCode(sourceCode).Emit(peStream);
+                    Microsoft.CodeAnalysis.Emit.EmitResult result;
+                    if (tempproj == null)
+                    {
+                        result = GenerateCode(sourceCode).Emit(peStream);
+                    }
+                    else
+                    {
+                        result = GenerateCode(sourceCode, tempproj).Emit(peStream);
+
+                    }
                     peStream.Seek(0, SeekOrigin.Begin);
                     if (!result.Success)
                     {
@@ -125,11 +134,11 @@ namespace onfly
                                 proc.StartInfo.RedirectStandardError = true;
                                 proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {
-                                    resultcode += e.Data;
+                                    resultcode += e.Data + "\n";
                                 });
                                 proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {
-                                    sql += e.Data;
+                                    sql += e.Data + "\n";
                                 });
                                 proc.StartInfo.Arguments = User.Identity?.Name ?? Request.HttpContext.TraceIdentifier;
                                 proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
@@ -176,24 +185,48 @@ namespace onfly
             }
         }
 
-        private static List<string> GetModelsCode()
+        static string randomEndingForFolder = Guid.NewGuid().ToString().Replace('-', '_');
+        [Route("/Code/ProjectLoad")]
+        public IActionResult ProjectLoad([FromBody]string ProjectID)
         {
-            List<string> trees = new List<string>();
-            foreach (var file in Directory.GetFiles(Path.GetTempPath() + "/Model"))
+
+            var context = new Model.Context();
+            var projectdb = context.Projects.Where(c => c.Id == Convert.ToInt32(ProjectID)).FirstOrDefault();
+            var Project = new Tempproj();
+            Project.Data = new ConectionData()
             {
-                if (file.Contains(".cs"))
-                {
-                    using (StreamReader reader = new StreamReader(file.ToString()))
-                    {
-                        trees.Add(reader.ReadToEnd());
-                    }
-                }
-            }
+                ConnectionString = projectdb.ConnectionString,
+                ContextName = projectdb.ContextName,
+                ProjName = projectdb.ProjectName
+            };
+            Project.Id = projectdb.Id;
+            Project.Models = context.Model.Where(c => c.Projectid == projectdb.Id).Select(e => e.Model1).ToList();
+            Project.RandomEnding = randomEndingForFolder;
+            return Ok(Project);
+
+        }
+
+        private static List<string> GetModelsCode(Tempproj tempproj)
+        {
+
+            List<string> trees = new List<string>();
+            tempproj.Models.ForEach(c => trees.Add(c));
+            //foreach (var file in Directory.GetFiles(Path.GetTempPath() + "/Model"))
+            //{
+            //    if (file.Contains(".cs"))
+            //    {
+            //        using (StreamReader reader = new StreamReader(file.ToString()))
+            //        {
+            //            trees.Add(reader.ReadToEnd());
+            //            tempproj.Models.ForEach(c => trees.Add(c));
+            //        }
+            //    }
+            //}
 
             return trees;
         }
 
-        private static CSharpCompilation GenerateCode(string sourceCode = null)
+        private static CSharpCompilation GenerateCode(string sourceCode = null, Tempproj tempproj = null)
         {
             var assembly = AppDomain.CurrentDomain.GetAssemblies();
 
@@ -201,7 +234,7 @@ namespace onfly
             var codeString = SourceText.From(sourceCode);
             var options = CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest);
             trees.Add(SyntaxFactory.ParseSyntaxTree(codeString, options));
-            trees.AddRange(GetModelsCode().Select(c =>
+            trees.AddRange(GetModelsCode(tempproj).Select(c =>
             {
                 return SyntaxFactory.ParseSyntaxTree(SourceText.From(c), options);
             }));
@@ -209,7 +242,7 @@ namespace onfly
             List<MetadataReference> references = new List<MetadataReference>()
             {
                 MetadataReference.CreateFromFile(assembly.First(c=>c.FullName.StartsWith("netstandard")).Location),
-                MetadataReference.CreateFromFile(typeof(System.Linq.Enumerable).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(Enumerable).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.Linq.Expressions.BinaryExpression).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(RelationalDatabaseFacadeExtensions).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(System.ComponentModel.TypeConverter).Assembly.Location),
@@ -228,7 +261,8 @@ namespace onfly
                 MetadataReference.CreateFromFile(typeof(Microsoft.EntityFrameworkCore.Infrastructure.ModelCacheKey).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.EventId).Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(Microsoft.Extensions.Logging.Abstractions.NullLogger).Assembly.Location),
-                MetadataReference.CreateFromFile(typeof(System.IServiceProvider).Assembly.Location)
+                MetadataReference.CreateFromFile(typeof(IServiceProvider).Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(System.Runtime.Versioning.FrameworkName).Assembly.Location)
             };
 
             return CSharpCompilation.Create("CompiledCode.dll",
@@ -239,18 +273,13 @@ namespace onfly
             assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64));
         }
 
-        public IActionResult ModelGenerate([FromBody] ConectionData data)
+        public IActionResult ModelGenerate([FromBody] ConectionData data,string RandomEnding=null)
         {
+            if (RandomEnding != null)
+            {
+                randomEndingForFolder = RandomEnding;
+            }
 
-            string randomEndingForFolder;
-            if (!User.Identity.IsAuthenticated)
-            {
-                randomEndingForFolder = Guid.NewGuid().ToString();
-            }
-            else
-            {
-                randomEndingForFolder = User.Identity.Name;
-            }
             try
             {
                 if (string.IsNullOrEmpty(data.ContextName))
@@ -270,19 +299,25 @@ namespace onfly
                     var context = new OperationExecutor.ScaffoldContext(executor, resultHandler, new Dictionary<string, object> {
                     {"connectionString", data.ConnectionString },
                     {"provider", "Microsoft.EntityFrameworkCore.SqlServer"},
-                    { "outputDir", "Model" },
+                    { "outputDir", "Model_"+randomEndingForFolder },
                     {"dbContextClassName",data.ContextName},
-                    {"outputDbContextDir","Model"+randomEndingForFolder},
-                    {"schemaFilters",new string[]{"dbo"} },//Фильр схем н-р DBO
-                    {"tableFilters",Array.Empty<string>() },//Фильр таблиц
+                    {"outputDbContextDir","Model_"+randomEndingForFolder},
+                    {"schemaFilters",new string[]{""} },
+                    {"tableFilters",data?.selectedTables.Distinct()??new List<string>()},
                     {"useDataAnnotations",false },
                     {"overwriteFiles",true },
-                    { "useDatabaseNames",false} });
+                    { "useDatabaseNames",true} });
                     context.Execute(new Action(() => { }));
                     var id = new Tempproj();
                     if (User.Identity.IsAuthenticated)
                     {
-                        addProjToUser(data);
+                        if (data.ProjName == "")
+                        {
+                            data.ProjName = "TEMP_PROJ_" + randomEndingForFolder;
+                        }
+                        addProjToUser(data, randomEndingForFolder);
+                        id = GenerateTempProject(data, randomEndingForFolder);
+
                     }
                     else
                     {
@@ -302,7 +337,7 @@ namespace onfly
             }
         }
 
-        public void addProjToUser(ConectionData data)
+        public void addProjToUser(ConectionData data, string randomEnding)
         {
             Model.Context context = new Model.Context();
             Model.User user = context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
@@ -314,7 +349,7 @@ namespace onfly
             project.ContextName = data.ContextName;
             project.ConnectionString = data.ConnectionString;
             context.Add(project);
-            foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model" + User.Identity.Name))
+            foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model_" + randomEnding))
             {
                 Model.Model model = new Model.Model();
                 model.Project = project;
@@ -336,7 +371,7 @@ namespace onfly
             Tempproj tempproj = new Tempproj();
             context.Add(tempProject);
             tempproj.Models = new List<string>();
-            foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model" + ending))
+            foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model_" + ending))
             {
                 testWeb2.Model.Model model = new testWeb2.Model.Model();
                 model.Tempproject = tempProject.Id;
@@ -376,6 +411,7 @@ namespace onfly
             public string ConnectionString { get; set; }
             public string ContextName { get; set; }
             public string ProjName { get; set; }
+            public List<string> selectedTables { get; set; }
         }
 
         public class requestData

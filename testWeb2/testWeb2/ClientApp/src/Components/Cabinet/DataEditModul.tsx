@@ -1,9 +1,7 @@
 import sha256 from "crypto-js/sha256";
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
 import { Button, Input, Label } from "reactstrap";
 import GetInfo from "../../Services/AccountServicesGetInfo";
-import { ContextInput } from "../Context";
 
 interface state {
     OldPassword: string;

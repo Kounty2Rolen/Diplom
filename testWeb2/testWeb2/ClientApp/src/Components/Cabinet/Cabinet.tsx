@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
-import { Button } from "reactstrap";
+import { Redirect } from "react-router-dom";
 import "./Cabinet.css";
 import { CreateProjectModul } from "./CreateProjModul";
 import { DataEditModul } from "./DataEditModul";

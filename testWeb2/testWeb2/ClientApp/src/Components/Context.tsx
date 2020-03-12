@@ -8,7 +8,6 @@ import {
   ModalFooter,
   Input
 } from "reactstrap";
-import { serialize } from "v8";
 import CodeServices from "../Services/CodeServices";
 import DBService from "../Services/DataBasesService";
 
@@ -57,6 +56,8 @@ export class ContextInput extends React.Component<props, state> {
     });
   }
   public toggle = () => {
+    console.log(this.state.selectedTables);
+    
     this.GetTables();
     this.setState(prevState => {
       return {
@@ -81,7 +82,8 @@ export class ContextInput extends React.Component<props, state> {
     const ConectionData = {
       ConnectionString: this.state.connectionString,
       ContextName: this.state.Context,
-      ProjName: this.props.ProjName
+      ProjName: this.props.ProjName,
+      selectedTables: this.state.selectedTables
     };
     if (
       this.state.connectionString.length > 0 &&
@@ -90,7 +92,7 @@ export class ContextInput extends React.Component<props, state> {
       CodeServices.ModelGenerateService(ConectionData).then(
         (Response: string) => {
           this.setState({ spin: false });
-          localStorage.setItem("AnonymObject", Response);
+          localStorage.setItem("Object", Response);
         }
       );
     } else {
@@ -106,19 +108,22 @@ export class ContextInput extends React.Component<props, state> {
     this.setState({ Context: event.target.value });
   };
 
-  tableSelect = (e: ChangeEvent<HTMLInputElement>) => {
-    if (e.target.checked) {
+  tableSelect = (event: ChangeEvent<HTMLInputElement>) => {
+    event.persist();
+    if (event.target.checked) {
       this.setState(prevState => {
         const arr = prevState.selectedTables;
         return {
-          selectedTables: [...arr, e.target.id]
+          selectedTables: [...arr, event.target.id]
         };
       });
     } else {
       this.setState(prevState => {
         const arr = prevState.selectedTables;
+        arr.splice(arr.indexOf(event.target.id), 1);
+
         return {
-          selectedTables: arr.slice(arr.indexOf(e.target.id), 1)
+          selectedTables: arr
         };
       });
     }
@@ -160,11 +165,11 @@ export class ContextInput extends React.Component<props, state> {
           toggle={this.toggle}
           className={"SelectTable"}
         >
-          <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Select Tables</ModalHeader>
           <ModalBody>
             <ul>
               {this.state?.tables.map(item => (
-                <li>
+                <li key={item}>
                   <Input
                     type="checkbox"
                     onChange={this.tableSelect}
@@ -177,7 +182,7 @@ export class ContextInput extends React.Component<props, state> {
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.doSomthing}>
-              Do Something
+              Generate model
             </Button>
             <Button color="secondary" onClick={this.toggle}>
               Cancel

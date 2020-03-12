@@ -1,13 +1,11 @@
-import CodeMirror from "codemirror";
 import React from "react";
 import ReactCodeMirror from "react-codemirror";
-import { Button, Col, Row, Spinner } from "reactstrap";
+import { Button, Spinner } from "reactstrap";
 import "../../../node_modules/codemirror/lib/codemirror.css";
 import "../../../node_modules/codemirror/mode/clike/clike";
 import CodeService from "../../Services/CodeServices";
 import "../Home.css";
 import { Result } from "./ResultCode";
-import { Spin } from "./Spinner";
 
 interface state {
   Result: {
@@ -39,7 +37,6 @@ export class InpCode extends React.Component<{}, state> {
     let Code: object;
     this.setState({ Spin: true });
     if (sessionStorage.getItem("Token") !== null) {
-
       Code = {
         SourceCode: this.state.SourceCode,
         ContextName: document.getElementsByClassName(
@@ -47,13 +44,14 @@ export class InpCode extends React.Component<{}, state> {
         )[0].nodeValue
           ? document.getElementsByClassName("connectionComponentContext")[0]
               .nodeValue
-          : "Context"
+          : "Context",
+        serializeAnonProj: localStorage.getItem("Object")
       };
       debugger;
     } else {
       Code = {
         SourceCode: this.state.SourceCode,
-        serializeAnonProj: localStorage.getItem("AnonymObject")
+        serializeAnonProj: localStorage.getItem("Object")
       };
     }
     if (this.state.SourceCode.length >= 0) {

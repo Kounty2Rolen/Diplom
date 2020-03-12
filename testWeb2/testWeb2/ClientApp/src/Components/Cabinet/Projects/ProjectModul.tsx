@@ -42,6 +42,7 @@ export class ProjectModul extends React.Component<{}, state> {
     GetInfo.getProjects().then((projects: any) =>
       this.setState({ projects: projects })
     );
+    
   }
   public render() {
     return (

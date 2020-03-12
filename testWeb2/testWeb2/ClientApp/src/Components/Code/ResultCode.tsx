@@ -1,7 +1,5 @@
-import CodeMirror from "codemirror";
 import React from "react";
 import ReactCodeMirror from "react-codemirror";
-import { Button, Col, Row } from "reactstrap";
 import "../../../node_modules/codemirror/lib/codemirror.css";
 import "../../../node_modules/codemirror/mode/clike/clike";
 import "../Home.css";
