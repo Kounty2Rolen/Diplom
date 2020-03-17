@@ -57,7 +57,7 @@ export class ContextInput extends React.Component<props, state> {
   }
   public toggle = () => {
     console.log(this.state.selectedTables);
-    
+
     this.GetTables();
     this.setState(prevState => {
       return {
@@ -99,6 +99,7 @@ export class ContextInput extends React.Component<props, state> {
       alert("Строка подключения не может быть пустой");
       this.setState({ spin: false });
     }
+    this.setState({selectedTables:[]});
   };
   public inptOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ connectionString: event.target.value });

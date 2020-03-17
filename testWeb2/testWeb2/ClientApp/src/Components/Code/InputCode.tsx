@@ -6,6 +6,7 @@ import "../../../node_modules/codemirror/mode/clike/clike";
 import CodeService from "../../Services/CodeServices";
 import "../Home.css";
 import { Result } from "./ResultCode";
+import * as SignalR from "@aspnet/signalr";
 
 interface state {
   Result: {
@@ -23,8 +24,8 @@ export class InpCode extends React.Component<{}, state> {
     super(porps);
     this.state = {
       Result: {
-        resultcode: "",
-        sql: ""
+        resultcode: "Result:\n",
+        sql: "SQL:\n"
       },
       SourceCode: "",
       connectionString: "",
@@ -32,44 +33,75 @@ export class InpCode extends React.Component<{}, state> {
       Spin: false
     };
   }
+  hub = new SignalR.HubConnectionBuilder().withUrl("/rtt").build();
 
-  public codeCompile = () => {
-    let Code: object;
-    this.setState({ Spin: true });
-    if (sessionStorage.getItem("Token") !== null) {
-      Code = {
-        SourceCode: this.state.SourceCode,
-        ContextName: document.getElementsByClassName(
-          "connectionComponentContext"
-        )[0].nodeValue
-          ? document.getElementsByClassName("connectionComponentContext")[0]
-              .nodeValue
-          : "Context",
-        serializeAnonProj: localStorage.getItem("Object")
-      };
-      debugger;
-    } else {
-      Code = {
-        SourceCode: this.state.SourceCode,
-        serializeAnonProj: localStorage.getItem("Object")
-      };
-    }
-    if (this.state.SourceCode.length >= 0) {
-      // отправка данных в index() генерация и выполнение кода
-      CodeService.SendCode(Code).then((data: any) => {
-        this.setState(
-          {
-            Result: data
-          },
-          () => {
-            this.setState({ Spin: false });
+  componentDidMount() {
+    this.hub.on("Result", (data: string) => {
+      if (data === "True") {
+        this.setState({ Spin: false });
+      } else {
+        this.setState(prevState => ({
+          Result: {
+            resultcode: this.state.Result.resultcode + data,
+            sql: this.state.Result.sql
           }
-        );
-      });
-    } else if (this.state.connectionString.length > 0) {
-      alert("Сперва подключитесь к бд");
+        }));
+        console.log(data);
+      }
+    });
+    this.hub.on("Exception", (data: string) => {
+      this.setState(prevState => ({
+        Result: {
+          resultcode: "Compilation Error:\n" + data,
+          sql: this.state.Result.sql
+        }
+      }));
+    });
+
+    this.hub.on("SQL", (data: string) => {
+      this.setState(prevState => ({
+        Result: {
+          resultcode: this.state.Result.resultcode,
+          sql: this.state.Result.sql + data
+        }
+      }));
+
+      console.log(this.state.Result);
+    });
+    this.hub.start();
+  }
+  public codeCompile = () => {
+    if (localStorage.getItem("Object") === null) {
+      alert("Нет скомпилированной модели базы данных!");
     } else {
-      alert("Поле с кодом не может быть пустым!");
+      let Code: object;
+      this.setState({ Spin: true });
+      if (sessionStorage.getItem("Token") !== null) {
+        Code = {
+          SourceCode: this.state.SourceCode,
+          ContextName: document.getElementsByClassName(
+            "connectionComponentContext"
+          )[0].nodeValue
+            ? document.getElementsByClassName("connectionComponentContext")[0]
+                .nodeValue
+            : "Context",
+          serializeAnonProj: localStorage.getItem("Object")
+        };
+        debugger;
+      } else {
+        Code = {
+          SourceCode: this.state.SourceCode,
+          serializeAnonProj: localStorage.getItem("Object")
+        };
+      }
+      if (this.state.SourceCode.length >= 0) {
+        this.hub.send("Result", JSON.stringify(Code));
+
+      } else if (this.state.connectionString.length > 0) {
+        alert("Сперва подключитесь к бд");
+      } else {
+        alert("Поле с кодом не может быть пустым!");
+      }
     }
   };
 

@@ -48,11 +48,6 @@ export class Menu extends React.Component<props, state> {
         </NavbarBrand>
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <Link to="/About" className="Link">
-              <Button color="light">About</Button>
-            </Link>
-          </NavItem>
-          <NavItem>
             {token ? (
               <Link to="/Account" className="Link">
                 <Button color="light">Edit account</Button>

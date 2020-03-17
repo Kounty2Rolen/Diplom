@@ -43,8 +43,8 @@ class ProjectInfo extends React.Component<props, state> {
     );
   }
   public render() {
-    console.log(this.state.Project);
 
+    this.componentDidMount();
     return (
       <div>
         <div className="ModelCode">
@@ -61,7 +61,6 @@ class ProjectInfo extends React.Component<props, state> {
               <Card>
                 <CardBody>
                   <ProjectTree>
-
                   </ProjectTree>
                 </CardBody>
               </Card>

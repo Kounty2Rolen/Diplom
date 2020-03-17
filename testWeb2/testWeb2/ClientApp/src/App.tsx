@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.css";
-import { About } from "./Components/About";
 import { Cabinet } from "./Components/Cabinet/Cabinet";
 import ProjectInfo from "./Components/Cabinet/Projects/ProjectInfo";
 import { Home } from "./Components/Home";
@@ -30,7 +29,6 @@ export class App extends React.Component<{}, state> {
                         <Menu OnMenuClick={this.OnMenuClick}></Menu>
                     </header>
                     <Switch>
-                        <Route exact={true} path="/About" component={About} />
                         <Route exact={true} path="/Home" component={Home} />
                         {/*Регистрация и вход */}
                         <Route exact={true} path="/Register" component={RegScreen} />
