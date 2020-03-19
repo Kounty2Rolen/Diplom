@@ -1,30 +1,59 @@
-import React from "react";
+import React, { EventHandler } from "react";
 import { InpCode } from "../../../Code/InputCode";
-import { ListGroupItemHeading, Container, Row, Col } from "reactstrap";
+import ReactCodeMirror from "react-codemirror";
+import { ListGroupItemHeading, Container, Row, Col, Button } from "reactstrap";
+import { serialize } from "v8";
 
 interface props {
   match: {
     params: { File: string };
   };
 }
-
-class ModelEditor extends React.Component<props, {}> {
+interface state {
+  model: string;
+}
+class ModelEditor extends React.Component<props, state> {
   constructor(props: props) {
     super(props);
+    this.state = {
+      model: ""
+    };
   }
   proj = JSON.parse(localStorage?.getItem("Object") ?? "");
+  Files = Array.from(this.proj.fileNames);
+  id = this.Files.indexOf(this.props.match.params.File + ".cs");
+  models = Array.from(this.proj.models);
 
+  txtAreaOnChange = (event: any) => {
+    this.models[this.id] = event;
+  };
+  componentDidMount() {
+    this.setState({ model: this.models[this.id] as string });
+  }
+  btnClick = () => {
+    this.proj.models = this.models;
+    console.log();
+    let ser=JSON.stringify(this.proj);
+    
+    localStorage.setItem("Object",ser);
+    alert("Saved");
+  };
   render() {
-    let Files = Array.from(this.proj.fileNames);
-    let id = Files.indexOf(this.props.match.params.File + ".cs");
-    let models = Array.from(this.proj.models);
-    let model = models[id] as string;
-    console.log(models, id);
-
+    const options = {
+      lineNumbers: true,
+      matchBrackets: true,
+      mode: "text/x-csharp",
+      value: this.state.model
+    };
     return (
       <Container>
         <br></br>
-        <InpCode model={model}></InpCode>
+        <ReactCodeMirror
+          onChange={this.txtAreaOnChange}
+          className="InputCode"
+          options={options}
+        ></ReactCodeMirror>
+        <Button onClick={this.btnClick}>Save</Button>
       </Container>
     );
   }

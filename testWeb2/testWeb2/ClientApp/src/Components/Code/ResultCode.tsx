@@ -19,16 +19,24 @@ export class Result extends React.Component<props> {
   componentDidMount() {}
 
   public render() {
-    const options = {
+    const optionsResult = {
       lineNumbers: true,
       matchBrackets: true,
       mode: "text/x-csharp",
       autoScroll: true,
       autoSize: true,
       readOnly: true,
-      value: this.props.Result.resultcode + "\n" + this.props.Result.sql
+      value: this.props.Result.resultcode
     };
-
+    const optionsSQL = {
+      lineNumbers: true,
+      matchBrackets: true,
+      mode: "text/x-csharp",
+      autoScroll: true,
+      autoSize: true,
+      readOnly: true,
+      value: this.props.Result.sql
+    };
     return (
       <Container>
         <Row>
@@ -36,14 +44,14 @@ export class Result extends React.Component<props> {
             <div className="ResizeBox" style={{ resize: "both" }}>
               <ReactCodeMirror
                 className="ResultCode"
-                options={options}
+                options={optionsResult}
               ></ReactCodeMirror>
             </div>
           </Col>
           <Col>
             <ReactCodeMirror
               className="ResultCode SQL"
-              options={options}
+              options={optionsSQL}
             ></ReactCodeMirror>
           </Col>
         </Row>

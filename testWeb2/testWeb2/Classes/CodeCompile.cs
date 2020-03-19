@@ -19,7 +19,7 @@ namespace testWeb2.Classes
 {
     public class CodeCompile
     {
-        public void Index(requestData text, IClientProxy clientProxy,string randomEndingForFolder)
+        public void Index(requestData text, IClientProxy clientProxy, string randomEndingForFolder)
         {
             try
             {

@@ -1865,3 +1865,25 @@ hello
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
    at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+19.03.2020 16:42:33|SYSLOG|=>$ Connection.... Iddentificator:149c8d88_b34c_47d7_a2d0_c150ebb3680d
+19.03.2020 16:42:33|SYSLOG|=>$ Connected
+19.03.2020 16:42:33|LOGED_DATA|=>$ Data(Lenght):0
+19.03.2020 16:42:33|LOGED_DATA|=>$ Readed
+19.03.2020 16:42:33|Exception|=>$ System.BadImageFormatException: Bad IL format.
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+19.03.2020 16:44:49|SYSLOG|=>$ Connection.... Iddentificator:439c4a4b_0d08_4a3f_aa3b_e774fce4fa9c
+19.03.2020 16:44:49|SYSLOG|=>$ Connected
+19.03.2020 16:44:49|LOGED_DATA|=>$ Data(Lenght):0
+19.03.2020 16:44:49|LOGED_DATA|=>$ Readed
+19.03.2020 16:44:49|Exception|=>$ System.BadImageFormatException: Bad IL format.
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
+   at System.Reflection.Assembly.Load(Byte[] rawAssembly)
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+19.03.2020 16:45:09|SYSLOG|=>$ Connection.... Iddentificator:63127c63_6f1c_4614_baa9_5ae4d97d6542
+19.03.2020 16:45:09|SYSLOG|=>$ Connected
+19.03.2020 16:45:09|LOGED_DATA|=>$ Data(Lenght):13824
+19.03.2020 16:45:09|LOGED_DATA|=>$ Readed
+19.03.2020 16:45:19|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
