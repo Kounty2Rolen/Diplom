@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Button } from "reactstrap";
 
 const ModalExample = (props: any) => {
   const { buttonLabel, className } = props;
@@ -13,7 +13,6 @@ const ModalExample = (props: any) => {
       <Button color="danger" onClick={toggle}>
         {buttonLabel}
       </Button>
-     
     </div>
   );
 };
