@@ -9,7 +9,7 @@ h3 {
     color: black;
 }
 
-textarea.ModelRecord {
+textarea .ModelRecord {
     border: 1px solid black;
     float: left;
     background-color: floralwhite;

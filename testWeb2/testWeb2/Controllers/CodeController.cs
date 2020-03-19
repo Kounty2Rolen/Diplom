@@ -36,20 +36,27 @@ namespace testWeb2.Controllers
         [Route("/Code/ProjectLoad")]
         public IActionResult ProjectLoad([FromBody]string ProjectID)
         {
-
-            var context = new Model.Context();
-            var projectdb = context.Projects.Where(c => c.Id == Convert.ToInt32(ProjectID)).FirstOrDefault();
-            var Project = new Tempproj();
-            Project.Data = new ConectionData()
+            if (ProjectID != null)
             {
-                ConnectionString = projectdb.ConnectionString,
-                ContextName = projectdb.ContextName,
-                ProjName = projectdb.ProjectName
-            };
-            Project.Id = projectdb.Id;
-            Project.Models = context.Model.Where(c => c.Projectid == projectdb.Id).Select(e => e.Model1).ToList();
-            Project.RandomEnding = randomEndingForFolder;
-            return Ok(Project);
+                var context = new Model.Context();
+                var projectdb = context.Projects.Where(c => c.Id == Convert.ToInt32(ProjectID)).FirstOrDefault();
+                var Project = new Tempproj();
+                Project.Data = new ConectionData()
+                {
+                    ConnectionString = projectdb.ConnectionString,
+                    ContextName = projectdb.ContextName,
+                    ProjName = projectdb.ProjectName
+                };
+                Project.Id = projectdb.Id;
+                Project.FileNames = context.Model.Where(c => c.Projectid == projectdb.Id).Select(e => e.Filename).ToList();
+                Project.Models = context.Model.Where(c => c.Projectid == projectdb.Id).Select(e => e.Model1).ToList();
+                Project.RandomEnding = randomEndingForFolder;
+                return Ok(Project);
+            }
+            else
+            {
+                return BadRequest();
+            }
 
         }
 

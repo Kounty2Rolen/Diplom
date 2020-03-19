@@ -20,13 +20,7 @@ class ProjectTree extends React.Component<{}, state> {
       <div className="FileTree">
         <h3>FileTree</h3>
         <div className="tree" >
-          {object.models.map((item: any) => (
-            <p>
-            <textarea cols={50} rows={15} className={"ModelRecord"}>
-              {item}
-            </textarea>
-            </p>
-          ))}
+
         </div>
       </div>
     );

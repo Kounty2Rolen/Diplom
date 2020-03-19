@@ -6,7 +6,10 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Input
+  Input,
+  Container,
+  Row,
+  Col
 } from "reactstrap";
 import CodeServices from "../Services/CodeServices";
 import DBService from "../Services/DataBasesService";
@@ -99,7 +102,7 @@ export class ContextInput extends React.Component<props, state> {
       alert("Строка подключения не может быть пустой");
       this.setState({ spin: false });
     }
-    this.setState({selectedTables:[]});
+    this.setState({ selectedTables: [] });
   };
   public inptOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ connectionString: event.target.value });
@@ -132,35 +135,51 @@ export class ContextInput extends React.Component<props, state> {
 
   public render() {
     return (
-      <div className="ConnectionConteiner">
-        <Input
-          className="connectionComponent"
-          onChange={this.inptOnChange}
-          type="text"
-          placeholder="input connection string"
-        />
-        <br />
-        <Input
-          className="connectionComponentContext"
-          type="text"
-          placeholder="input context name"
-          onChange={this.inptContextOnChange}
-        />
-        {this.state.spin ? <Spinner color="success"></Spinner> : null}
-        <br />
-        <div className={"ButtonsDiv"}>
-          <label className={"checker"}>
-            <Input type="checkbox" onClick={this.checkClick} /> Check me out
-          </label>
-          <br />
-          <Button
-            className="connectionComponentBTN"
-            color="success"
-            onClick={this.btnOnClickModelGenerate}
+      <Container className="ConnectionConteiner">
+        <Row>
+          <Col 
           >
-            Generate Models
-          </Button>
-        </div>
+            <Input
+              className="connectionComponent"
+              onChange={this.inptOnChange}
+              type="text"
+              placeholder="input connection string"
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Input
+              className="connectionComponentContext"
+              type="text"
+              placeholder="input context name"
+              onChange={this.inptContextOnChange}
+            />
+          </Col>
+
+          <Col>
+            {this.state.spin ? <Spinner color="success"></Spinner> : null}
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <label className={"checker"}>
+              <Input type="checkbox" onClick={this.checkClick} /> Check me out
+            </label>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Button
+              className="connectionComponentBTN"
+              color="success"
+              onClick={this.btnOnClickModelGenerate}
+            >
+              Generate Models
+            </Button>
+          </Col>
+        </Row>
+
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
@@ -190,7 +209,7 @@ export class ContextInput extends React.Component<props, state> {
             </Button>
           </ModalFooter>
         </Modal>
-      </div>
+      </Container>
     );
   }
 }

@@ -1,0 +1,16 @@
+.Hamburger {
+    width: 2%;
+    left: 0.3%;
+    margin-top: 1%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.SideBarRoot {
+    margin-top: 64px;
+}
+
+.Rec {
+    text-align: left;
+    margin-left: 5%;
+}

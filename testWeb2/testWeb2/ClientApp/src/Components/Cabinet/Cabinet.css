@@ -16,19 +16,21 @@ h2 {
 
 .createProjectModulBody {
     background-color: ghostwhite;
-    margin: 10px;
+    /* margin: 10px; */
     border-radius: 10px;
 }
 
-.createProjectModulBody input {
+.createProjectModulBody {
     width: auto;
     border-radius: 10px;
     width: 300px;
 }
 
-.ProjectNameInput {
-    margin-top: 10px;
-    width: 300px;
+.createProjectModulBody input {
+    /* width: auto; */
+    width: 270px;
+    border-radius: 10px;
+    /* width: 300px; */
 }
 
 .FieldsModul {
@@ -41,20 +43,26 @@ h2 {
     margin-top: 20px;
     background-color: white;
     border-radius: 10px;
-    position: absolute;
-    margin-left: 80.89%;
+    /* position: absolute; */
+    /* margin-left: 80.89%; */
+    /* margin-left: -2%; */
 }
 
 .ProjectsModul {
     background-color: white;
     border-radius: 10px;
-    position: absolute;
-    margin-left: 23.9%;
+    width: auto;
+    /* position: absolute; */
+    /* margin-left: 23.9%; */
     margin-top: 20px;
-    width: 56.25%;
+    /* width: 56.25%; */
     text-align: left;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.Main {
+    margin-left: auto;
 }
 
 .Projects {
@@ -62,26 +70,28 @@ h2 {
     border-radius: 10px;
 }
 
+.createProjectModulBody input {
+    margin-top: 2px;
+}
+
 .createProjectModul {
     background-color: white;
     border-radius: 10px;
-    position: absolute;
-    margin-left: 5.2%;
     margin-top: 20px;
-    width: 18%;
 }
 
 .contextGenerate .ConnectionConteiner .connectionComponent {
     margin-top: 1%;
 }
 
-.createProjectModul .ButtonsDiv {
+
+/* .createProjectModul .ButtonsDiv {
     margin-top: -8%;
-}
+} */
 
 .createProjectModul .checker {
-    margin-left: -128%;
-    color: black;
+    /* margin-left: -128%; */
+    /* color: black; */
 }
 
 .contextGenerate .ConnectionConteiner .connectionComponentContext {

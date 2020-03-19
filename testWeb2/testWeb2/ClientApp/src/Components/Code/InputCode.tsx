@@ -1,6 +1,6 @@
 import React from "react";
 import ReactCodeMirror from "react-codemirror";
-import { Button, Spinner } from "reactstrap";
+import { Button, Spinner, Container, Row, Col } from "reactstrap";
 import "../../../node_modules/codemirror/lib/codemirror.css";
 import "../../../node_modules/codemirror/mode/clike/clike";
 import CodeService from "../../Services/CodeServices";
@@ -17,11 +17,14 @@ interface state {
   connectionString: string;
   Context: string;
   Spin: boolean;
+  model: string;
 }
-
-export class InpCode extends React.Component<{}, state> {
-  constructor(porps: state) {
-    super(porps);
+interface props {
+  model: string;
+}
+export class InpCode extends React.Component<props, state> {
+  constructor(props: props) {
+    super(props);
     this.state = {
       Result: {
         resultcode: "Result:\n",
@@ -30,7 +33,8 @@ export class InpCode extends React.Component<{}, state> {
       SourceCode: "",
       connectionString: "",
       Context: "",
-      Spin: false
+      Spin: false,
+      model: ""
     };
   }
   hub = new SignalR.HubConnectionBuilder().withUrl("/rtt").build();
@@ -46,7 +50,7 @@ export class InpCode extends React.Component<{}, state> {
             sql: this.state.Result.sql
           }
         }));
-        console.log(data);
+        this.setState({ model: this.props.model });
       }
     });
     this.hub.on("Exception", (data: string) => {
@@ -96,7 +100,6 @@ export class InpCode extends React.Component<{}, state> {
       }
       if (this.state.SourceCode.length >= 0) {
         this.hub.send("Result", JSON.stringify(Code));
-
       } else if (this.state.connectionString.length > 0) {
         alert("Сперва подключитесь к бд");
       } else {
@@ -110,65 +113,53 @@ export class InpCode extends React.Component<{}, state> {
   };
   public btnlock = () => {
     return this.state.Spin ? (
-      <html>
-        <Button
-          size="lg"
-          className="btnConnect"
-          color="danger"
-          onClick={this.codeCompile}
-          disabled
-        >
-          Submit
-        </Button>
-      </html>
+      <Button
+        size="lg"
+        className="btnConnect"
+        color="danger"
+        onClick={this.codeCompile}
+        disabled
+      >
+        Submit
+      </Button>
     ) : (
-      <html>
-        <Button
-          size="lg"
-          className="btnConnect"
-          color="danger"
-          onClick={this.codeCompile}
-        >
-          Submit
-        </Button>
-      </html>
+      <Button
+        size="lg"
+        className="btnConnect"
+        color="danger"
+        onClick={this.codeCompile}
+      >
+        Submit
+      </Button>
     );
   };
   public render() {
     const options = {
       lineNumbers: true,
       matchBrackets: true,
-      mode: "text/x-csharp"
+      mode: "text/x-csharp",
+      value: this.props.model
     };
-    return (
-      <div>
-        <ReactCodeMirror
-          onChange={this.txtAreaOnChange}
-          className="InputCode"
-          options={options}
-        ></ReactCodeMirror>
-        {/* <textarea
-          className="txtArea"
-          id="SourceCode"
-          rows={20}
-          cols={70}
-          onChange={this.txtAreaOnChange}
-          placeholder="input yours code"
-        ></textarea> */}
 
-        <Result Result={this.state.Result} />
-        <br />
-        {this.state.Spin ? <Spinner color="danger"></Spinner> : null}
-        {this.btnlock()}
-        {/* <Button
-          size="lg"
-          className="btnConnect"
-          color="danger"
-          onClick={this.codeCompile}
-        >
-          Submit
-        </Button> */}
-      </div>
+    return (
+      <Container>
+        <Row>
+          <ReactCodeMirror
+            onChange={this.txtAreaOnChange}
+            className="InputCode"
+            options={options}
+          ></ReactCodeMirror>
+        </Row>
+        <Row>
+          <Result Result={this.state.Result} />
+        </Row>
+        <Row xs="1">
+          <Col>
+            {this.btnlock()}
+            {this.state.Spin ? <Spinner color="danger"></Spinner> : null}
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
