@@ -12,7 +12,7 @@ export class Home extends React.Component {
                 <ContextInput ProjName=""></ContextInput>
                 </div>
                 <br />
-                <InpCode />
+                <InpCode model="" />
             </div>
         );
     }

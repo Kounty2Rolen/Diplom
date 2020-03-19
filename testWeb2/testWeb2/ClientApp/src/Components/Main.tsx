@@ -1,5 +1,4 @@
 import React from "react";
-import { About } from "./About";
 import { Home } from "./Home";
 import "./Home.css";
 
@@ -12,10 +11,6 @@ export class Main extends React.Component<props> {
             case "home":
                 return <Home />;
                 break;
-            case "about":
-                return <About />;
-                break;
-
             default:
                 break;
         }
