@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace testWeb2
+namespace DiplomWork
 {
     public static class Program
     {

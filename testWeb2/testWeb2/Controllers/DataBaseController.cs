@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
 
-namespace testWeb2.Controllers
+namespace DiplomWork.Controllers
 {
     public class DataBaseController : Controller
     {

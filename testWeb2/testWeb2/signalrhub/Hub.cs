@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
-using testWeb2.Classes;
-using testWeb2.Controllers;
+using DiplomWork.Classes;
+using DiplomWork.Controllers;
 
-namespace testWeb2.signalrhub
+namespace DiplomWork.signalrhub
 {
     public class RTTHub : Hub
     {

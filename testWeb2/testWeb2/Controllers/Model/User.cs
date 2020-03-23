@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace testWeb2.Model
+namespace DiplomWork.Model
 {
     public partial class User
     {

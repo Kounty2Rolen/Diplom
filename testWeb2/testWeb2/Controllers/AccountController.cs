@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using testWeb2.Model; // класс Person
+using DiplomWork.Model; // класс Person
 
-namespace testWeb2.Controllers
+namespace DiplomWork.Controllers
 {
     public class AccountController : Controller
     {
@@ -47,7 +47,7 @@ namespace testWeb2.Controllers
 
         private ClaimsIdentity GetIdentity([FromBody]Person personfrmbody)
         {
-            testWeb2.Model.Context context = new Model.Context();
+            DiplomWork.Model.Context context = new Model.Context();
             people = context.User.ToList();
             context.Dispose();
             User person = people.FirstOrDefault(x => x.LoginName == personfrmbody.LoginName && x.Password == personfrmbody.Password);

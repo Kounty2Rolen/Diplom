@@ -13,9 +13,9 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using testWeb2.Controllers;
+using DiplomWork.Controllers;
 
-namespace testWeb2.Classes
+namespace DiplomWork.Classes
 {
     public class CodeCompile
     {
@@ -36,7 +36,7 @@ using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using testWeb2.Model_" + tempproj.RandomEnding + @";
+using DiplomWork.Model_" + tempproj.RandomEnding + @";
 using System.Linq;
 
 namespace onfly
@@ -84,7 +84,7 @@ namespace onfly
                     db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());*/
 
                 string sourceCode = codeHead + text.SourceCode + "}}}";
-                using (var peStream = new MemoryStream())
+                using ( var peStream = new MemoryStream())
                 {
                     Microsoft.CodeAnalysis.Emit.EmitResult result;
                     if (tempproj == null)

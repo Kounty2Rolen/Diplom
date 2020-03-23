@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace testWeb2.Model
+namespace DiplomWork.Model
 {
     public partial class Context : DbContext
     {

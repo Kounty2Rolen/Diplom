@@ -1,4 +1,4 @@
-﻿namespace testWeb2.Controllers
+﻿namespace DiplomWork.Controllers
 {
     public class Person
     {

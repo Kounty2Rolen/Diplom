@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using testWeb2.Controllers;
-using testWeb2.signalrhub;
+using DiplomWork.Controllers;
+using DiplomWork.signalrhub;
 
-namespace testWeb2
+namespace DiplomWork
 {
     public class Startup
     {

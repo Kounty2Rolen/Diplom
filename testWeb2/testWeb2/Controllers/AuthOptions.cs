@@ -1,7 +1,7 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace testWeb2.Controllers
+namespace DiplomWork.Controllers
 {
     public class AuthOptions
     {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using testWeb2.Model;
+using DiplomWork.Model;
 
-namespace testWeb2.Controllers
+namespace DiplomWork.Controllers
 {
     [Route("/[controller]/[action]")]
     public class RegisterController : Controller

@@ -16,10 +16,11 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using testWeb2.signalrhub;
+using DiplomWork.signalrhub;
+using DiplomWork.Classes;
+using Microsoft.EntityFrameworkCore.Scaffolding;
 
-
-namespace testWeb2.Controllers
+namespace DiplomWork.Controllers
 {
     [Authorize]
     [AllowAnonymous]
@@ -51,6 +52,7 @@ namespace testWeb2.Controllers
                 Project.FileNames = context.Model.Where(c => c.Projectid == projectdb.Id).Select(e => e.Filename).ToList();
                 Project.Models = context.Model.Where(c => c.Projectid == projectdb.Id).Select(e => e.Model1).ToList();
                 Project.RandomEnding = randomEndingForFolder;
+                context.Dispose();
                 return Ok(Project);
             }
             else
@@ -63,7 +65,6 @@ namespace testWeb2.Controllers
         [Route("/Code/ModelGenerate")]
         public IActionResult ModelGenerate([FromBody] ConectionData data, string RandomEnding = null)
         {
-
             if (RandomEnding != null)
             {
                 randomEndingForFolder = RandomEnding;
@@ -71,7 +72,7 @@ namespace testWeb2.Controllers
 
             try
             {
-                if (string.IsNullOrEmpty(data.ContextName))
+                if (string.IsNullOrEmpty(value: data.ContextName))
                 {
                     data.ContextName = "Context";
                 }
@@ -79,46 +80,45 @@ namespace testWeb2.Controllers
                 if (!string.IsNullOrEmpty(data.ConnectionString))
                 {
                     string filter = "";
-                    if (data.selectedTables.Distinct().Count() <= 0)
+                    if (!data.selectedTables.Distinct().Any())
                     {
                         filter = "dbo";
                     }
-                    var reportHandler = new OperationReportHandler();
-                    var resultHandler = new OperationResultHandler();
-                    var executor = new OperationExecutor(reportHandler, new Dictionary<string, string> {
-                    { "targetName", "testWeb2" },
-                    { "startupTargetName", "testWeb2" },
-                    { "projectDir", Path.GetTempPath()},
-                    { "rootNamespace", "testWeb2" } });
-                    var context = new OperationExecutor.ScaffoldContext(executor, resultHandler, new Dictionary<string, object> {
-                    {"connectionString", data.ConnectionString },
-                    {"provider", "Microsoft.EntityFrameworkCore.SqlServer"},
-                    { "outputDir", "Model_"+randomEndingForFolder },
-                    {"dbContextClassName",data.ContextName},
-                    {"outputDbContextDir","Model_"+randomEndingForFolder},
-                    {"schemaFilters",new string[]{filter} },
-                    {"tableFilters",data?.selectedTables.Distinct()??Array.Empty<string>()},
-                    {"useDataAnnotations",false },
-                    {"overwriteFiles",true },
-                    { "useDatabaseNames",true} });
-                    context.Execute(new Action(() => { }));
-                    var id = new Tempproj();
+
+
+                    var models = CustomReverseEngineerScaffolder.ScaffoldContext(
+                        provider: "Microsoft.EntityFrameworkCore.SqlServer",
+                        connectionString: data.ConnectionString,
+                        outputDir: Path.GetTempPath() + "Model_" + randomEndingForFolder,
+                        outputContextDir: Path.GetTempPath() + "Model_" + randomEndingForFolder,
+                        dbContextClassName: data.ContextName,
+                        schemas: new string[] { filter },
+                        tables: data?.selectedTables.Distinct() ?? Array.Empty<string>(),
+                        useDataAnnotations: false,
+                        overwriteFiles: true,
+                        useDatabaseNames: true
+                        );
+
+                    var TempProj = new Tempproj();
+
                     if (User.Identity.IsAuthenticated)
                     {
                         if (data.ProjName == "")
                         {
                             data.ProjName = "TEMP_PROJ_" + randomEndingForFolder;
                         }
-                        addProjToUser(data, randomEndingForFolder);
-                        id = GenerateTempProject(data, randomEndingForFolder);
-
+                        addProjToUser(data, models);
+                        TempProj.Models = models.AdditionalFiles.Select(c => c.Code).ToList();
+                        TempProj.Models.Add(models.ContextFile.Code);
+                        TempProj.FileNames = models.AdditionalFiles.Select(c => Path.GetFileName(c.Path)).ToList();
+                        TempProj.FileNames.Add(Path.GetFileName(models.ContextFile.Path));
                     }
                     else
                     {
-                        id = GenerateTempProject(data, randomEndingForFolder);
+                        TempProj = GenerateTempProject(data, randomEndingForFolder,models);
                     }
 
-                    return Ok(id);
+                    return Ok(TempProj);
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace testWeb2.Controllers
             }
         }
 
-        public void addProjToUser(ConectionData data, string randomEnding)
+        public void addProjToUser(ConectionData data, ScaffoldedModel models)
         {
             Model.Context context = new Model.Context();
             Model.User user = context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
@@ -143,21 +143,27 @@ namespace testWeb2.Controllers
             project.ContextName = data.ContextName;
             project.ConnectionString = data.ConnectionString;
             context.Add(project);
-            foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model_" + randomEnding))
+            foreach (var file in models.AdditionalFiles)
             {
                 Model.Model model = new Model.Model();
                 model.Project = project;
                 model.Projectid = project.Id;
-                model.Model1 = System.IO.File.ReadAllText(file);
-                model.Filename = Path.GetFileName(file);
+                model.Model1 = file.Code;
+                model.Filename = Path.GetFileName(file.Path);
                 context.Add(model);
             }
+            Model.Model ContextModel = new Model.Model();
+            ContextModel.Project = project;
+            ContextModel.Projectid = project.Id;
+            ContextModel.Model1 = models.ContextFile.Code;
+            ContextModel.Filename = Path.GetFileName(models.ContextFile.Path);
+            context.Add(ContextModel);
             context.SaveChanges();
             context.Dispose();
         }
-        public Tempproj GenerateTempProject(ConectionData data, string ending)
+        public Tempproj GenerateTempProject(ConectionData data, string ending, ScaffoldedModel models)
         {
-            testWeb2.Model.Context context = new Model.Context();
+            DiplomWork.Model.Context context = new Model.Context();
             Model.TempProjects tempProject = new Model.TempProjects();
             tempProject.ConnectionString = data.ConnectionString;
             tempProject.ContextName = data.ContextName;
@@ -166,19 +172,26 @@ namespace testWeb2.Controllers
             context.Add(tempProject);
             tempproj.Models = new List<string>();
             tempproj.FileNames = new List<string>();
-            foreach (var file in Directory.GetFiles(path: Path.GetTempPath() + "Model_" + ending))
+            foreach (var file in models.AdditionalFiles)
             {
-                testWeb2.Model.Model model = new testWeb2.Model.Model();
+                DiplomWork.Model.Model model = new DiplomWork.Model.Model();
                 model.Tempproject = tempProject.Id;
-                model.Model1 = System.IO.File.ReadAllText(file);
-                model.Filename = Path.GetFileName(file);
+                model.Model1 = file.Code;
+                model.Filename = Path.GetFileName(file.Path);
                 model.TempprojectNavigation = tempProject;
                 context.Add(model);
                 context.SaveChanges();
-                tempproj.FileNames.Add(Path.GetFileName(file));
-                tempproj.Models.Add(System.IO.File.ReadAllText(file));
-
+                tempproj.FileNames.Add(Path.GetFileName(file.Path));
+                tempproj.Models.Add(file.Code);
             }
+            tempproj.FileNames.Add(Path.GetFileName(models.ContextFile.Path));
+            tempproj.Models.Add(models.ContextFile.Code);
+            DiplomWork.Model.Model Contextmodel = new DiplomWork.Model.Model();
+            Contextmodel.Tempproject = tempProject.Id;
+            Contextmodel.Model1 = models.ContextFile.Code;
+            Contextmodel.Filename = Path.GetFileName(models.ContextFile.Path);
+            context.Add(Contextmodel);
+
             context.SaveChanges();
             tempproj.Id = tempProject.Id;
             tempproj.RandomEnding = ending;

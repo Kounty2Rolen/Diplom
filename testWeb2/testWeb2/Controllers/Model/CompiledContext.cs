@@ -1,4 +1,4 @@
-﻿namespace testWeb2.Model
+﻿namespace DiplomWork.Model
 {
     public partial class CompiledContext
     {
