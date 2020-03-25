@@ -75,36 +75,31 @@ export class InpCode extends React.Component<props, state> {
     this.hub.start();
   }
   public codeCompile = () => {
-    if (localStorage.getItem("Object") === null) {
-      alert("Нет скомпилированной модели базы данных!");
+    let Code: object;
+    this.setState({ Spin: true });
+    if (sessionStorage.getItem("Token") !== null) {
+      Code = {
+        SourceCode: this.state.SourceCode,
+        ContextName: document.getElementsByClassName(
+          "connectionComponentContext"
+        )[0].nodeValue
+          ? document.getElementsByClassName("connectionComponentContext")[0]
+              .nodeValue
+          : "Context",
+        serializeAnonProj: localStorage.getItem("Object")
+      };
     } else {
-      let Code: object;
-      this.setState({ Spin: true });
-      if (sessionStorage.getItem("Token") !== null) {
-        Code = {
-          SourceCode: this.state.SourceCode,
-          ContextName: document.getElementsByClassName(
-            "connectionComponentContext"
-          )[0].nodeValue
-            ? document.getElementsByClassName("connectionComponentContext")[0]
-                .nodeValue
-            : "Context",
-          serializeAnonProj: localStorage.getItem("Object")
-        };
-        debugger;
-      } else {
-        Code = {
-          SourceCode: this.state.SourceCode,
-          serializeAnonProj: localStorage.getItem("Object")
-        };
-      }
-      if (this.state.SourceCode.length >= 0) {
-        this.hub.send("Result", JSON.stringify(Code));
-      } else if (this.state.connectionString.length > 0) {
-        alert("Сперва подключитесь к бд");
-      } else {
-        alert("Поле с кодом не может быть пустым!");
-      }
+      Code = {
+        SourceCode: this.state.SourceCode,
+        serializeAnonProj: localStorage.getItem("Object")
+      };
+    }
+    if (this.state.SourceCode.length >= 0) {
+      this.hub.send("Result", JSON.stringify(Code));
+    } else if (this.state.connectionString.length > 0) {
+      alert("Сперва подключитесь к бд");
+    } else {
+      alert("Поле с кодом не может быть пустым!");
     }
   };
 

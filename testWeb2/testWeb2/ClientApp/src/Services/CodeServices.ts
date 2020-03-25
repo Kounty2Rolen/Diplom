@@ -7,7 +7,7 @@ class CodeService {
         Accept: "application/json"
       },
       body: JSON.stringify(Code)
-    }).then(Response => Response.json());
+    }).then((Response) => Response.json());
   }
   public ModelGenerateService(ConectionData: object) {
     return fetch("Code/ModelGenerate", {
@@ -18,7 +18,7 @@ class CodeService {
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       },
       body: JSON.stringify(ConectionData)
-    }).then(Response => {
+    }).then((Response) => {
       if (!Response.ok) {
         alert("Model compilation error, check the connection string.");
         return "";

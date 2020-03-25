@@ -27,18 +27,24 @@ namespace DiplomWork.Controllers
             }
         }
 
-        public IActionResult RemoveProject([FromBody]int projectID)
+        public  IActionResult RemoveProject([FromBody]int projectID)
         {
             var context = new Model.Context();
             var project = context.Projects.Where(c => c.Id == projectID).FirstOrDefault();
             var models = context.Model.Where(c => c.Projectid == projectID);
             var compiledContext = context.CompiledContext.Where(c => c.ProjectId == projectID).FirstOrDefault();
             if (compiledContext != null)
+            {
                 context.Remove(compiledContext);
+            }
             if (models != null)
+            {
                 context.RemoveRange(models.AsEnumerable());
+            }
             if (project != null)
+            {
                 context.Remove(project);
+            }
             context.SaveChanges();
             context.Dispose();
             return Ok();

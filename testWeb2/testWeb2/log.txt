@@ -12,7 +12,7 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 21.02.2020 15:21:51|SYSLOG|=>$ Connection
 21.02.2020 15:21:51|SYSLOG|=>$ Connected
 21.02.2020 15:21:51|LOGED_DATA|=>$ Data(Lenght):10752
@@ -27,7 +27,7 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 21.02.2020 15:22:54|SYSLOG|=>$ Connection
 21.02.2020 15:22:54|SYSLOG|=>$ Connected
 21.02.2020 15:22:54|LOGED_DATA|=>$ Data(Lenght):10752
@@ -42,7 +42,7 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 21.02.2020 15:36:50|SYSLOG|=>$ Connection
 21.02.2020 15:36:50|SYSLOG|=>$ Connected
 21.02.2020 15:36:50|LOGED_DATA|=>$ Data(Lenght):10752
@@ -57,7 +57,7 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 21.02.2020 15:39:26|SYSLOG|=>$ Connection
 21.02.2020 15:39:26|SYSLOG|=>$ Connected
 21.02.2020 15:39:26|LOGED_DATA|=>$ Data(Lenght):10752
@@ -72,7 +72,7 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 21.02.2020 15:39:35|SYSLOG|=>$ Connection
 21.02.2020 15:39:35|SYSLOG|=>$ Connected
 21.02.2020 15:39:35|LOGED_DATA|=>$ Data(Lenght):10752
@@ -87,7 +87,7 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 21.02.2020 15:39:47|SYSLOG|=>$ Connection
 21.02.2020 15:39:47|SYSLOG|=>$ Connected
 21.02.2020 15:39:47|LOGED_DATA|=>$ Data(Lenght):10752
@@ -102,12 +102,12 @@ File name: 'Microsoft.EntityFrameworkCore, Version=2.1.14.0, Culture=neutral, Pu
    at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
    at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
    at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 13:17:38|SYSLOG|=>$ Connection
 25.02.2020 13:17:38|SYSLOG|=>$ Connected
 25.02.2020 13:17:38|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 13:17:38|LOGED_DATA|=>$ Readed
-25.02.2020 13:17:39|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:17:39|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 13:17:39|Result|=>$ 
 	{hello
 	}
@@ -119,7 +119,7 @@ hello
 25.02.2020 13:18:07|SYSLOG|=>$ Connected
 25.02.2020 13:18:07|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 13:18:07|LOGED_DATA|=>$ Readed
-25.02.2020 13:18:08|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:18:08|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 13:18:08|Result|=>$ 
 	{hello
 	}
@@ -131,7 +131,7 @@ hello
 25.02.2020 13:34:18|SYSLOG|=>$ Connected
 25.02.2020 13:34:18|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 13:34:18|LOGED_DATA|=>$ Readed
-25.02.2020 13:34:19|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:34:19|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 13:34:19|Result|=>$ 
 	{hello
 	}
@@ -143,7 +143,7 @@ hello
 25.02.2020 13:34:42|SYSLOG|=>$ Connected
 25.02.2020 13:34:42|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 13:34:42|LOGED_DATA|=>$ Readed
-25.02.2020 13:34:42|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:34:42|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 13:34:42|Result|=>$ 
 	{hello
 	}
@@ -155,7 +155,7 @@ hello
 25.02.2020 13:35:34|SYSLOG|=>$ Connected
 25.02.2020 13:35:34|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 13:35:34|LOGED_DATA|=>$ Readed
-25.02.2020 13:35:35|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:35:35|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 13:35:35|Result|=>$ 
 	{hello
 	}
@@ -167,7 +167,7 @@ hello
 25.02.2020 13:36:31|SYSLOG|=>$ Connected
 25.02.2020 13:36:31|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 13:36:31|LOGED_DATA|=>$ Readed
-25.02.2020 13:36:32|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 13:36:32|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 13:36:32|Result|=>$ 
 	{hello
 	}
@@ -183,7 +183,7 @@ hello
    at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 48
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 48
 25.02.2020 13:41:03|SYSLOG|=>$ Connection
 25.02.2020 13:41:03|SYSLOG|=>$ Connected
 25.02.2020 13:41:03|LOGED_DATA|=>$ Data(Lenght):10752
@@ -192,12 +192,12 @@ hello
    at System.Runtime.Loader.AssemblyLoadContext.InternalLoad(ReadOnlySpan`1 arrAssembly, ReadOnlySpan`1 arrSymbols)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 48
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 48
 25.02.2020 14:24:24|SYSLOG|=>$ Connection
 25.02.2020 14:24:51|SYSLOG|=>$ Connected
 25.02.2020 14:24:51|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 14:24:51|LOGED_DATA|=>$ Readed
-25.02.2020 14:24:52|LOGED_DEBUG|=>$ testWeb2.Model.CompiledContext,testWeb2.Model.Context,testWeb2.Model.Projects,testWeb2.Model.User,onfly.TestClass,testWeb2.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
+25.02.2020 14:24:52|LOGED_DEBUG|=>$ DiplomWork.Model.CompiledContext,DiplomWork.Model.Context,DiplomWork.Model.Projects,DiplomWork.Model.User,onfly.TestClass,DiplomWork.Model.Context+<>c,onfly.TestClass+MyLoggerProvider,onfly.TestClass+MyLoggerProvider+MyLogger
 25.02.2020 14:24:52|Result|=>$ 
 	{213123123
 	}
@@ -586,265 +586,265 @@ hello
 25.02.2020 16:06:25|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:06:25|LOGED_DATA|=>$ Readed
 25.02.2020 16:06:25|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:33:50|SYSLOG|=>$ Connection
 25.02.2020 16:34:36|SYSLOG|=>$ Connected
 25.02.2020 16:34:36|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:34:36|LOGED_DATA|=>$ Readed
 25.02.2020 16:34:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:34:36|SYSLOG|=>$ Connection
 25.02.2020 16:35:07|SYSLOG|=>$ Connected
 25.02.2020 16:35:07|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:35:07|LOGED_DATA|=>$ Readed
 25.02.2020 16:35:07|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:35:07|SYSLOG|=>$ Connection
 25.02.2020 16:36:40|SYSLOG|=>$ Connected
 25.02.2020 16:36:40|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:36:40|LOGED_DATA|=>$ Readed
 25.02.2020 16:36:40|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:36:40|SYSLOG|=>$ Connection
 25.02.2020 16:37:02|SYSLOG|=>$ Connected
 25.02.2020 16:37:02|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:37:02|LOGED_DATA|=>$ Readed
 25.02.2020 16:37:02|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:37:02|SYSLOG|=>$ Connection
 25.02.2020 16:38:21|SYSLOG|=>$ Connected
 25.02.2020 16:38:21|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:38:21|LOGED_DATA|=>$ Readed
 25.02.2020 16:38:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:39:01|SYSLOG|=>$ Connection
 25.02.2020 16:39:28|SYSLOG|=>$ Connected
 25.02.2020 16:39:28|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:39:28|LOGED_DATA|=>$ Readed
 25.02.2020 16:39:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:40:06|SYSLOG|=>$ Connection
 25.02.2020 16:40:40|SYSLOG|=>$ Connected
 25.02.2020 16:40:40|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:40:40|LOGED_DATA|=>$ Readed
 25.02.2020 16:40:40|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:41:48|SYSLOG|=>$ Connection
 25.02.2020 16:43:58|SYSLOG|=>$ Connected
 25.02.2020 16:43:58|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:43:58|LOGED_DATA|=>$ Readed
 25.02.2020 16:43:58|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:44:20|SYSLOG|=>$ Connection
 25.02.2020 16:44:20|SYSLOG|=>$ Connected
 25.02.2020 16:44:20|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:44:20|LOGED_DATA|=>$ Readed
 25.02.2020 16:44:20|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:44:36|SYSLOG|=>$ Connection
 25.02.2020 16:44:36|SYSLOG|=>$ Connected
 25.02.2020 16:44:36|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:44:36|LOGED_DATA|=>$ Readed
 25.02.2020 16:44:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:44:44|SYSLOG|=>$ Connection
 25.02.2020 16:44:44|SYSLOG|=>$ Connected
 25.02.2020 16:44:44|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:44:44|LOGED_DATA|=>$ Readed
 25.02.2020 16:44:44|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:45:08|SYSLOG|=>$ Connection
 25.02.2020 16:45:08|SYSLOG|=>$ Connected
 25.02.2020 16:45:08|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:45:08|LOGED_DATA|=>$ Readed
 25.02.2020 16:45:08|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:50:24|SYSLOG|=>$ Connection
 25.02.2020 16:50:53|SYSLOG|=>$ Connected
 25.02.2020 16:50:53|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:50:53|LOGED_DATA|=>$ Readed
 25.02.2020 16:50:53|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:50:53|SYSLOG|=>$ Connection
 25.02.2020 16:51:10|SYSLOG|=>$ Connected
 25.02.2020 16:51:10|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:51:10|LOGED_DATA|=>$ Readed
 25.02.2020 16:51:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:55:07|SYSLOG|=>$ Connection
 25.02.2020 16:55:25|SYSLOG|=>$ Connected
 25.02.2020 16:55:25|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:55:25|LOGED_DATA|=>$ Readed
 25.02.2020 16:55:25|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 16:55:25|SYSLOG|=>$ Connection
 25.02.2020 16:55:44|SYSLOG|=>$ Connected
 25.02.2020 16:55:44|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 16:55:44|LOGED_DATA|=>$ Readed
 25.02.2020 16:55:44|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:17:30|SYSLOG|=>$ Connection
 25.02.2020 17:17:30|SYSLOG|=>$ Connected
 25.02.2020 17:17:30|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:17:30|LOGED_DATA|=>$ Readed
 25.02.2020 17:17:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:17:59|SYSLOG|=>$ Connection
 25.02.2020 17:17:59|SYSLOG|=>$ Connected
 25.02.2020 17:17:59|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:17:59|LOGED_DATA|=>$ Readed
 25.02.2020 17:17:59|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:18:10|SYSLOG|=>$ Connection
 25.02.2020 17:18:10|SYSLOG|=>$ Connected
 25.02.2020 17:18:10|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:18:10|LOGED_DATA|=>$ Readed
 25.02.2020 17:18:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:18:48|SYSLOG|=>$ Connection
 25.02.2020 17:18:48|SYSLOG|=>$ Connected
 25.02.2020 17:18:48|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:18:48|LOGED_DATA|=>$ Readed
 25.02.2020 17:18:48|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:19:12|SYSLOG|=>$ Connection
 25.02.2020 17:19:12|SYSLOG|=>$ Connected
 25.02.2020 17:19:12|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:19:12|LOGED_DATA|=>$ Readed
 25.02.2020 17:19:12|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:19:21|SYSLOG|=>$ Connection
 25.02.2020 17:19:21|SYSLOG|=>$ Connected
 25.02.2020 17:19:21|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:19:21|LOGED_DATA|=>$ Readed
 25.02.2020 17:19:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:22:59|SYSLOG|=>$ Connection
 25.02.2020 17:24:17|SYSLOG|=>$ Connected
 25.02.2020 17:24:17|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:24:17|LOGED_DATA|=>$ Readed
 25.02.2020 17:24:17|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:24:17|SYSLOG|=>$ Connection
 25.02.2020 17:24:38|SYSLOG|=>$ Connected
 25.02.2020 17:24:38|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:24:38|LOGED_DATA|=>$ Readed
 25.02.2020 17:24:38|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:25:38|SYSLOG|=>$ Connection
 25.02.2020 17:26:03|SYSLOG|=>$ Connected
 25.02.2020 17:26:03|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:26:03|LOGED_DATA|=>$ Readed
 25.02.2020 17:26:03|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:26:03|SYSLOG|=>$ Connection
 25.02.2020 17:26:10|SYSLOG|=>$ Connected
 25.02.2020 17:26:10|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:26:10|LOGED_DATA|=>$ Readed
 25.02.2020 17:26:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:26:10|SYSLOG|=>$ Connection
 25.02.2020 17:26:18|SYSLOG|=>$ Connected
 25.02.2020 17:26:18|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:26:18|LOGED_DATA|=>$ Readed
 25.02.2020 17:26:18|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:27:12|SYSLOG|=>$ Connection
 25.02.2020 17:28:55|SYSLOG|=>$ Connected
 25.02.2020 17:28:55|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:28:55|LOGED_DATA|=>$ Readed
 25.02.2020 17:28:55|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:28:55|SYSLOG|=>$ Connection
 25.02.2020 17:29:52|SYSLOG|=>$ Connected
 25.02.2020 17:29:52|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:29:52|LOGED_DATA|=>$ Readed
 25.02.2020 17:29:52|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:40:02|SYSLOG|=>$ Connection
 25.02.2020 17:40:02|SYSLOG|=>$ Connected
 25.02.2020 17:40:02|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:40:02|LOGED_DATA|=>$ Readed
 25.02.2020 17:40:02|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:40:13|SYSLOG|=>$ Connection
 25.02.2020 17:40:13|SYSLOG|=>$ Connected
 25.02.2020 17:40:13|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:40:13|LOGED_DATA|=>$ Readed
 25.02.2020 17:40:13|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:40:23|SYSLOG|=>$ Connection
 25.02.2020 17:40:23|SYSLOG|=>$ Connected
 25.02.2020 17:40:23|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:40:23|LOGED_DATA|=>$ Readed
 25.02.2020 17:40:23|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:40:28|SYSLOG|=>$ Connection
 25.02.2020 17:40:28|SYSLOG|=>$ Connected
 25.02.2020 17:40:28|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:40:28|LOGED_DATA|=>$ Readed
 25.02.2020 17:40:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:40:35|SYSLOG|=>$ Connection
 25.02.2020 17:40:35|SYSLOG|=>$ Connected
 25.02.2020 17:40:35|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:40:35|LOGED_DATA|=>$ Readed
 25.02.2020 17:40:35|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:41:58|SYSLOG|=>$ Connection
 25.02.2020 17:41:58|SYSLOG|=>$ Connected
 25.02.2020 17:41:58|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:41:58|LOGED_DATA|=>$ Readed
 25.02.2020 17:41:58|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:42:30|SYSLOG|=>$ Connection
 25.02.2020 17:42:30|SYSLOG|=>$ Connected
 25.02.2020 17:42:30|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:42:30|LOGED_DATA|=>$ Readed
 25.02.2020 17:42:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 17:48:00|SYSLOG|=>$ Connection
 25.02.2020 17:48:00|SYSLOG|=>$ Connected
 25.02.2020 17:48:00|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 17:48:00|LOGED_DATA|=>$ Readed
 25.02.2020 17:48:00|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:02:28|SYSLOG|=>$ Connection
 25.02.2020 18:02:28|SYSLOG|=>$ Connected
 25.02.2020 18:02:28|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 18:02:28|LOGED_DATA|=>$ Readed
 25.02.2020 18:02:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:02:35|SYSLOG|=>$ Connection
 25.02.2020 18:02:35|SYSLOG|=>$ Connected
 25.02.2020 18:02:35|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 18:02:35|LOGED_DATA|=>$ Readed
 25.02.2020 18:02:35|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:02:40|SYSLOG|=>$ Connection
 25.02.2020 18:02:41|SYSLOG|=>$ Connected
 25.02.2020 18:02:41|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 18:02:41|LOGED_DATA|=>$ Readed
 25.02.2020 18:02:41|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:03:28|SYSLOG|=>$ Connection
 25.02.2020 18:03:28|SYSLOG|=>$ Connected
 25.02.2020 18:03:28|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 18:03:28|LOGED_DATA|=>$ Readed
 25.02.2020 18:03:28|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:04:01|SYSLOG|=>$ Connection
 25.02.2020 18:04:01|SYSLOG|=>$ Connected
 25.02.2020 18:04:01|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 18:04:01|LOGED_DATA|=>$ Readed
 25.02.2020 18:04:01|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:20:03|SYSLOG|=>$ Connection
 25.02.2020 18:20:03|SYSLOG|=>$ Connected
 25.02.2020 18:20:03|LOGED_DATA|=>$ Data(Lenght):10752
 25.02.2020 18:20:03|LOGED_DATA|=>$ Readed
 25.02.2020 18:20:03|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 25.02.2020 18:21:44|SYSLOG|=>$ Connection
 25.02.2020 18:21:44|SYSLOG|=>$ Connected
 25.02.2020 18:21:44|LOGED_DATA|=>$ Data(Lenght):10752
@@ -1028,7 +1028,7 @@ hello
 27.02.2020 16:32:14|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 46
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 46
 27.02.2020 16:34:19|SYSLOG|=>$ Connection
 27.02.2020 16:34:19|SYSLOG|=>$ Connected
 27.02.2020 16:34:19|LOGED_DATA|=>$ Data(Lenght):14848
@@ -1065,43 +1065,43 @@ hello
 27.02.2020 16:46:53|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 30
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 30
 27.02.2020 16:49:36|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHF4HLRUD:00000002
 27.02.2020 16:49:51|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 30
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 30
 27.02.2020 16:51:31|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHGF4TBPN:00000003
 27.02.2020 16:51:46|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 30
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 30
 1
 27.02.2020 17:04:42|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHNPO5DGS:00000002
 27.02.2020 17:04:57|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:05:38|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHOCDT5NO:00000002
 27.02.2020 17:05:53|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:07:32|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHPE9U42A:00000002
 27.02.2020 17:07:47|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:09:10|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHQAPLBQ0:00000003
 27.02.2020 17:09:25|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:11:41|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHRM2073D:00000003
 27.02.2020 17:11:56|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:12:48|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHSC7HGCI:00000002
 27.02.2020 17:12:48|SYSLOG|=>$ Connected
 27.02.2020 17:12:48|LOGED_DATA|=>$ Data(Lenght):14848
@@ -1234,7 +1234,7 @@ hello
 28.02.2020 16:55:39|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 28.02.2020 16:55:48|SYSLOG|=>$ Connection.... Iddentificator:0HLTSAM32MNIJ:00000005
 28.02.2020 16:55:48|SYSLOG|=>$ Connected
 28.02.2020 16:55:48|LOGED_DATA|=>$ Data(Lenght):14336
@@ -1280,439 +1280,439 @@ hello
 12.03.2020 16:49:31|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 16:49:31|LOGED_DATA|=>$ Readed
 12.03.2020 16:49:32|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 16:51:41|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HBAO3J5S:00000001
 12.03.2020 16:51:41|SYSLOG|=>$ Connected
 12.03.2020 16:51:41|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 16:51:41|LOGED_DATA|=>$ Readed
 12.03.2020 16:51:42|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 16:52:23|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HBAO3J6C:00000001
 12.03.2020 16:52:23|SYSLOG|=>$ Connected
 12.03.2020 16:52:23|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 16:52:23|LOGED_DATA|=>$ Readed
 12.03.2020 16:52:24|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 16:53:15|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HBAO3J6I:00000001
 12.03.2020 16:53:15|SYSLOG|=>$ Connected
 12.03.2020 16:53:15|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 16:53:15|LOGED_DATA|=>$ Readed
 12.03.2020 16:53:16|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 16:55:38|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HBAO3J6L:00000001
 12.03.2020 16:55:38|SYSLOG|=>$ Connected
 12.03.2020 16:55:38|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 16:55:38|LOGED_DATA|=>$ Readed
 12.03.2020 16:55:39|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 16:57:43|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HKSL9GSD:00000009
 12.03.2020 16:57:43|SYSLOG|=>$ Connected
 12.03.2020 16:57:43|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 16:57:43|LOGED_DATA|=>$ Readed
 12.03.2020 16:57:44|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:00:34|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HMP303Q0:00000002
 12.03.2020 17:00:34|SYSLOG|=>$ Connected
 12.03.2020 17:00:34|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 17:00:34|LOGED_DATA|=>$ Readed
 12.03.2020 17:01:04|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:01:23|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HN8IV4BU:00000003
 12.03.2020 17:01:23|SYSLOG|=>$ Connected
 12.03.2020 17:01:23|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 17:01:23|LOGED_DATA|=>$ Readed
 12.03.2020 17:01:38|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:02:17|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HN8IV4C4:00000002
 12.03.2020 17:02:17|SYSLOG|=>$ Connected
 12.03.2020 17:02:17|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 17:02:17|LOGED_DATA|=>$ Readed
 12.03.2020 17:02:18|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:02:35|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HN8IV4CA:00000002
 12.03.2020 17:02:35|SYSLOG|=>$ Connected
 12.03.2020 17:02:35|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 17:02:35|LOGED_DATA|=>$ Readed
 12.03.2020 17:02:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:08:29|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HQ937OVT:00000001
 12.03.2020 17:08:29|SYSLOG|=>$ Connected
 12.03.2020 17:08:29|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 17:08:29|LOGED_DATA|=>$ Readed
 12.03.2020 17:08:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:09:18|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HRM5F3SO:00000001
 12.03.2020 17:09:18|SYSLOG|=>$ Connected
 12.03.2020 17:09:18|LOGED_DATA|=>$ Data(Lenght):10240
 12.03.2020 17:09:18|LOGED_DATA|=>$ Readed
 12.03.2020 17:09:19|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 12.03.2020 17:20:09|SYSLOG|=>$ Connection.... Iddentificator:0HLU6HVDTATKM:00000005
 12.03.2020 17:20:09|SYSLOG|=>$ Connected
 12.03.2020 17:20:09|LOGED_DATA|=>$ Data(Lenght):8192
 12.03.2020 17:20:09|LOGED_DATA|=>$ Readed
 12.03.2020 17:20:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:33:56|SYSLOG|=>$ Connection.... Iddentificator:0HLU787V75UA9:00000008
 13.03.2020 14:33:56|SYSLOG|=>$ Connected
 13.03.2020 14:33:56|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:33:56|LOGED_DATA|=>$ Readed
 13.03.2020 14:34:12|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:34:57|SYSLOG|=>$ Connection.... Iddentificator:0HLU787V75UAH:00000001
 13.03.2020 14:34:57|SYSLOG|=>$ Connected
 13.03.2020 14:34:57|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:34:57|LOGED_DATA|=>$ Readed
 13.03.2020 14:36:52|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:39:12|SYSLOG|=>$ Connection.... Iddentificator:0HLU787V75UAR:00000001
 13.03.2020 14:39:12|SYSLOG|=>$ Connected
 13.03.2020 14:39:12|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:39:12|LOGED_DATA|=>$ Readed
 13.03.2020 14:39:39|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:40:15|SYSLOG|=>$ Connection.... Iddentificator:0HLU78CSRAD31:00000001
 13.03.2020 14:40:15|SYSLOG|=>$ Connected
 13.03.2020 14:40:15|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:40:15|LOGED_DATA|=>$ Readed
 13.03.2020 14:41:24|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:41:57|SYSLOG|=>$ Connection.... Iddentificator:0HLU78CSRAD37:00000001
 13.03.2020 14:41:57|SYSLOG|=>$ Connected
 13.03.2020 14:41:57|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:41:57|LOGED_DATA|=>$ Readed
 13.03.2020 14:42:12|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:43:08|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83GQ:00000001
 13.03.2020 14:43:08|SYSLOG|=>$ Connected
 13.03.2020 14:43:08|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:43:08|LOGED_DATA|=>$ Readed
 13.03.2020 14:43:23|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:43:56|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83GU:00000004
 13.03.2020 14:43:56|SYSLOG|=>$ Connected
 13.03.2020 14:43:56|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:43:56|LOGED_DATA|=>$ Readed
 13.03.2020 14:44:12|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:44:34|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83H6:00000003
 13.03.2020 14:44:34|SYSLOG|=>$ Connected
 13.03.2020 14:44:34|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:44:34|LOGED_DATA|=>$ Readed
 13.03.2020 14:44:49|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:46:53|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83HT:00000001
 13.03.2020 14:46:53|SYSLOG|=>$ Connected
 13.03.2020 14:46:53|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:46:53|LOGED_DATA|=>$ Readed
 13.03.2020 14:47:08|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:49:43|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83IA:00000001
 13.03.2020 14:49:43|SYSLOG|=>$ Connected
 13.03.2020 14:49:43|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:49:43|LOGED_DATA|=>$ Readed
 13.03.2020 14:49:58|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:52:44|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83IM:00000001
 13.03.2020 14:52:44|SYSLOG|=>$ Connected
 13.03.2020 14:52:44|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:52:44|LOGED_DATA|=>$ Readed
 13.03.2020 14:53:00|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 14:53:11|SYSLOG|=>$ Connection.... Iddentificator:0HLU78EJT83IO:00000003
 13.03.2020 14:53:11|SYSLOG|=>$ Connected
 13.03.2020 14:53:11|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 14:53:11|LOGED_DATA|=>$ Readed
 13.03.2020 14:53:26|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:00:11|SYSLOG|=>$ Connection.... Iddentificator:0HLU78NFRGHE2:00000001
 13.03.2020 15:00:11|SYSLOG|=>$ Connected
 13.03.2020 15:00:11|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:00:11|LOGED_DATA|=>$ Readed
 13.03.2020 15:00:27|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:11:34|SYSLOG|=>$ Connection.... Iddentificator:0HLU78RH39C43:00000002
 13.03.2020 15:11:34|SYSLOG|=>$ Connected
 13.03.2020 15:11:34|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:11:34|LOGED_DATA|=>$ Readed
 13.03.2020 15:11:49|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:12:55|SYSLOG|=>$ Connection.... Iddentificator:0HLU78RH39C3N:0000001D
 13.03.2020 15:12:55|SYSLOG|=>$ Connected
 13.03.2020 15:12:55|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:12:55|LOGED_DATA|=>$ Readed
 13.03.2020 15:13:10|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:16:47|SYSLOG|=>$ Connection.... Iddentificator:0HLU78RH39C4A:00000002
 13.03.2020 15:16:47|SYSLOG|=>$ Connected
 13.03.2020 15:16:47|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:16:47|LOGED_DATA|=>$ Readed
 13.03.2020 15:17:02|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:20:38|SYSLOG|=>$ Connection.... Iddentificator:0HLU78RH39C4P:00000004
 13.03.2020 15:20:38|SYSLOG|=>$ Connected
 13.03.2020 15:20:38|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:20:38|LOGED_DATA|=>$ Readed
 13.03.2020 15:20:53|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:36:14|SYSLOG|=>$ Connection.... Iddentificator:0HLU79AGRQ29A:00000001
 13.03.2020 15:36:14|SYSLOG|=>$ Connected
 13.03.2020 15:36:14|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:36:14|LOGED_DATA|=>$ Readed
 13.03.2020 15:36:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:36:42|SYSLOG|=>$ Connection.... Iddentificator:0HLU79AGRQ29D:00000001
 13.03.2020 15:36:42|SYSLOG|=>$ Connected
 13.03.2020 15:36:42|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:36:42|LOGED_DATA|=>$ Readed
 13.03.2020 15:36:52|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:37:11|SYSLOG|=>$ Connection.... Iddentificator:0HLU79CS5DH53:00000001
 13.03.2020 15:37:11|SYSLOG|=>$ Connected
 13.03.2020 15:37:11|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:37:11|LOGED_DATA|=>$ Readed
 13.03.2020 15:37:24|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:42:10|SYSLOG|=>$ Connection.... Iddentificator:0HLU79FJ8SI17:00000001
 13.03.2020 15:42:10|SYSLOG|=>$ Connected
 13.03.2020 15:42:10|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:42:10|LOGED_DATA|=>$ Readed
 13.03.2020 15:43:20|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:46:38|SYSLOG|=>$ Connection.... Iddentificator:0HLU79I060AQT:00000001
 13.03.2020 15:46:38|SYSLOG|=>$ Connected
 13.03.2020 15:46:38|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:46:38|LOGED_DATA|=>$ Readed
 13.03.2020 15:47:05|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:48:26|SYSLOG|=>$ Connection.... Iddentificator:0HLU79J55R95H:00000001
 13.03.2020 15:48:26|SYSLOG|=>$ Connected
 13.03.2020 15:48:26|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:48:26|LOGED_DATA|=>$ Readed
 13.03.2020 15:48:41|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:48:51|SYSLOG|=>$ Connection.... Iddentificator:0HLU79J55R95K:00000001
 13.03.2020 15:48:51|SYSLOG|=>$ Connected
 13.03.2020 15:48:51|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:48:51|LOGED_DATA|=>$ Readed
 13.03.2020 15:49:06|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:49:07|SYSLOG|=>$ Connection.... Iddentificator:0HLU79J55R95O:00000001
 13.03.2020 15:49:07|SYSLOG|=>$ Connected
 13.03.2020 15:49:07|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:49:07|LOGED_DATA|=>$ Readed
 13.03.2020 15:49:15|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:51:43|SYSLOG|=>$ Connection.... Iddentificator:0HLU79KUTB9NB:00000001
 13.03.2020 15:51:43|SYSLOG|=>$ Connected
 13.03.2020 15:51:43|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:51:43|LOGED_DATA|=>$ Readed
 13.03.2020 15:51:59|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:52:42|SYSLOG|=>$ Connection.... Iddentificator:0HLU79LI1VFTT:00000001
 13.03.2020 15:52:42|SYSLOG|=>$ Connected
 13.03.2020 15:52:42|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:52:42|LOGED_DATA|=>$ Readed
 13.03.2020 15:53:04|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 15:53:33|SYSLOG|=>$ Connection.... Iddentificator:0HLU79M12FL2N:00000001
 13.03.2020 15:53:33|SYSLOG|=>$ Connected
 13.03.2020 15:53:33|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 15:53:33|LOGED_DATA|=>$ Readed
 13.03.2020 15:54:17|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 16:37:07|SYSLOG|=>$ Connection.... Iddentificator:0HLU7AE7EPJG6:00000001
 13.03.2020 16:37:07|SYSLOG|=>$ Connected
 13.03.2020 16:37:07|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 16:37:07|LOGED_DATA|=>$ Readed
 13.03.2020 16:37:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 16:37:52|SYSLOG|=>$ Connection.... Iddentificator:0HLU7AEPCAGNN:00000001
 13.03.2020 16:37:52|SYSLOG|=>$ Connected
 13.03.2020 16:37:52|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 16:37:52|LOGED_DATA|=>$ Readed
 13.03.2020 16:38:07|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 16:42:11|SYSLOG|=>$ Connection.... Iddentificator:0HLU7AEPCAGNR:00000001
 13.03.2020 16:42:11|SYSLOG|=>$ Connected
 13.03.2020 16:42:11|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 16:42:11|LOGED_DATA|=>$ Readed
 13.03.2020 16:42:26|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 17:03:28|SYSLOG|=>$ Connection.... Iddentificator:0HLU7APSSU3G9:00000002
 13.03.2020 17:03:28|SYSLOG|=>$ Connected
 13.03.2020 17:03:28|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 17:03:28|LOGED_DATA|=>$ Readed
 13.03.2020 17:03:43|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 17:06:22|SYSLOG|=>$ Connection.... Iddentificator:0HLU7APSSU3GE:00000009
 13.03.2020 17:06:22|SYSLOG|=>$ Connected
 13.03.2020 17:06:22|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 17:06:22|LOGED_DATA|=>$ Readed
 13.03.2020 17:06:37|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 17:06:51|SYSLOG|=>$ Connection.... Iddentificator:0HLU7APSSU3GE:0000000A
 13.03.2020 17:06:51|SYSLOG|=>$ Connected
 13.03.2020 17:06:51|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 17:06:51|LOGED_DATA|=>$ Readed
 13.03.2020 17:07:05|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 17:07:29|SYSLOG|=>$ Connection.... Iddentificator:0HLU7AVA0FS42:00000004
 13.03.2020 17:07:29|SYSLOG|=>$ Connected
 13.03.2020 17:07:29|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 17:07:29|LOGED_DATA|=>$ Readed
 13.03.2020 17:17:23|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 17:54:28|SYSLOG|=>$ Connection.... Iddentificator:0HLU7BP92KB1H:00000004
 13.03.2020 17:54:28|SYSLOG|=>$ Connected
 13.03.2020 17:54:28|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 17:54:28|LOGED_DATA|=>$ Readed
 13.03.2020 17:55:24|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 17:56:07|SYSLOG|=>$ Connection.... Iddentificator:0HLU7BQGGENV9:00000003
 13.03.2020 17:56:07|SYSLOG|=>$ Connected
 13.03.2020 17:56:07|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 17:56:07|LOGED_DATA|=>$ Readed
 13.03.2020 17:59:50|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 18:01:04|SYSLOG|=>$ Connection.... Iddentificator:0HLU7BT65D9EB:00000004
 13.03.2020 18:01:04|SYSLOG|=>$ Connected
 13.03.2020 18:01:04|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 18:01:04|LOGED_DATA|=>$ Readed
 13.03.2020 18:01:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 18:05:17|SYSLOG|=>$ Connection.... Iddentificator:0HLU7BVK3OGT2:00000006
 13.03.2020 18:05:17|SYSLOG|=>$ Connected
 13.03.2020 18:05:17|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 18:05:17|LOGED_DATA|=>$ Readed
 13.03.2020 18:05:24|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 18:05:52|SYSLOG|=>$ Connection.... Iddentificator:0HLU7BVUJPOJO:00000003
 13.03.2020 18:05:52|SYSLOG|=>$ Connected
 13.03.2020 18:05:52|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 18:05:52|LOGED_DATA|=>$ Readed
 13.03.2020 18:06:07|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 13.03.2020 18:09:41|SYSLOG|=>$ Connection.... Iddentificator:0HLU7C22K9GIL:00000004
 13.03.2020 18:09:41|SYSLOG|=>$ Connected
 13.03.2020 18:09:41|LOGED_DATA|=>$ Data(Lenght):13824
 13.03.2020 18:09:41|LOGED_DATA|=>$ Readed
 13.03.2020 18:11:09|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 14:28:05|SYSLOG|=>$ Connection.... Iddentificator:0HLU9JJTG1SK3:00000004
 16.03.2020 14:28:05|SYSLOG|=>$ Connected
 16.03.2020 14:28:05|LOGED_DATA|=>$ Data(Lenght):13824
 16.03.2020 14:28:05|LOGED_DATA|=>$ Readed
 16.03.2020 14:35:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 14:38:41|SYSLOG|=>$ Connection.... Iddentificator:0HLU9JQ4UM507:00000004
 16.03.2020 14:38:41|SYSLOG|=>$ Connected
 16.03.2020 14:38:41|LOGED_DATA|=>$ Data(Lenght):13824
 16.03.2020 14:38:41|LOGED_DATA|=>$ Readed
 16.03.2020 14:38:54|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 14:39:45|SYSLOG|=>$ Connection.... Iddentificator:0HLU9JQH1Q2DS:00000004
 16.03.2020 14:39:45|SYSLOG|=>$ Connected
 16.03.2020 14:39:45|LOGED_DATA|=>$ Data(Lenght):13824
 16.03.2020 14:39:45|LOGED_DATA|=>$ Readed
 16.03.2020 14:40:04|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 17:43:51|SYSLOG|=>$ Connection.... Iddentificator:633fab6c_32d6_45e2_b633_6ebefcef8090
 16.03.2020 17:43:51|SYSLOG|=>$ Connected
 16.03.2020 17:43:51|LOGED_DATA|=>$ Data(Lenght):3584
 16.03.2020 17:43:51|LOGED_DATA|=>$ Readed
 16.03.2020 17:44:06|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 17:55:29|SYSLOG|=>$ Connection.... Iddentificator:0f102799_8af4_4ce6_ad47_055ac52ebc86
 16.03.2020 17:55:29|SYSLOG|=>$ Connected
 16.03.2020 17:55:29|LOGED_DATA|=>$ Data(Lenght):3584
 16.03.2020 17:55:29|LOGED_DATA|=>$ Readed
 16.03.2020 17:55:43|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 17:57:28|SYSLOG|=>$ Connection.... Iddentificator:3e2d8cff_03d4_4691_a64f_e080f0bd138b
 16.03.2020 17:57:28|SYSLOG|=>$ Connected
 16.03.2020 17:57:28|LOGED_DATA|=>$ Data(Lenght):3584
 16.03.2020 17:57:28|LOGED_DATA|=>$ Readed
 16.03.2020 17:57:29|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 17:58:54|SYSLOG|=>$ Connection.... Iddentificator:490308ad_cbb4_435f_8fdc_c88064952c00
 16.03.2020 17:58:54|SYSLOG|=>$ Connected
 16.03.2020 17:58:54|LOGED_DATA|=>$ Data(Lenght):3584
 16.03.2020 17:58:54|LOGED_DATA|=>$ Readed
 16.03.2020 17:58:56|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 16.03.2020 18:00:59|SYSLOG|=>$ Connection.... Iddentificator:6a2294c6_ca11_4f1b_ae42_7128d0995d5b
 16.03.2020 18:00:59|SYSLOG|=>$ Connected
 16.03.2020 18:00:59|LOGED_DATA|=>$ Data(Lenght):3584
 16.03.2020 18:00:59|LOGED_DATA|=>$ Readed
 16.03.2020 18:00:59|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 13:00:32|SYSLOG|=>$ Connection.... Iddentificator:a1aaf21b_42ad_4956_9668_69636990dcf2
 17.03.2020 13:00:32|SYSLOG|=>$ Connected
 17.03.2020 13:00:32|LOGED_DATA|=>$ Data(Lenght):3584
 17.03.2020 13:00:32|LOGED_DATA|=>$ Readed
 17.03.2020 13:00:42|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:02:49|SYSLOG|=>$ Connection.... Iddentificator:91c964fc_b74c_49c5_a73b_dba6fff97da2
 17.03.2020 14:02:49|SYSLOG|=>$ Connected
 17.03.2020 14:02:49|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:02:49|LOGED_DATA|=>$ Readed
 17.03.2020 14:02:50|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:11:13|SYSLOG|=>$ Connection.... Iddentificator:6eb5576e_0e14_412b_ac76_a2efa06c2a41
 17.03.2020 14:11:13|SYSLOG|=>$ Connected
 17.03.2020 14:11:13|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:11:13|LOGED_DATA|=>$ Readed
 17.03.2020 14:11:14|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:14:50|SYSLOG|=>$ Connection.... Iddentificator:868f7500_7ad1_4f4a_bba9_d6b6bcb01f0e
 17.03.2020 14:14:50|SYSLOG|=>$ Connected
 17.03.2020 14:14:50|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:14:50|LOGED_DATA|=>$ Readed
 17.03.2020 14:14:51|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:16:15|SYSLOG|=>$ Connection.... Iddentificator:987390df_66b6_4256_83bd_6051b61e8de4
 17.03.2020 14:16:15|SYSLOG|=>$ Connected
 17.03.2020 14:16:15|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:16:15|LOGED_DATA|=>$ Readed
 17.03.2020 14:16:16|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:19:06|SYSLOG|=>$ Connection.... Iddentificator:e4c292f8_1842_4192_943c_8321294010f3
 17.03.2020 14:19:06|SYSLOG|=>$ Connected
 17.03.2020 14:19:06|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:19:06|LOGED_DATA|=>$ Readed
 17.03.2020 14:19:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:19:41|SYSLOG|=>$ Connection.... Iddentificator:4927d9cf_306c_403c_92ca_3a7f33652519
 17.03.2020 14:19:41|SYSLOG|=>$ Connected
 17.03.2020 14:19:41|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:19:41|LOGED_DATA|=>$ Readed
 17.03.2020 14:19:41|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:20:00|SYSLOG|=>$ Connection.... Iddentificator:0e3347f0_9f77_485d_8732_13edcce979b7
 17.03.2020 14:20:00|SYSLOG|=>$ Connected
 17.03.2020 14:20:00|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:20:00|LOGED_DATA|=>$ Readed
 17.03.2020 14:20:01|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:24:11|SYSLOG|=>$ Connection.... Iddentificator:da65f30c_b3c9_473c_b869_c0f2c575db97
 17.03.2020 14:24:12|SYSLOG|=>$ Connected
 17.03.2020 14:24:12|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:24:12|LOGED_DATA|=>$ Readed
 17.03.2020 14:24:13|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 14:35:45|SYSLOG|=>$ Connection.... Iddentificator:d6fdf618_6e9a_4c5f_85b2_642d0ee50299
 17.03.2020 14:35:45|SYSLOG|=>$ Connected
 17.03.2020 14:35:45|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 14:35:45|LOGED_DATA|=>$ Readed
 17.03.2020 14:35:46|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 15:44:27|SYSLOG|=>$ Connection.... Iddentificator:6e521fa4_c2a6_4fa9_8d3f_c968f96ca336
 17.03.2020 15:44:27|SYSLOG|=>$ Connected
 17.03.2020 15:44:27|LOGED_DATA|=>$ Data(Lenght):3584
 17.03.2020 15:44:27|LOGED_DATA|=>$ Readed
 17.03.2020 15:44:36|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 16:00:09|SYSLOG|=>$ Connection.... Iddentificator:5a780001_75dc_4e74_88c4_753c87f3a9a4
 17.03.2020 16:00:09|SYSLOG|=>$ Connected
 17.03.2020 16:00:09|LOGED_DATA|=>$ Data(Lenght):0
@@ -1720,7 +1720,7 @@ hello
 17.03.2020 16:00:09|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:00:13|SYSLOG|=>$ Connection.... Iddentificator:e864b90d_71fa_48d4_b7c5_22aece3082b8
 17.03.2020 16:00:13|SYSLOG|=>$ Connected
 17.03.2020 16:00:13|LOGED_DATA|=>$ Data(Lenght):0
@@ -1728,7 +1728,7 @@ hello
 17.03.2020 16:00:13|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:00:20|SYSLOG|=>$ Connection.... Iddentificator:6d38b7e1_3684_4c90_8178_88f7c77d2607
 17.03.2020 16:00:20|SYSLOG|=>$ Connected
 17.03.2020 16:00:20|LOGED_DATA|=>$ Data(Lenght):0
@@ -1736,7 +1736,7 @@ hello
 17.03.2020 16:00:20|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:01:06|SYSLOG|=>$ Connection.... Iddentificator:5c38dcca_7f88_4f73_8d50_05dbf07e90af
 17.03.2020 16:01:06|SYSLOG|=>$ Connected
 17.03.2020 16:01:06|LOGED_DATA|=>$ Data(Lenght):0
@@ -1744,13 +1744,13 @@ hello
 17.03.2020 16:01:06|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:01:10|SYSLOG|=>$ Connection.... Iddentificator:81813829_0c21_4b67_91d2_b864777a878b
 17.03.2020 16:01:10|SYSLOG|=>$ Connected
 17.03.2020 16:01:10|LOGED_DATA|=>$ Data(Lenght):3584
 17.03.2020 16:01:10|LOGED_DATA|=>$ Readed
 17.03.2020 16:01:11|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 16:01:34|SYSLOG|=>$ Connection.... Iddentificator:2d527fb3_8209_4932_a072_31f440e33413
 17.03.2020 16:01:34|SYSLOG|=>$ Connected
 17.03.2020 16:01:34|LOGED_DATA|=>$ Data(Lenght):0
@@ -1758,7 +1758,7 @@ hello
 17.03.2020 16:01:34|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:05:53|SYSLOG|=>$ Connection.... Iddentificator:3d5e0fd6_0b61_460c_8444_567e3137c438
 17.03.2020 16:05:53|SYSLOG|=>$ Connected
 17.03.2020 16:05:53|LOGED_DATA|=>$ Data(Lenght):0
@@ -1766,7 +1766,7 @@ hello
 17.03.2020 16:05:53|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:06:01|SYSLOG|=>$ Connection.... Iddentificator:9ddc564c_7a1d_4e58_a414_5b2149c1f7ef
 17.03.2020 16:06:01|SYSLOG|=>$ Connected
 17.03.2020 16:06:01|LOGED_DATA|=>$ Data(Lenght):0
@@ -1774,25 +1774,25 @@ hello
 17.03.2020 16:06:01|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 17.03.2020 16:06:07|SYSLOG|=>$ Connection.... Iddentificator:3b0157a9_f4ba_4c34_945f_9ecb7ede3a3e
 17.03.2020 16:06:07|SYSLOG|=>$ Connected
 17.03.2020 16:06:07|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 16:06:07|LOGED_DATA|=>$ Readed
 17.03.2020 16:06:08|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 16:12:47|SYSLOG|=>$ Connection.... Iddentificator:db27bdae_0c87_419c_b8e0_fb3f85e49749
 17.03.2020 16:12:47|SYSLOG|=>$ Connected
 17.03.2020 16:12:47|LOGED_DATA|=>$ Data(Lenght):6144
 17.03.2020 16:12:47|LOGED_DATA|=>$ Readed
 17.03.2020 16:12:48|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 17.03.2020 16:37:45|SYSLOG|=>$ Connection.... Iddentificator:3abd6f21_97c1_4908_9fc4_95a386ec6ab5
 17.03.2020 16:37:45|SYSLOG|=>$ Connected
 17.03.2020 16:37:45|LOGED_DATA|=>$ Data(Lenght):13824
 17.03.2020 16:37:45|LOGED_DATA|=>$ Readed
 17.03.2020 16:37:45|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 47
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 47
 19.03.2020 15:04:26|SYSLOG|=>$ Connection.... Iddentificator:6df7f882_c96c_4327_baf5_94cef1996262
 19.03.2020 15:04:27|SYSLOG|=>$ Connected
 19.03.2020 15:04:27|LOGED_DATA|=>$ Data(Lenght):0
@@ -1800,7 +1800,7 @@ hello
 19.03.2020 15:04:27|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:05:18|SYSLOG|=>$ Connection.... Iddentificator:b53a49ce_2db8_470e_952f_7c55c66b7785
 19.03.2020 15:05:18|SYSLOG|=>$ Connected
 19.03.2020 15:05:18|LOGED_DATA|=>$ Data(Lenght):0
@@ -1808,7 +1808,7 @@ hello
 19.03.2020 15:05:18|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:08:51|SYSLOG|=>$ Connection.... Iddentificator:505c2756_ea5b_40c0_9f46_39d3cb273f33
 19.03.2020 15:08:51|SYSLOG|=>$ Connected
 19.03.2020 15:08:51|LOGED_DATA|=>$ Data(Lenght):0
@@ -1816,7 +1816,7 @@ hello
 19.03.2020 15:08:51|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:09:30|SYSLOG|=>$ Connection.... Iddentificator:28cd2c1b_3803_43b7_8439_45d20384b7d7
 19.03.2020 15:09:30|SYSLOG|=>$ Connected
 19.03.2020 15:09:30|LOGED_DATA|=>$ Data(Lenght):0
@@ -1824,7 +1824,7 @@ hello
 19.03.2020 15:09:30|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:09:31|SYSLOG|=>$ Connection.... Iddentificator:ae3e0882_5ab1_4af0_8e1d_2d4be3442011
 19.03.2020 15:09:31|SYSLOG|=>$ Connected
 19.03.2020 15:09:31|LOGED_DATA|=>$ Data(Lenght):0
@@ -1832,7 +1832,7 @@ hello
 19.03.2020 15:09:31|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:09:32|SYSLOG|=>$ Connection.... Iddentificator:6c755826_b1d9_4e05_afbc_9ab1b40f3487
 19.03.2020 15:09:32|SYSLOG|=>$ Connected
 19.03.2020 15:09:32|LOGED_DATA|=>$ Data(Lenght):0
@@ -1840,7 +1840,7 @@ hello
 19.03.2020 15:09:32|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:09:34|SYSLOG|=>$ Connection.... Iddentificator:d119a875_0e4e_4fa6_8fbe_708a278c7c21
 19.03.2020 15:09:34|SYSLOG|=>$ Connected
 19.03.2020 15:09:34|LOGED_DATA|=>$ Data(Lenght):0
@@ -1848,7 +1848,7 @@ hello
 19.03.2020 15:09:34|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:09:36|SYSLOG|=>$ Connection.... Iddentificator:90148e7e_c639_4356_a01a_30c31fd8f203
 19.03.2020 15:09:36|SYSLOG|=>$ Connected
 19.03.2020 15:09:36|LOGED_DATA|=>$ Data(Lenght):0
@@ -1856,7 +1856,7 @@ hello
 19.03.2020 15:09:36|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 15:09:40|SYSLOG|=>$ Connection.... Iddentificator:761f3b82_6aa4_40c0_9f89_71a202c86bcf
 19.03.2020 15:09:40|SYSLOG|=>$ Connected
 19.03.2020 15:09:40|LOGED_DATA|=>$ Data(Lenght):0
@@ -1864,7 +1864,7 @@ hello
 19.03.2020 15:09:40|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 16:42:33|SYSLOG|=>$ Connection.... Iddentificator:149c8d88_b34c_47d7_a2d0_c150ebb3680d
 19.03.2020 16:42:33|SYSLOG|=>$ Connected
 19.03.2020 16:42:33|LOGED_DATA|=>$ Data(Lenght):0
@@ -1872,7 +1872,7 @@ hello
 19.03.2020 16:42:33|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 16:44:49|SYSLOG|=>$ Connection.... Iddentificator:439c4a4b_0d08_4a3f_aa3b_e774fce4fa9c
 19.03.2020 16:44:49|SYSLOG|=>$ Connected
 19.03.2020 16:44:49|LOGED_DATA|=>$ Data(Lenght):0
@@ -1880,10 +1880,46 @@ hello
 19.03.2020 16:44:49|Exception|=>$ System.BadImageFormatException: Bad IL format.
    at System.Reflection.Assembly.Load(Byte[] rawAssembly, Byte[] rawSymbolStore)
    at System.Reflection.Assembly.Load(Byte[] rawAssembly)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
 19.03.2020 16:45:09|SYSLOG|=>$ Connection.... Iddentificator:63127c63_6f1c_4614_baa9_5ae4d97d6542
 19.03.2020 16:45:09|SYSLOG|=>$ Connected
 19.03.2020 16:45:09|LOGED_DATA|=>$ Data(Lenght):13824
 19.03.2020 16:45:09|LOGED_DATA|=>$ Readed
 19.03.2020 16:45:19|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 45
+24.03.2020 15:55:20|SYSLOG|=>$ Connection.... Iddentificator:cf73e73e_e553_4aff_92bf_897f49750fe5
+24.03.2020 15:55:20|SYSLOG|=>$ Connected
+24.03.2020 15:55:20|LOGED_DATA|=>$ Data(Lenght):2560
+24.03.2020 15:55:20|LOGED_DATA|=>$ Readed
+24.03.2020 15:55:29|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+24.03.2020 16:01:13|SYSLOG|=>$ Connection.... Iddentificator:ae08e27f_a32b_472b_91cc_c7507817fd14
+24.03.2020 16:01:13|SYSLOG|=>$ Connected
+24.03.2020 16:01:13|LOGED_DATA|=>$ Data(Lenght):2560
+24.03.2020 16:01:13|LOGED_DATA|=>$ Readed
+24.03.2020 16:01:21|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+24.03.2020 16:01:50|SYSLOG|=>$ Connection.... Iddentificator:6d5fc03f_8330_49ee_8e0e_be927f348a88
+24.03.2020 16:01:50|SYSLOG|=>$ Connected
+24.03.2020 16:01:50|LOGED_DATA|=>$ Data(Lenght):2560
+24.03.2020 16:01:50|LOGED_DATA|=>$ Readed
+24.03.2020 16:01:50|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+24.03.2020 16:02:04|SYSLOG|=>$ Connection.... Iddentificator:eb1d117c_7208_47ff_84fd_d3f4bf2a8260
+24.03.2020 16:02:04|SYSLOG|=>$ Connected
+24.03.2020 16:02:04|LOGED_DATA|=>$ Data(Lenght):2560
+24.03.2020 16:02:04|LOGED_DATA|=>$ Readed
+24.03.2020 16:02:04|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+24.03.2020 16:02:16|SYSLOG|=>$ Connection.... Iddentificator:f969ab5e_c767_48d1_adf9_fc315cd2174f
+24.03.2020 16:02:16|SYSLOG|=>$ Connected
+24.03.2020 16:02:16|LOGED_DATA|=>$ Data(Lenght):2560
+24.03.2020 16:02:16|LOGED_DATA|=>$ Readed
+24.03.2020 16:02:16|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45
+24.03.2020 16:02:48|SYSLOG|=>$ Connection.... Iddentificator:316b1b31_bade_43d6_bccd_53d435069aca
+24.03.2020 16:02:48|SYSLOG|=>$ Connected
+24.03.2020 16:02:48|LOGED_DATA|=>$ Data(Lenght):2560
+24.03.2020 16:02:48|LOGED_DATA|=>$ Readed
+24.03.2020 16:02:48|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
    at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 45

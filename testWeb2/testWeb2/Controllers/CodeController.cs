@@ -131,7 +131,7 @@ namespace DiplomWork.Controllers
             }
         }
 
-        public void addProjToUser(ConectionData data, ScaffoldedModel models)
+        public  void addProjToUser(ConectionData data, ScaffoldedModel models)
         {
             Model.Context context = new Model.Context();
             Model.User user = context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
@@ -161,7 +161,7 @@ namespace DiplomWork.Controllers
             context.SaveChanges();
             context.Dispose();
         }
-        public Tempproj GenerateTempProject(ConectionData data, string ending, ScaffoldedModel models)
+        public  Tempproj GenerateTempProject(ConectionData data, string ending, ScaffoldedModel models)
         {
             DiplomWork.Model.Context context = new Model.Context();
             Model.TempProjects tempProject = new Model.TempProjects();

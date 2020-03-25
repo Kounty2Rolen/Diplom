@@ -20,7 +20,6 @@ class sidebar extends React.Component<{}, state> {
   };
   render() {
     let proj = JSON.parse(localStorage?.getItem("Object") ?? '{"error":true}');
-    console.log(proj, "Proj");
 
     return (
       <div>

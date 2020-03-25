@@ -13,6 +13,10 @@
     border-radius: 10px;
 }
 
+.tglButton {
+    margin-left: -50%;
+}
+
 .ResultCode {
     margin-top: 15px;
     text-align: left;

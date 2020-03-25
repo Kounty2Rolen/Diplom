@@ -28,24 +28,13 @@ namespace DiplomWork.Classes
             bool overwriteFiles,
             bool useDatabaseNames)
         {
-            //Check.NotEmpty(provider, nameof(provider));
-            //Check.NotEmpty(connectionString, nameof(connectionString));
-            //Check.NotNull(schemas, nameof(schemas));
-            //Check.NotNull(tables, nameof(tables));
+
             var unwrappedReportHandler = ForwardingProxy.Unwrap<IOperationReportHandler>(new OperationReportHandler());
             var reporter = new OperationReporter(unwrappedReportHandler);
             var _servicesBuilder = new DesignTimeServicesBuilder(Assembly.GetExecutingAssembly(), reporter, Array.Empty<string>());
             var services = _servicesBuilder.Build(provider);
             var scaffolder = services.GetRequiredService<IReverseEngineerScaffolder>();
-
             var @namespace = "DiplomWork";
-
-            //var subNamespace = SubnamespaceFromOutputPath(_projectDir, outputDir);
-            //if (!string.IsNullOrEmpty(subNamespace))
-            //{
-            //    @namespace += "." + subNamespace;
-            //}
-
             var scaffoldedModel = scaffolder.ScaffoldModel(
                 connectionString,
                 tables,

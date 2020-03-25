@@ -6,14 +6,14 @@ class GetInfo {
         Accept: "application/json",
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       }
-    }).then(Response => Response.json());
+    }).then((Response) => Response.json());
   }
   public getToken(Person: any) {
     return fetch("/Account/Token", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(Person)
-    }).then(Response => Response.text());
+    }).then((Response) => Response.text());
   }
   public getIdentity() {
     return fetch("/Account/GetLogin", {
@@ -22,7 +22,7 @@ class GetInfo {
         Accept: "application/json",
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       }
-    }).then(Response => Response.json());
+    }).then((Response) => Response.json());
   }
   public getProjects() {
     return fetch("AccountEdit/GetProjects", {
@@ -31,7 +31,7 @@ class GetInfo {
         Accept: "application/json",
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       }
-    }).then(Response => Response.json());
+    }).then((Response) => Response.json());
   }
 
   public PasswordEdit(Passwords: object) {
@@ -42,7 +42,7 @@ class GetInfo {
         Authorization: "Bearer " + sessionStorage.getItem("Token")
       },
       body: JSON.stringify(Passwords)
-    }).then(Response => Response);
+    }).then((Response) => Response);
   }
 
   public FioChange(Person: object) {
@@ -65,7 +65,7 @@ class GetInfo {
           Authorization: "Bearer " + sessionStorage.getItem("Token")
         },
         body: JSON.stringify(ProjectId)
-      }).then(Response => result(Response.json()));
+      }).then((Response) => result(Response.json()));
     });
   }
 
@@ -77,7 +77,7 @@ class GetInfo {
         "Content-type": "application/json"
       },
       body: JSON.stringify(Person)
-    }).then(Response => {
+    }).then((Response) => {
       if (!Response.ok) {
         alert("Some error, please check creds.");
       } else {

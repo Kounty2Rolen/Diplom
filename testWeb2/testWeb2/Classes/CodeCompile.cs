@@ -23,20 +23,25 @@ namespace DiplomWork.Classes
         {
             try
             {
+                string usng = "";
+                string context = "";
                 Tempproj tempproj = null;
                 if (text.serializeAnonProj != null)
                 {
                     tempproj = JsonConvert.DeserializeObject<Tempproj>(text.serializeAnonProj);
                     text.ContextName = tempproj.Data.ContextName;
+                    usng = @"using DiplomWork.Model_" + tempproj.RandomEnding + @";";
+                    context = text.ContextName;
                 }
-
                 string codeHead = @"
                                 using System;
 using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using DiplomWork.Model_" + tempproj.RandomEnding + @";
+using Microsoft.EntityFrameworkCore.Infrastructure;"
++
+usng
++ @"
 using System.Linq;
 
 namespace onfly
@@ -76,15 +81,11 @@ namespace onfly
         public static void Main() {
 }
         public static void CodeCompile()
-        {
-            var db = new " + text.ContextName + "();" + @";
-            db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());
-                ";
-                /* var " + "db" + "= new " + text.ContextName + "();" + @"
-                    db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());*/
-
+        {"
++
+context;
                 string sourceCode = codeHead + text.SourceCode + "}}}";
-                using ( var peStream = new MemoryStream())
+                using (var peStream = new MemoryStream())
                 {
                     Microsoft.CodeAnalysis.Emit.EmitResult result;
                     if (tempproj == null)
@@ -137,13 +138,6 @@ namespace onfly
                                 proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {
                                     clientProxy.SendAsync("Result", e.Data + "\n");
-
-                                    //hub.Clients.All.SendAsync("Result", "test");
-                                    //sql += e.Data + "\n";
-                                    //hub.Send("test");
-                                    //hub.Clients.All.SendAsync("Result", e.Data);
-                                    //hub.Clients.Client(RTTHub.UserHandler.ConnectedIds.Last()).SendAsync("Result", "test");
-
                                 });
                                 proc.StartInfo.Arguments = randomEndingForFolder;/*User.Identity?.Name ?? Request.HttpContext.TraceIdentifier;*/
                                 proc.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
@@ -178,7 +172,7 @@ namespace onfly
                         {
                             proc.Kill();
                             cts.Cancel();
-                            throw new Exception("TimeOut too long operation");
+                            throw new TimeoutException("TimeOut too long operation");
                         }
                     }
                 }
@@ -196,7 +190,10 @@ namespace onfly
         {
 
             List<string> trees = new List<string>();
-            tempproj.Models.ForEach(c => trees.Add(c));
+            if (tempproj != null)
+            {
+                tempproj.Models.ForEach(c => trees.Add(c));
+            }
             return trees;
         }
         private CSharpCompilation GenerateCode(string sourceCode = null, Tempproj tempproj = null)

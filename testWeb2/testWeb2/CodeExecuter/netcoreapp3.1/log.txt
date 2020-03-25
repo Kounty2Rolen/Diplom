@@ -1,34 +1,36 @@
 27.02.2020 16:43:40|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 25
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 25
 0
 27.02.2020 16:59:09|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHKL98RUO:00000003
 27.02.2020 16:59:24|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 16:59:44|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHKL98RUO:00000003
 27.02.2020 16:59:59|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:01:03|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHKL98RUO:00000003
 27.02.2020 17:01:18|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:02:36|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHM68O0DO:00000002
 27.02.2020 17:02:51|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 27.02.2020 17:03:15|SYSLOG|=>$ Connection.... Iddentificator:0HLTRHM68O0DO:00000002
 27.02.2020 17:03:30|Exception|=>$ System.TimeoutException: The operation has timed out.
    at System.IO.Pipes.NamedPipeClientStream.ConnectInternal(Int32 timeout, CancellationToken cancellationToken, Int32 startTime)
    at System.IO.Pipes.NamedPipeClientStream.Connect(Int32 timeout)
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 31
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 31
 12.03.2020 16:56:53|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 26
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 26
 12.03.2020 16:58:05|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 26
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 26
 12.03.2020 16:58:14|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
-   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\testWeb2\CodeExecuter\Program.cs:line 26
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 26
+24.03.2020 14:37:09|Exception|=>$ System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at CodeExecuter.Program.Main(String[] args) in C:\Users\mdm\Desktop\Diplom\DiplomWork\CodeExecuter\Program.cs:line 26
