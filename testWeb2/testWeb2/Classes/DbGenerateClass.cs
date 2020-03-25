@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Scaffolding.Internal;
+﻿using JetBrains.Annotations;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Design.Internal;
 using Microsoft.EntityFrameworkCore.Scaffolding;
-using Microsoft.EntityFrameworkCore.Utilities;
 using Microsoft.Extensions.DependencyInjection;
-using JetBrains.Annotations;
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using Microsoft.EntityFrameworkCore.Design;
 
 namespace DiplomWork.Classes
 {
@@ -28,7 +24,6 @@ namespace DiplomWork.Classes
             bool overwriteFiles,
             bool useDatabaseNames)
         {
-
             var unwrappedReportHandler = ForwardingProxy.Unwrap<IOperationReportHandler>(new OperationReportHandler());
             var reporter = new OperationReporter(unwrappedReportHandler);
             var _servicesBuilder = new DesignTimeServicesBuilder(Assembly.GetExecutingAssembly(), reporter, Array.Empty<string>());
@@ -48,12 +43,14 @@ namespace DiplomWork.Classes
 
             return scaffoldedModel;
         }
+
         private static string MakeDirRelative(string root, string path)
         {
             var relativeUri = new Uri(NormalizeDir(root)).MakeRelativeUri(new Uri(NormalizeDir(path)));
 
             return Uri.UnescapeDataString(relativeUri.ToString()).Replace('/', Path.DirectorySeparatorChar);
         }
+
         private static string NormalizeDir(string path)
         {
             if (string.IsNullOrEmpty(path))
@@ -70,6 +67,5 @@ namespace DiplomWork.Classes
 
             return path + Path.DirectorySeparatorChar;
         }
-
     }
 }

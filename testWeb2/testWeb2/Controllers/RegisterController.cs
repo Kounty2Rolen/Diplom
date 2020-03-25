@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DiplomWork.Model;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using DiplomWork.Model;
 
 namespace DiplomWork.Controllers
 {

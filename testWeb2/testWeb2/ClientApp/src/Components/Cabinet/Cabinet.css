@@ -26,12 +26,12 @@ h2 {
     width: 300px;
 }
 
-.createProjectModulBody input {
-    /* width: auto; */
-    width: 270px;
-    border-radius: 10px;
-    /* width: 300px; */
-}
+    .createProjectModulBody input {
+        /* width: auto; */
+        width: 270px;
+        border-radius: 10px;
+        /* width: 300px; */
+    }
 
 .FieldsModul {
     background-color: ghostwhite;
@@ -83,7 +83,6 @@ h2 {
 .contextGenerate .ConnectionConteiner .connectionComponent {
     margin-top: 1%;
 }
-
 
 /* .createProjectModul .ButtonsDiv {
     margin-top: -8%;

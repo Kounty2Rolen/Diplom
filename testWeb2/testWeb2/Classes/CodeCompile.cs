@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using DiplomWork.Controllers;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Text;
@@ -13,7 +14,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using DiplomWork.Controllers;
 
 namespace DiplomWork.Classes
 {
@@ -30,8 +30,9 @@ namespace DiplomWork.Classes
                 {
                     tempproj = JsonConvert.DeserializeObject<Tempproj>(text.serializeAnonProj);
                     text.ContextName = tempproj.Data.ContextName;
-                    usng = @"using DiplomWork.Model_" + tempproj.RandomEnding + @";";
-                    context = text.ContextName;
+                    usng = @"using DiplomWork;";
+                    context = @"var db = new " + text.ContextName + "();" + @";
+                                db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());";
                 }
                 string codeHead = @"
                                 using System;
@@ -82,8 +83,10 @@ namespace onfly
 }
         public static void CodeCompile()
         {"
-+
-context;
++ context;
+
+
+
                 string sourceCode = codeHead + text.SourceCode + "}}}";
                 using (var peStream = new MemoryStream())
                 {
@@ -95,12 +98,10 @@ context;
                     else
                     {
                         result = GenerateCode(sourceCode, tempproj).Emit(peStream);
-
                     }
                     peStream.Seek(0, SeekOrigin.Begin);
                     if (!result.Success)
                     {
-
                         var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
 
                         StringBuilder bld = new StringBuilder();
@@ -128,12 +129,9 @@ context;
                                 proc.StartInfo.UseShellExecute = false;
                                 proc.StartInfo.RedirectStandardError = true;
 
-
-
                                 proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {
                                     clientProxy.SendAsync("SQL", e.Data + "\n");
-
                                 });
                                 proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {
@@ -183,12 +181,10 @@ context;
                 result.resultcode = ex.ToString();
                 clientProxy.SendAsync("Exeption", ex);
             }
-
-
         }
+
         private List<string> GetModelsCode(Tempproj tempproj)
         {
-
             List<string> trees = new List<string>();
             if (tempproj != null)
             {
@@ -196,6 +192,7 @@ context;
             }
             return trees;
         }
+
         private CSharpCompilation GenerateCode(string sourceCode = null, Tempproj tempproj = null)
         {
             var assembly = AppDomain.CurrentDomain.GetAssemblies();
@@ -242,8 +239,5 @@ context;
             optimizationLevel: OptimizationLevel.Release,
             assemblyIdentityComparer: DesktopAssemblyIdentityComparer.Default, platform: Platform.X64));
         }
-
-
-
     }
 }

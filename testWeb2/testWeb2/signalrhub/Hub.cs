@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using DiplomWork.Classes;
+using DiplomWork.Controllers;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
-using DiplomWork.Classes;
-using DiplomWork.Controllers;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DiplomWork.signalrhub
 {
     public class RTTHub : Hub
     {
-    
         public override Task OnConnectedAsync()
         {
             UserHandler.ConnectedIds.Add(Context.ConnectionId);
@@ -23,6 +21,7 @@ namespace DiplomWork.signalrhub
             UserHandler.ConnectedIds.Remove(Context.ConnectionId);
             return base.OnDisconnectedAsync(new Exception());
         }
+
         //protected IHubContext<CRUDServiceHubBase<TDTO>> _context;
 
         //public CRUDServiceHubBase(IHubContext<CRUDServiceHubBase<TDTO>> context)
@@ -41,13 +40,11 @@ namespace DiplomWork.signalrhub
             var requestDatavar = JsonConvert.DeserializeObject<requestData>(message);
             code.Index(requestDatavar, this.Clients.All, randomEndingForFolder);
             await this.Clients.All.SendAsync("Result", "");
-            
         }
+
         public static class UserHandler
         {
             public static List<string> ConnectedIds = new List<string>();
         }
     }
-
 }
-

@@ -1,24 +1,12 @@
+using DiplomWork.Classes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.Text;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using Newtonsoft.Json;
+using Microsoft.EntityFrameworkCore.Scaffolding;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.IO.Pipes;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using DiplomWork.signalrhub;
-using DiplomWork.Classes;
-using Microsoft.EntityFrameworkCore.Scaffolding;
 
 namespace DiplomWork.Controllers
 {
@@ -26,13 +14,9 @@ namespace DiplomWork.Controllers
     [AllowAnonymous]
     public class CodeController : Controller
     {
-        string randomEndingForFolder = Guid.NewGuid().ToString().Replace('-', '_');
-
-
+        private string randomEndingForFolder = Guid.NewGuid().ToString().Replace('-', '_');
 
         //public CodeController(IConnectionManager connectionManager)
-
-
 
         [Route("/Code/ProjectLoad")]
         public IActionResult ProjectLoad([FromBody]string ProjectID)
@@ -59,7 +43,6 @@ namespace DiplomWork.Controllers
             {
                 return BadRequest();
             }
-
         }
 
         [Route("/Code/ModelGenerate")]
@@ -85,7 +68,6 @@ namespace DiplomWork.Controllers
                         filter = "dbo";
                     }
 
-
                     var models = CustomReverseEngineerScaffolder.ScaffoldContext(
                         provider: "Microsoft.EntityFrameworkCore.SqlServer",
                         connectionString: data.ConnectionString,
@@ -93,7 +75,7 @@ namespace DiplomWork.Controllers
                         outputContextDir: Path.GetTempPath() + "Model_" + randomEndingForFolder,
                         dbContextClassName: data.ContextName,
                         schemas: new string[] { filter },
-                        tables: data?.selectedTables.Distinct() ?? Array.Empty<string>(),
+                        tables: data.selectedTables.Distinct().Count()>0 ? data.selectedTables.Distinct() : Array.Empty<string>(),
                         useDataAnnotations: false,
                         overwriteFiles: true,
                         useDatabaseNames: true
@@ -115,7 +97,7 @@ namespace DiplomWork.Controllers
                     }
                     else
                     {
-                        TempProj = GenerateTempProject(data, randomEndingForFolder,models);
+                        TempProj = GenerateTempProject(data, randomEndingForFolder, models);
                     }
 
                     return Ok(TempProj);
@@ -131,7 +113,7 @@ namespace DiplomWork.Controllers
             }
         }
 
-        public  void addProjToUser(ConectionData data, ScaffoldedModel models)
+        public void addProjToUser(ConectionData data, ScaffoldedModel models)
         {
             Model.Context context = new Model.Context();
             Model.User user = context.User.Where(c => c.LoginName == User.Identity.Name).FirstOrDefault();
@@ -161,7 +143,8 @@ namespace DiplomWork.Controllers
             context.SaveChanges();
             context.Dispose();
         }
-        public  Tempproj GenerateTempProject(ConectionData data, string ending, ScaffoldedModel models)
+
+        public Tempproj GenerateTempProject(ConectionData data, string ending, ScaffoldedModel models)
         {
             DiplomWork.Model.Context context = new Model.Context();
             Model.TempProjects tempProject = new Model.TempProjects();
@@ -199,8 +182,8 @@ namespace DiplomWork.Controllers
             context.Dispose();
             return tempproj;
         }
-
     }
+
     public class Tempproj
     {
         public int Id { get; set; }

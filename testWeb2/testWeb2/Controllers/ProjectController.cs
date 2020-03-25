@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace DiplomWork.Controllers
@@ -27,7 +26,7 @@ namespace DiplomWork.Controllers
             }
         }
 
-        public  IActionResult RemoveProject([FromBody]int projectID)
+        public IActionResult RemoveProject([FromBody]int projectID)
         {
             var context = new Model.Context();
             var project = context.Projects.Where(c => c.Id == projectID).FirstOrDefault();

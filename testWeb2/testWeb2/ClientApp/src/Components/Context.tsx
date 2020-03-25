@@ -1,215 +1,215 @@
 import React, { ChangeEvent } from "react";
 import {
-  Button,
-  Spinner,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Input,
-  Container,
-  Row,
-  Col
+    Button,
+    Spinner,
+    Modal,
+    ModalHeader,
+    ModalBody,
+    ModalFooter,
+    Input,
+    Container,
+    Row,
+    Col
 } from "reactstrap";
 import CodeServices from "../Services/CodeServices";
 import DBService from "../Services/DataBasesService";
 
 interface state {
-  CodeResult: string;
-  text: string;
-  connectionString: string;
-  Context: string;
-  spin: boolean;
-  modal: boolean;
-  check: boolean;
-  tables: string[];
-  selectedTables: string[];
+    CodeResult: string;
+    text: string;
+    connectionString: string;
+    Context: string;
+    spin: boolean;
+    modal: boolean;
+    check: boolean;
+    tables: string[];
+    selectedTables: string[];
 }
 interface props {
-  ProjName: string;
+    ProjName: string;
 }
 
 export class ContextInput extends React.Component<props, state> {
-  constructor(props: props) {
-    super(props);
-    this.state = {
-      CodeResult: "",
-      text: "",
-      connectionString: "",
-      Context: "",
-      spin: false,
-      modal: false,
-      check: true,
-      tables: [],
-      selectedTables: []
-    };
-  }
-
-  public checkClick = () => {
-    this.setState(prevState => {
-      return {
-        check: !prevState.check
-      };
-    });
-  };
-
-  public GetTables() {
-    DBService.GetTables(this.state.connectionString).then((Response: any) => {
-      this.setState({ tables: Response });
-    });
-  }
-  public toggle = () => {
-    console.log(this.state.selectedTables);
-
-    this.GetTables();
-    this.setState(prevState => {
-      return {
-        modal: !prevState.modal
-      };
-    });
-  };
-  public doSomthing = () => {
-    this.GenerateModel();
-    this.toggle();
-  };
-  public btnOnClickModelGenerate = () => {
-    this.setState({ spin: true });
-    if (!this.state.check) {
-      this.toggle();
-    } else {
-      this.GenerateModel();
+    constructor(props: props) {
+        super(props);
+        this.state = {
+            CodeResult: "",
+            text: "",
+            connectionString: "",
+            Context: "",
+            spin: false,
+            modal: false,
+            check: true,
+            tables: [],
+            selectedTables: []
+        };
     }
-    // Отправка названия контекста и вызов генерации модели
-  };
-  GenerateModel = () => {
-    const ConectionData = {
-      ConnectionString: this.state.connectionString,
-      ContextName: this.state.Context,
-      ProjName: this.props.ProjName,
-      selectedTables: this.state.selectedTables
+
+    public checkClick = () => {
+        this.setState(prevState => {
+            return {
+                check: !prevState.check
+            };
+        });
     };
-    if (
-      this.state.connectionString.length > 0 &&
-      this.state.Context.length > 0
-    ) {
-      CodeServices.ModelGenerateService(ConectionData).then(
-        (Response: string) => {
-          this.setState({ spin: false });
-          localStorage.setItem("Object", Response);
+
+    public GetTables() {
+        DBService.GetTables(this.state.connectionString).then((Response: any) => {
+            this.setState({ tables: Response });
+        });
+    }
+    public toggle = () => {
+        console.log(this.state.selectedTables);
+
+        this.GetTables();
+        this.setState(prevState => {
+            return {
+                modal: !prevState.modal
+            };
+        });
+    };
+    public doSomthing = () => {
+        this.GenerateModel();
+        this.toggle();
+    };
+    public btnOnClickModelGenerate = () => {
+        this.setState({ spin: true });
+        if (!this.state.check) {
+            this.toggle();
+        } else {
+            this.GenerateModel();
         }
-      );
-    } else {
-      alert("Строка подключения не может быть пустой");
-      this.setState({ spin: false });
-    }
-    this.setState({ selectedTables: [] });
-  };
-  public inptOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ connectionString: event.target.value });
-  };
-
-  public inptContextOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    this.setState({ Context: event.target.value });
-  };
-
-  tableSelect = (event: ChangeEvent<HTMLInputElement>) => {
-    event.persist();
-    if (event.target.checked) {
-      this.setState(prevState => {
-        const arr = prevState.selectedTables;
-        return {
-          selectedTables: [...arr, event.target.id]
+        // Отправка названия контекста и вызов генерации модели
+    };
+    GenerateModel = () => {
+        const ConectionData = {
+            ConnectionString: this.state.connectionString,
+            ContextName: this.state.Context,
+            ProjName: this.props.ProjName,
+            selectedTables: this.state.selectedTables
         };
-      });
-    } else {
-      this.setState(prevState => {
-        const arr = prevState.selectedTables;
-        arr.splice(arr.indexOf(event.target.id), 1);
+        if (
+            this.state.connectionString.length > 0 &&
+            this.state.Context.length > 0
+        ) {
+            CodeServices.ModelGenerateService(ConectionData).then(
+                (Response: string) => {
+                    this.setState({ spin: false });
+                    localStorage.setItem("Object", Response);
+                }
+            );
+        } else {
+            alert("Строка подключения не может быть пустой");
+            this.setState({ spin: false });
+        }
+        this.setState({ selectedTables: [] });
+    };
+    public inptOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({ connectionString: event.target.value });
+    };
 
-        return {
-          selectedTables: arr
-        };
-      });
-    }
-  };
+    public inptContextOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({ Context: event.target.value });
+    };
 
-  public render() {
-    return (
-      <Container className="ConnectionConteiner">
-        <Row>
-          <Col 
-          >
-            <Input
-              className="connectionComponent"
-              onChange={this.inptOnChange}
-              type="text"
-              placeholder="input connection string"
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Input
-              className="connectionComponentContext"
-              type="text"
-              placeholder="input context name"
-              onChange={this.inptContextOnChange}
-            />
-          </Col>
+    tableSelect = (event: ChangeEvent<HTMLInputElement>) => {
+        event.persist();
+        if (event.target.checked) {
+            this.setState(prevState => {
+                const arr = prevState.selectedTables;
+                return {
+                    selectedTables: [...arr, event.target.id]
+                };
+            });
+        } else {
+            this.setState(prevState => {
+                const arr = prevState.selectedTables;
+                arr.splice(arr.indexOf(event.target.id), 1);
 
-          <Col>
-            {this.state.spin ? <Spinner color="success"></Spinner> : null}
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <label className={"checker"}>
-              <Input type="checkbox" onClick={this.checkClick} /> Check me out
+                return {
+                    selectedTables: arr
+                };
+            });
+        }
+    };
+
+    public render() {
+        return (
+            <Container className="ConnectionConteiner">
+                <Row>
+                    <Col
+                    >
+                        <Input
+                            className="connectionComponent"
+                            onChange={this.inptOnChange}
+                            type="text"
+                            placeholder="input connection string"
+                        />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Input
+                            className="connectionComponentContext"
+                            type="text"
+                            placeholder="input context name"
+                            onChange={this.inptContextOnChange}
+                        />
+                    </Col>
+
+                    <Col>
+                        {this.state.spin ? <Spinner color="success"></Spinner> : null}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <label className={"checker"}>
+                            <Input type="checkbox" onClick={this.checkClick} /> Check me out
             </label>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Button
-              className="connectionComponentBTN"
-              color="success"
-              onClick={this.btnOnClickModelGenerate}
-            >
-              Generate Models
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Button
+                            className="connectionComponentBTN"
+                            color="success"
+                            onClick={this.btnOnClickModelGenerate}
+                        >
+                            Generate Models
             </Button>
-          </Col>
-        </Row>
+                    </Col>
+                </Row>
 
-        <Modal
-          isOpen={this.state.modal}
-          toggle={this.toggle}
-          className={"SelectTable"}
-        >
-          <ModalHeader toggle={this.toggle}>Select Tables</ModalHeader>
-          <ModalBody>
-            <ul>
-              {this.state?.tables.map(item => (
-                <li key={item}>
-                  <Input
-                    type="checkbox"
-                    onChange={this.tableSelect}
-                    id={item}
-                  ></Input>
-                  <p>{item}</p>
-                </li>
-              )) ?? "Tables not found"}
-            </ul>
-          </ModalBody>
-          <ModalFooter>
-            <Button color="primary" onClick={this.doSomthing}>
-              Generate model
+                <Modal
+                    isOpen={this.state.modal}
+                    toggle={this.toggle}
+                    className={"SelectTable"}
+                >
+                    <ModalHeader toggle={this.toggle}>Select Tables</ModalHeader>
+                    <ModalBody>
+                        <ul>
+                            {this.state?.tables.map(item => (
+                                <li key={item}>
+                                    <Input
+                                        type="checkbox"
+                                        onChange={this.tableSelect}
+                                        id={item}
+                                    ></Input>
+                                    <p>{item}</p>
+                                </li>
+                            )) ?? "Tables not found"}
+                        </ul>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" onClick={this.doSomthing}>
+                            Generate model
             </Button>
-            <Button color="secondary" onClick={this.toggle}>
-              Cancel
+                        <Button color="secondary" onClick={this.toggle}>
+                            Cancel
             </Button>
-          </ModalFooter>
-        </Modal>
-      </Container>
-    );
-  }
+                    </ModalFooter>
+                </Modal>
+            </Container>
+        );
+    }
 }

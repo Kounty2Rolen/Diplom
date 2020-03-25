@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using DiplomWork.Model; // класс Person
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -6,7 +7,6 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
-using DiplomWork.Model; // класс Person
 
 namespace DiplomWork.Controllers
 {
@@ -57,7 +57,6 @@ namespace DiplomWork.Controllers
                 {
                     new Claim(ClaimsIdentity.DefaultNameClaimType, person.LoginName),
                     new Claim("DateTime", DateTime.Now.ToString("s",System.Globalization.CultureInfo.InvariantCulture))
-
             };
                 ClaimsIdentity claimsIdentity =
                 new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType,

@@ -34,7 +34,7 @@ class ModelEditor extends React.Component<props, state> {
     this.proj.models = this.models;
     console.log();
     let ser=JSON.stringify(this.proj);
-    
+
     localStorage.setItem("Object",ser);
     alert("Saved");
   };

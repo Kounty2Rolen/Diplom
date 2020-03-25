@@ -1,3 +1,5 @@
+using DiplomWork.Controllers;
+using DiplomWork.signalrhub;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,8 +8,6 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using DiplomWork.Controllers;
-using DiplomWork.signalrhub;
 
 namespace DiplomWork
 {

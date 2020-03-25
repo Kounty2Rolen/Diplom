@@ -1,8 +1,8 @@
-﻿  using Microsoft.AspNetCore.Authorization;
+﻿using DiplomWork.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-using DiplomWork.Model;
 
 namespace DiplomWork.Controllers
 {
@@ -33,7 +33,7 @@ namespace DiplomWork.Controllers
             Context context = new Context();
             List<Projects> projects = new List<Projects>();
             int? userid = context.User.Where(c => c.LoginName == User.Identity.Name).Select(c => c.Id).FirstOrDefault();
-            if (userid !=null)
+            if (userid != null)
             {
                 foreach (var item in context.Projects.Where(c => c.OwnerId == userid).ToList())
                 {
@@ -41,7 +41,7 @@ namespace DiplomWork.Controllers
                 }
             }
             context.Dispose();
-            return projects;        
+            return projects;
         }
 
         public Person getInfo()

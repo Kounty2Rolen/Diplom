@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 
 namespace DiplomWork.Controllers
@@ -26,11 +26,7 @@ namespace DiplomWork.Controllers
                 {
                     return BadRequest();
                 }
-
-
-
             }
-
 
             return Ok(tables);
         }

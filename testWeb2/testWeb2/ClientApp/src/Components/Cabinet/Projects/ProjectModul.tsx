@@ -27,7 +27,6 @@ export class ProjectModul extends React.Component<{}, state> {
   }
 
   public btnClick(item: any) {
-
     var result = window.confirm(
       "Are you sure you want to delete this project?"
     );
@@ -42,7 +41,6 @@ export class ProjectModul extends React.Component<{}, state> {
     GetInfo.getProjects().then((projects: any) =>
       this.setState({ projects: projects })
     );
-    
   }
   public render() {
     return (
