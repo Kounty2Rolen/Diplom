@@ -3,6 +3,7 @@ using DiplomWork.Controllers;
 using Microsoft.AspNetCore.SignalR;
 using Newtonsoft.Json;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -38,7 +39,7 @@ namespace DiplomWork.signalrhub
             string randomEndingForFolder = Guid.NewGuid().ToString().Replace('-', '_');
             var code = new CodeCompile();
             var requestDatavar = JsonConvert.DeserializeObject<requestData>(message);
-            code.Index(requestDatavar, this.Clients.All, randomEndingForFolder);
+            code.Index(requestDatavar, this.Clients.Client(Context.ConnectionId), randomEndingForFolder);
             await this.Clients.All.SendAsync("Result", "");
         }
 

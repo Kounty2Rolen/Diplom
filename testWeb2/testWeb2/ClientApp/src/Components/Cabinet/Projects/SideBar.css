@@ -1,9 +1,14 @@
 .Hamburger {
-    width: 2%;
+    width: 3%;
+    size: auto;
     left: 0.3%;
     margin-top: 1%;
     overflow: hidden;
     position: absolute;
+}
+
+.SideBarClass {
+    width: 25% !important;
 }
 
 .SideBarRoot {

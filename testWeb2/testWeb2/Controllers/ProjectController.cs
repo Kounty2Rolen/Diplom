@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using Newtonsoft.Json;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace DiplomWork.Controllers
 {
@@ -49,6 +51,14 @@ namespace DiplomWork.Controllers
             return Ok();
         }
 
+        public IActionResult EditModel([FromBody]EditModel tempproj)
+        {
+            Model.Context context = new Model.Context();
+            Model.Model model = context.Model.Where(c => c.Projectid == tempproj.Id).Where(c => c.Filename == tempproj.Filename).FirstOrDefault();
+            model.Model1 = tempproj.Model;
+            context.SaveChanges();
+            return Ok();
+        }
         public IActionResult Newproject(Project project)
         {
             var context = new Model.Context();
@@ -65,6 +75,12 @@ namespace DiplomWork.Controllers
         }
     }
 
+    public class EditModel
+    {
+        public int Id { get; set; }
+        public string Filename { get; set; }
+        public string Model { get; set; }
+    }
     public class Project
     {
         public string Name { get; set; }

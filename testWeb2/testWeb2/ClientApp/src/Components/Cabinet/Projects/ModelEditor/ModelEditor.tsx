@@ -1,8 +1,6 @@
-import React, { EventHandler } from "react";
-import { InpCode } from "../../../Code/InputCode";
+import React from "react";
 import ReactCodeMirror from "react-codemirror";
-import { ListGroupItemHeading, Container, Row, Col, Button } from "reactstrap";
-import { serialize } from "v8";
+import { Container, Button } from "reactstrap";
 
 interface props {
   match: {
@@ -32,10 +30,23 @@ class ModelEditor extends React.Component<props, state> {
   }
   btnClick = () => {
     this.proj.models = this.models;
-    console.log();
-    let ser=JSON.stringify(this.proj);
-
-    localStorage.setItem("Object",ser);
+    debugger;
+    let toSend = {
+      Id: this.proj.id,
+      FileName: this.props.match.params.File + ".cs",
+      Model: this.models[this.id]
+    };
+    let ser = JSON.stringify(this.proj);
+    fetch("/Project/EditModel", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        Authorization: "Bearer " + sessionStorage.getItem("Token")
+      },
+      body: JSON.stringify(toSend)
+    });
+    localStorage.setItem("Object", ser);
     alert("Saved");
   };
   render() {

@@ -26,6 +26,7 @@ class sidebar extends React.Component<{}, state> {
                 <Sidebar
                     overlayClassName="SideBarrOverlay"
                     rootClassName="SideBarRoot"
+                    sidebarClassName="SideBarClass"
                     sidebar={
                         <div className="SideBarsItems">
                             <b>Database Models</b>

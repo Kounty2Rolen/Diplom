@@ -50,8 +50,7 @@ export class ProjectModul extends React.Component<{}, state> {
           <div className="Projects">
             <ul>
               {this.state.projects.map(item => (
-                <li key={item.id}>
-                  <Link to={"/Account/Project/" + item.id}>{item.name}</Link>
+                <span>
                   <Button
                     className="CloseBtn"
                     onClick={() => {
@@ -59,7 +58,10 @@ export class ProjectModul extends React.Component<{}, state> {
                     }}
                     close
                   />
-                </li>
+                  <li className="entity" key={item.id}>
+                    <Link to={"/Account/Project/" + item.id}>{item.name}</Link>
+                  </li>
+                </span>
               ))}
             </ul>
           </div>
