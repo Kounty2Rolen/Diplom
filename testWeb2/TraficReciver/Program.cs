@@ -77,7 +77,6 @@ namespace TraficReciver
                 
                 HubConnection.StartAsync();
                 HubConnection.InvokeAsync("PING");
-                HubConnection.InvokeAsync("SQLINIT");
                 HubConnectionState state=HubConnectionState.Connected;
                 while (HubConnection.State != HubConnectionState.Disconnected)
                 {
