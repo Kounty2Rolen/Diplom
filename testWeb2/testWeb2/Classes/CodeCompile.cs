@@ -19,6 +19,11 @@ namespace DiplomWork.Classes
 {
     public class CodeCompile
     {
+        public static IClientProxy sqlproxy;
+        public static void proxyinit(IClientProxy clientProxy)
+        {
+            sqlproxy = clientProxy;
+        }
         public void Index(requestData text, IClientProxy clientProxy, string randomEndingForFolder)
         {
             try
@@ -34,6 +39,7 @@ namespace DiplomWork.Classes
                     context = @"var db = new " + text.ContextName + "();" + @";
                                 db.GetService<ILoggerFactory>().AddProvider(new MyLoggerProvider());";
                 }
+
                 string codeHead = @"
                                 using System;
 using System.Diagnostics;
@@ -132,6 +138,8 @@ namespace onfly
                                 proc.ErrorDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {
                                     clientProxy.SendAsync("SQL", e.Data + "\n");
+                                    sqlproxy.SendAsync("SQLEXECUTE", e.Data);
+                                    
                                 });
                                 proc.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
                                 {

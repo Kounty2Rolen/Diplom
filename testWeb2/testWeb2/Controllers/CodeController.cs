@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Scaffolding;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.AspNetCore.SignalR;
 using System.Linq;
 
 namespace DiplomWork.Controllers
@@ -14,6 +15,11 @@ namespace DiplomWork.Controllers
     [AllowAnonymous]
     public class CodeController : Controller
     {
+        public static IClientProxy sqlproxy;
+        public static void proxyinit(IClientProxy clientProxy)
+        {
+            sqlproxy = clientProxy;
+        }
         private string randomEndingForFolder = Guid.NewGuid().ToString().Replace('-', '_');
 
         //public CodeController(IConnectionManager connectionManager)
@@ -48,6 +54,7 @@ namespace DiplomWork.Controllers
         [Route("/Code/ModelGenerate")]
         public IActionResult ModelGenerate([FromBody] ConectionData data, string RandomEnding = null)
         {
+            sqlproxy.SendAsync("SQLINIT",data.ConnectionString);
             if (RandomEnding != null)
             {
                 randomEndingForFolder = RandomEnding;
@@ -79,7 +86,7 @@ namespace DiplomWork.Controllers
                         useDataAnnotations: false,
                         overwriteFiles: true,
                         useDatabaseNames: true
-                        );
+                        );  
 
                     var TempProj = new Tempproj();
 
@@ -109,7 +116,7 @@ namespace DiplomWork.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest("error:"+ex.Message);
             }
         }
 
@@ -146,40 +153,30 @@ namespace DiplomWork.Controllers
 
         public Tempproj GenerateTempProject(ConectionData data, string ending, ScaffoldedModel models)
         {
-            DiplomWork.Model.Context context = new Model.Context();
             Model.TempProjects tempProject = new Model.TempProjects();
             tempProject.ConnectionString = data.ConnectionString;
             tempProject.ContextName = data.ContextName;
             tempProject.ProjectName = data.ProjName;
             Tempproj tempproj = new Tempproj();
-            context.Add(tempProject);
             tempproj.Models = new List<string>();
             tempproj.FileNames = new List<string>();
             foreach (var file in models.AdditionalFiles)
             {
                 DiplomWork.Model.Model model = new DiplomWork.Model.Model();
-                model.Tempproject = tempProject.Id;
                 model.Model1 = file.Code;
                 model.Filename = Path.GetFileName(file.Path);
-                model.TempprojectNavigation = tempProject;
-                context.Add(model);
-                context.SaveChanges();
                 tempproj.FileNames.Add(Path.GetFileName(file.Path));
                 tempproj.Models.Add(file.Code);
             }
             tempproj.FileNames.Add(Path.GetFileName(models.ContextFile.Path));
             tempproj.Models.Add(models.ContextFile.Code);
             DiplomWork.Model.Model Contextmodel = new DiplomWork.Model.Model();
-            Contextmodel.Tempproject = tempProject.Id;
             Contextmodel.Model1 = models.ContextFile.Code;
             Contextmodel.Filename = Path.GetFileName(models.ContextFile.Path);
-            context.Add(Contextmodel);
 
-            context.SaveChanges();
             tempproj.Id = tempProject.Id;
             tempproj.RandomEnding = ending;
             tempproj.Data = data;
-            context.Dispose();
             return tempproj;
         }
     }

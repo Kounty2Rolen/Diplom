@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>C:\Users\mdm\Desktop\Diplom\testWeb2\testWeb2\CodeExecuter\</OutputPath>
+    <OutputPath>C:\Users\mdm\Desktop\Диплом\Код\Diplom\testWeb2\testWeb2\bin\Release\netcoreapp2.1\publish\CodeExecuter\</OutputPath>
     <Optimize>false</Optimize>
   </PropertyGroup>
 

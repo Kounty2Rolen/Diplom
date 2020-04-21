@@ -9,10 +9,11 @@ import {
   Input,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 import CodeServices from "../Services/CodeServices";
 import DBService from "../Services/DataBasesService";
+import * as SignalR from "@aspnet/signalr";
 
 interface state {
   CodeResult: string;
@@ -41,14 +42,14 @@ export class ContextInput extends React.Component<props, state> {
       modal: false,
       check: true,
       tables: [],
-      selectedTables: []
+      selectedTables: [],
     };
   }
-
+  sqlc = new SignalR.HubConnectionBuilder().withUrl("/sql").build();
   public checkClick = () => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
-        check: !prevState.check
+        check: !prevState.check,
       };
     });
   };
@@ -62,9 +63,9 @@ export class ContextInput extends React.Component<props, state> {
     console.log(this.state.selectedTables);
 
     this.GetTables();
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
-        modal: !prevState.modal
+        modal: !prevState.modal,
       };
     });
   };
@@ -86,7 +87,7 @@ export class ContextInput extends React.Component<props, state> {
       ConnectionString: this.state.connectionString,
       ContextName: this.state.Context,
       ProjName: this.props.ProjName,
-      selectedTables: this.state.selectedTables
+      selectedTables: this.state.selectedTables,
     };
     if (
       this.state.connectionString.length > 0 &&
@@ -94,12 +95,16 @@ export class ContextInput extends React.Component<props, state> {
     ) {
       CodeServices.ModelGenerateService(ConectionData).then(
         (Response: string) => {
-          this.setState({ spin: false });
-          localStorage.setItem("Object", Response);
+          if (Response.startsWith("error:", 1)) {
+            alert(Response.slice(7, Response.length - 1));
+          } else {
+            this.setState({ spin: false });
+            localStorage.setItem("Object", Response);
+          }
         }
       );
     } else {
-      alert("Строка подключения не может быть пустой");
+      alert("Connection string cannot be empty");
       this.setState({ spin: false });
     }
     this.setState({ selectedTables: [] });
@@ -112,22 +117,23 @@ export class ContextInput extends React.Component<props, state> {
     this.setState({ Context: event.target.value });
   };
 
+
   tableSelect = (event: ChangeEvent<HTMLInputElement>) => {
     event.persist();
     if (event.target.checked) {
-      this.setState(prevState => {
+      this.setState((prevState) => {
         const arr = prevState.selectedTables;
         return {
-          selectedTables: [...arr, event.target.id]
+          selectedTables: [...arr, event.target.id],
         };
       });
     } else {
-      this.setState(prevState => {
+      this.setState((prevState) => {
         const arr = prevState.selectedTables;
         arr.splice(arr.indexOf(event.target.id), 1);
 
         return {
-          selectedTables: arr
+          selectedTables: arr,
         };
       });
     }
@@ -184,7 +190,7 @@ export class ContextInput extends React.Component<props, state> {
           <ModalHeader toggle={this.toggle}>Select Tables</ModalHeader>
           <ModalBody>
             <ul>
-              {this.state?.tables.map(item => (
+              {this.state?.tables.map((item) => (
                 <li key={item}>
                   <Input
                     type="checkbox"

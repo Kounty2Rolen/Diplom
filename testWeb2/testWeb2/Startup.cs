@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using System;
 
 namespace DiplomWork
 {
@@ -80,9 +81,9 @@ namespace DiplomWork
 
             app.UseSignalR(options =>
             {
+                options.MapHub<SQL>("/sql");
                 options.MapHub<RTTHub>("/rtt");
             });
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -93,6 +94,7 @@ namespace DiplomWork
             app.UseSpa(spa =>
             {
                 spa.Options.SourcePath = "ClientApp";
+                spa.Options.StartupTimeout = TimeSpan.FromSeconds(180);
 
                 if (env.IsDevelopment())
                 {

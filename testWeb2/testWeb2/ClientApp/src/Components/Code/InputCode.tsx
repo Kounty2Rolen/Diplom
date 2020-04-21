@@ -8,7 +8,7 @@ import {
   Col,
   UncontrolledCollapse,
   Card,
-  CardBody
+  CardBody,
 } from "reactstrap";
 import "../../../node_modules/codemirror/lib/codemirror.css";
 import "../../../node_modules/codemirror/mode/clike/clike";
@@ -37,13 +37,13 @@ export class InpCode extends React.Component<props, state> {
     this.state = {
       Result: {
         resultcode: "Result:\n",
-        sql: "SQL:\n"
+        sql: "SQL:\n",
       },
       SourceCode: "",
       connectionString: "",
       Context: "",
       Spin: false,
-      model: ""
+      model: "",
     };
   }
   hub = new SignalR.HubConnectionBuilder().withUrl("/rtt").build();
@@ -53,30 +53,30 @@ export class InpCode extends React.Component<props, state> {
       if (data === "True") {
         this.setState({ Spin: false });
       } else {
-        this.setState(prevState => ({
+        this.setState((prevState) => ({
           Result: {
             resultcode: this.state.Result.resultcode + data,
-            sql: this.state.Result.sql
-          }
+            sql: this.state.Result.sql,
+          },
         }));
         this.setState({ model: this.props.model });
       }
     });
     this.hub.on("Exception", (data: string) => {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         Result: {
           resultcode: "Compilation Error:\n" + data,
-          sql: this.state.Result.sql
-        }
+          sql: this.state.Result.sql,
+        },
       }));
     });
 
     this.hub.on("SQL", (data: string) => {
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         Result: {
           resultcode: this.state.Result.resultcode,
-          sql: this.state.Result.sql + data
-        }
+          sql: this.state.Result.sql + data,
+        },
       }));
 
       console.log(this.state.Result);
@@ -95,20 +95,20 @@ export class InpCode extends React.Component<props, state> {
             ? document.getElementsByClassName("connectionComponentContext")[0]
                 ?.nodeValue ?? ""
             : "Context",
-        serializeAnonProj: localStorage.getItem("Object")
+        serializeAnonProj: localStorage.getItem("Object"),
       };
     } else {
       Code = {
         SourceCode: this.state.SourceCode,
-        serializeAnonProj: localStorage.getItem("Object")
+        serializeAnonProj: localStorage.getItem("Object"),
       };
     }
     if (this.state.SourceCode.length >= 0) {
       this.hub.send("Result", JSON.stringify(Code));
     } else if (this.state.connectionString.length > 0) {
-      alert("Сперва подключитесь к бд");
+      alert("First connect to the database");
     } else {
-      alert("Поле с кодом не может быть пустым!");
+      alert("The code field cannot be empty!");
     }
   };
 
@@ -143,7 +143,7 @@ export class InpCode extends React.Component<props, state> {
       lineNumbers: true,
       matchBrackets: true,
       mode: "text/x-csharp",
-      value: this.props.model
+      value: this.props.model,
     };
 
     return (
@@ -152,7 +152,7 @@ export class InpCode extends React.Component<props, state> {
           <Card
             style={{
               backgroundColor: "#34475b",
-              boxShadow: " 0 0 10px rgba(0,0,0,0.5)"
+              boxShadow: " 0 0 10px rgba(0,0,0,0.5)",
             }}
           >
             <CardBody>

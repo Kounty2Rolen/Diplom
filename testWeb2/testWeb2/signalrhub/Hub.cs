@@ -22,18 +22,6 @@ namespace DiplomWork.signalrhub
             UserHandler.ConnectedIds.Remove(Context.ConnectionId);
             return base.OnDisconnectedAsync(new Exception());
         }
-
-        //protected IHubContext<CRUDServiceHubBase<TDTO>> _context;
-
-        //public CRUDServiceHubBase(IHubContext<CRUDServiceHubBase<TDTO>> context)
-        //{
-        //    this._context = context;
-        //}
-
-        //public Task Create(TDTO entityDTO)
-        //{
-        //    return this._context.Clients.All.InvokeAsync(CreateEventName, entityDTO);
-        //}
         public async Task Result(string message)
         {
             string randomEndingForFolder = Guid.NewGuid().ToString().Replace('-', '_');
