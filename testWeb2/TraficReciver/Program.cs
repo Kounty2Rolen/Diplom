@@ -25,33 +25,47 @@ namespace TraficReciver
                     Console.WriteLine("Enter the id in the field on the site");
 
                 });
+                var code = "";
+                string oldparam = "";
                 HubConnection.On<string>("SQLEXECUTE", (param) => {
-                    if(param!= "Compiling query model: ")
-                        
+                    if (param != null)
+                    {
+                        if (param.Contains("SELECT"))
+                            code += param.Trim() + ' ';
+                        else
+                            oldparam = param;
+                        if (param.Contains("FROM"))
+                        {
+                            code += param.Trim().Trim(',')+';';
+                        }
+                    }
+                });
+                HubConnection.On<string>("exec",(param)=> {
+                    Console.WriteLine(code);
                     if (sqlConnection.State == System.Data.ConnectionState.Open)
                     {
-                        var command=sqlConnection.CreateCommand();
-                        command.CommandText = param;
-                        var reader=command.ExecuteReader();
+                        var command = sqlConnection.CreateCommand();
+                        command.CommandText = code;
+                        var reader = command.ExecuteReader();
                         var result = new Result();
                         if (reader.HasRows)
                         {
-                            for (int i = 0; i <= reader.FieldCount; i++)
+                            for (int i = 0; i < reader.FieldCount; i++)
                             {
                                 result.columns.Add(reader.GetName(i));
 
                             }
                             while (reader.Read())
                             {
-                                for (int j = 0; j <= reader.FieldCount; j++)
+                                for (int j = 0; j < reader.FieldCount; j++)
                                 {
                                     result.content.Add(reader.GetValue(j).ToString());
-                                    
+
                                 }
                             }
-                            
+
                         }
-                        Console.WriteLine(param);
+                        Console.WriteLine(code);
                         HubConnection.InvokeAsync("Result", result);
                     }
 

@@ -2113,3 +2113,87 @@ hello
 21.04.2020 13:14:23|LOGED_DATA|=>$ Readed
 21.04.2020 13:14:57|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
    at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:22:29|SYSLOG|=>$ Connection.... Iddentificator:35418244_e2a9_48d2_9f9b_b22c135fd6ab
+21.04.2020 13:22:29|SYSLOG|=>$ Connected
+21.04.2020 13:22:29|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:22:29|LOGED_DATA|=>$ Readed
+21.04.2020 13:22:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:25:54|SYSLOG|=>$ Connection.... Iddentificator:59bb0f9f_d22d_426b_921e_6ab55892f7f9
+21.04.2020 13:25:54|SYSLOG|=>$ Connected
+21.04.2020 13:25:54|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:25:54|LOGED_DATA|=>$ Readed
+21.04.2020 13:25:54|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:26:58|SYSLOG|=>$ Connection.... Iddentificator:605c65b4_c9e9_417d_a9df_18e9066e09f3
+21.04.2020 13:26:58|SYSLOG|=>$ Connected
+21.04.2020 13:26:58|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:26:58|LOGED_DATA|=>$ Readed
+21.04.2020 13:26:59|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:29:17|SYSLOG|=>$ Connection.... Iddentificator:1e8b219f_357f_4094_8db3_d69d3d2f4a1a
+21.04.2020 13:29:17|SYSLOG|=>$ Connected
+21.04.2020 13:29:17|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:29:17|LOGED_DATA|=>$ Readed
+21.04.2020 13:29:17|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:30:56|SYSLOG|=>$ Connection.... Iddentificator:36618c0c_4aac_445a_af4c_1d5af2153a3a
+21.04.2020 13:30:56|SYSLOG|=>$ Connected
+21.04.2020 13:30:56|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:30:56|LOGED_DATA|=>$ Readed
+21.04.2020 13:30:56|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:31:18|SYSLOG|=>$ Connection.... Iddentificator:3bbf0bb4_b883_45fc_b1ca_2c2bd4273304
+21.04.2020 13:31:18|SYSLOG|=>$ Connected
+21.04.2020 13:31:18|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:31:18|LOGED_DATA|=>$ Readed
+21.04.2020 13:31:19|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:33:29|SYSLOG|=>$ Connection.... Iddentificator:488cf060_8610_4024_9d43_55b3efe05b93
+21.04.2020 13:33:29|SYSLOG|=>$ Connected
+21.04.2020 13:33:29|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:33:29|LOGED_DATA|=>$ Readed
+21.04.2020 13:33:32|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:35:25|SYSLOG|=>$ Connection.... Iddentificator:dec633c3_e703_48c9_8082_d68bad1905c3
+21.04.2020 13:35:25|SYSLOG|=>$ Connected
+21.04.2020 13:35:25|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:35:25|LOGED_DATA|=>$ Readed
+21.04.2020 13:35:25|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:36:58|SYSLOG|=>$ Connection.... Iddentificator:0413877b_5b17_4731_b309_6f0ac47284a9
+21.04.2020 13:36:58|SYSLOG|=>$ Connected
+21.04.2020 13:36:58|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:36:58|LOGED_DATA|=>$ Readed
+21.04.2020 13:36:59|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:38:15|SYSLOG|=>$ Connection.... Iddentificator:e72138f6_6d32_4116_8fc1_c6e87a7ee4e4
+21.04.2020 13:38:15|SYSLOG|=>$ Connected
+21.04.2020 13:38:15|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:38:15|LOGED_DATA|=>$ Readed
+21.04.2020 13:38:16|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:40:47|SYSLOG|=>$ Connection.... Iddentificator:8b266832_0db5_4427_94a2_8636317fb51d
+21.04.2020 13:40:47|SYSLOG|=>$ Connected
+21.04.2020 13:40:47|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:40:47|LOGED_DATA|=>$ Readed
+21.04.2020 13:40:48|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:41:38|SYSLOG|=>$ Connection.... Iddentificator:92ef9346_a681_4ad8_a0f4_70105311227d
+21.04.2020 13:41:38|SYSLOG|=>$ Connected
+21.04.2020 13:41:38|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:41:38|LOGED_DATA|=>$ Readed
+21.04.2020 13:41:38|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:43:29|SYSLOG|=>$ Connection.... Iddentificator:e6f8738d_2c83_4169_bf19_e90fb002afab
+21.04.2020 13:43:29|SYSLOG|=>$ Connected
+21.04.2020 13:43:29|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:43:29|LOGED_DATA|=>$ Readed
+21.04.2020 13:43:30|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)
+21.04.2020 13:44:52|SYSLOG|=>$ Connection.... Iddentificator:8e814d61_5761_48a3_a081_f9a8aa0c72db
+21.04.2020 13:44:52|SYSLOG|=>$ Connected
+21.04.2020 13:44:52|LOGED_DATA|=>$ Data(Lenght):10240
+21.04.2020 13:44:52|LOGED_DATA|=>$ Readed
+21.04.2020 13:44:53|Exception|=>$ System.NullReferenceException: Object reference not set to an instance of an object.
+   at CodeExecuter.Program.Main(String[] args)

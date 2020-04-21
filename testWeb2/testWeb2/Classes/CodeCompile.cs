@@ -164,6 +164,8 @@ namespace onfly
                                 result1.sql = sql;
                                 result1.resultcode = resultcode;
                                 clientProxy.SendAsync("Result", "True");
+                                sqlproxy.SendAsync("exec","");
+
                                 return result1;
                             }
                             catch (Exception ex)
